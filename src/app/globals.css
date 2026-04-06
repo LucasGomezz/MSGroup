@@ -3,11 +3,35 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /*Paleta principal*/
+  --navy: #0A2342;
+  --ocean:#2E5A88;
+  --coral: #FF6B35;
+  --sky: #5C9EAD;
+  --sand: #F4F1E8;
+
+  /*MS Shipping*/
+  --shippingPrincipal: #2A632C;
+  --shippingSecundario: #488C46;
+  --shippingComplementario: #E53935;
+  /*MS Fowarding*/
+  --fowardingPrincipal: #3767A6;
+  --fowardingSecundario: #51ABD7;
+  --fowardingComplementario: #FF8C42;
+  /*Ms Trading*/
+
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-ocean: var(--ocean);
+  --color-coral: var(--coral);
+  --color-sky: var(--sky);
+  --color-sand: var(--sand);
+
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
