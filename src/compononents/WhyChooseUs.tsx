@@ -7,7 +7,7 @@ export default function WhyMSGroup() {
 
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threshold: 0.4
+        threshold: 0.2
     })
 
     return (

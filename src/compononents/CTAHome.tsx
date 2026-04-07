@@ -28,7 +28,7 @@ export default function CTAHome() {
 
                         <p className="text-white/90 text-sm md:text-base">
                             Obtén una cotización personalizada de forma inmediata.
-                        </p>
+                        </p>y
                     </div>
 
                     <button className="bg-white text-coral font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition">
