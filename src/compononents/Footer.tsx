@@ -11,7 +11,7 @@ export default function Footer() {
 
           <div className="md:pr-10 md:border-r border-white/20">
             <h3 className="text-coral font-semibold uppercase mb-3 text-center">
-              Be Group
+              MS Group
             </h3>
 
             <p className="text-gray-300 text-sm leading-relaxed text-center">
@@ -26,13 +26,13 @@ export default function Footer() {
             </h3>
 
             <p className="text-gray-300 text-sm leading-relaxed text-center">
-              Tte. Gral. Juan D. Perón 430, 9° piso
+              Tte. Gral. Juan D. Perón 683, 3° piso
               <br />
-              C1038AAT - Buenos Aires, Argentina
+              C1038AAM - Buenos Aires, Argentina
               <br />
-              Tel: +54 11 5219-8000
+              Tel: +54 11 4322-4902
               <br />
-              Email: contacto@maritima-group.com
+              Email: maritima@maritima-group.com
             </p>
           </div>
 
@@ -45,19 +45,19 @@ export default function Footer() {
 
               <li>
                 <Link href="/servicios/forwarding" className="hover:text-white transition">
-                  MX Forwarding
+                  MS Forwarding
                 </Link>
               </li>
 
               <li>
                 <Link href="/servicios/shipping" className="hover:text-white transition">
-                  MX Shipping
+                  MS Shipping
                 </Link>
               </li>
 
               <li>
                 <Link href="/servicios/trading" className="hover:text-white transition">
-                  MX Trading
+                  MT Trading
                 </Link>
               </li>
 
@@ -73,7 +73,7 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-300">
 
           <p>
-            © 2024 MX-Group S.R.L. Todos los derechos reservados.
+            © 2026 MS Group S.R.L. Todos los derechos reservados.
           </p>
 
           <div className="flex gap-6 mt-2 md:mt-0">
