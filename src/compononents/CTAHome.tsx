@@ -14,8 +14,8 @@ export default function CTAHome() {
             <div
                 ref={ref}
                 className={`max-w-6xl mx-auto px-6 transition-all duration-700 ${inView
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-10"
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-10"
                     }`}
             >
 
@@ -27,7 +27,7 @@ export default function CTAHome() {
                         </h3>
 
                         <p className="text-white/90 text-sm md:text-base">
-                             Obtén una cotización personalizada de forma inmediata
+                            Obtén una cotización personalizada de forma inmediata.
                         </p>
                     </div>
 
