@@ -4,6 +4,7 @@ import Services from "@/compononents/Services";
 import Stats from "@/compononents/Stats";
 import WhyChooseUs from "@/compononents/WhyChooseUs";
 import CTAHome from "@/compononents/CTAHome";
+import Footer from "@/compononents/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Stats />
       <WhyChooseUs />
       <CTAHome />
+      <Footer />
     </>
   );
 }

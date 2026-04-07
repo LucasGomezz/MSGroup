@@ -5,17 +5,10 @@ export default function Navbar() {
   return (
     <header className="w-full bg-white border-b border-gray-200">
 
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-2/3 mx-auto px-6 py-4 flex items-center justify-between">
 
-  
         <div className="flex items-center gap-3">
-          <Image
-            src="/images/MSLogo.png"
-            alt="Marítima"
-            width={120}
-            height={40}
-            priority
-          />
+          <Image src={"/images/MSLogoHorizontal.png"} alt={"Logo"} width={32} height={100}/>
         </div>
 
         <nav className="hidden md:flex items-center gap-10 text-navy font-medium">

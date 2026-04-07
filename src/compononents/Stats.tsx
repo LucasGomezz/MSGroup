@@ -3,10 +3,17 @@ import CountUp from "react-countup"
 import { useInView } from "react-intersection-observer"
 
 export default function Stats() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.4
+  })
   return (
     <section className="bg-navy text-white py-20">
 
-      <div className="max-w-4xl mx-auto text-center mb-12 px-6">
+      <div
+        ref={ref} 
+        className={`relative flex flex-col items-center max-w-4xl mx-auto text-center mb-12 px-6 transition-all duration-700 
+      ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
         <h2 className="text-3xl md:text-4xl font-semibold mb-3">
           Experiencia, Eficiencia y Confianza
         </h2>
