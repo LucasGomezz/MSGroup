@@ -18,9 +18,9 @@ export default function Stats() {
 
       <div className="max-w-5xl mx-auto px-6">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl py-10 px-6 grid grid-cols-2 md:grid-cols-4 text-center divide-x divide-white/20">
-          <Stat number={30} label="Años de trayectoria" />
-          <Stat number={3000} label="Operaciones anuales" />
-          <Stat number={75} label="Países conectados" />
+          <Stat number={35} label="Años de trayectoria" />
+          <Stat number={500} label="Clientes activos" />
+          <Stat number={100} label="Países conectados" />
           <Stat number={365} label="Días al año operando" />
 
         </div>

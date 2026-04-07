@@ -33,8 +33,8 @@ export default function Services() {
 
           <ServiceCard
             title="Shipping"
-            subTitle="Servicios marítimos integrales."
-            description="Gestión integral de servicios marítimos para la operación y comercialización de buques."
+            subTitle="Servicios marítimos especializados."
+            description="Expertos en el manejo comercial y operativo de buques como Operadores, Charterers, Agentes Marítimos y Brokers."
             points={[
               "Operación y gestión de buques",
               "Chartering",
@@ -49,10 +49,15 @@ export default function Services() {
             subTitle="Operaciones aéreas y terrestres"
             description="Operación integral de transporte internacional por vía marítima, aérea y terrestre, conectando cargas desde y hacia cualquier parte del mundo."
             points={[
-              "Transporte marítimo, aéreo y terrestre",
-              "Servicios multimodales",
-              "Cargas de proyecto",
-              "Logística, aduana y seguros de carga"
+              "Transporte Marítimo Internacional",
+              "Transporte Aéreo Internacional",
+              "Transporte Terrestre",
+              "Servicios Multimodales",
+              "Cargas de Proyecto",
+              "Cargas Break Bulk",
+              "Despacho Aduanero",
+              "Seguros de Carga",
+              "Depósito Fiscal y Logística"
             ]}
             icon={<FaTruckPlane size={50} className="text-navy " />}
           />
