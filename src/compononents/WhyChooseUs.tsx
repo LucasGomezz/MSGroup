@@ -35,25 +35,25 @@ export default function WhyMSGroup() {
                     <Feature
                         icon={<FaSlidersH />}
                         title="Personalización total"
-                        description="Diseñamos soluciones a medida para cada cliente."
+                        description="Diseñamos soluciones a medida para cada cliente, adaptándonos a la complejidad de cada operación."
                     />
 
                     <Feature
                         icon={<FaSearch />}
                         title="Transparencia real"
-                        description="Seguimiento en tiempo real, costos claros y comunicación directa."
+                        description="Seguimiento en tiempo real, costos claros y comunicación directa con tu ejecutivo asignado."
                     />
 
                     <Feature
                         icon={<FaStar />}
                         title="Valor agregado"
-                        description="Más de 35 años de experiencia optimizando operaciones internacionales."
+                        description="+35 años de experiencia transformando la logística internacional en una ventaja competitiva para tu negocio."
                     />
 
                     <Feature
                         icon={<FaGlobeAmericas />}
                         title="Red global, trato local"
-                        description="Presencia en más de 75 países con cercanía y confianza."
+                        description="Presencia en +100 países a través de nuestra red de agentes con la cercanía y confianza de una empresa argentina."
                     />
 
                 </div>

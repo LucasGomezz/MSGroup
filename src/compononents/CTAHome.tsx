@@ -23,16 +23,16 @@ export default function CTAHome() {
 
                     <div>
                         <h3 className="text-2xl md:text-3xl font-semibold text-white mb-2">
-                            ¿Listo para simplificar tu logística internacional?
+                            ¿Listo para potenciar tu logística internacional?
                         </h3>
 
                         <p className="text-white/90 text-sm md:text-base">
-                            Obtén una cotización personalizada en menos de 24 horas.
+                             Obtén una cotización personalizada de forma inmediata
                         </p>
                     </div>
 
                     <button className="bg-white text-coral font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition">
-                        Solicitar cotización
+                        Solicitar cotización gratuita
                     </button>
 
                 </div>
