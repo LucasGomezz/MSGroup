@@ -61,7 +61,7 @@ export default function Services() {
 
   const activeIndex = useTransform(
     scrollYProgress,
-    [0, 0.45, 0.85],
+    [0, 0.5, 1],
     [0, 1, 2]
   );
 
@@ -133,56 +133,54 @@ function ImageTransition({ image, index, activeIndex }: any) {
 }
 
 function ScrollContent({ service, index, progress }: any) {
-  const start = index * 0.33;
-  const end = (index + 1) * 0.33;
-  const transitionBuffer = 0.05;
+  const unit = 1 / (services.length - 1);
+  const center = index * unit;
+  const buffer = 0.2;
 
   const opacity = useTransform(
     progress,
-    [start, start + transitionBuffer, end - transitionBuffer, end],
-    [0, 1, 1, 0]
+    [center - buffer, center, center + buffer],
+    [0, 1, 0]
   );
 
-  const fixedOpacity =
-    index === 0
-      ? useTransform(opacity, (v) => Math.max(v, 0.999))
-      : opacity;
+  const fixedOpacity = useTransform(opacity, (v) => {
+    if (index === 0 && progress.get() < center) return 1;
+    if (index === services.length - 1 && progress.get() > center) return 1;
+    return v;
+  });
 
   const y = useTransform(
     progress,
-    [start, start + transitionBuffer, end - transitionBuffer, end],
-    [150, 0, 0, -150]
+    [center - buffer, center, center + buffer],
+    [80, 0, -80]
   );
 
-  const initialOpacity = index === 0 ? 1 : undefined;
-  const initialY = index === 0 ? 0 : undefined;
+  const fixedY = useTransform(y, (v) => {
+    if (index === 0 && progress.get() < center) return 0;
+    if (index === services.length - 1 && progress.get() > center) return 0;
+    return v;
+  });
 
-  const zIndex = 10 + index;
-
-  const visibility = useTransform(opacity, (val) =>
-    val <= 0 ? "hidden" : "visible"
+  const visibility = useTransform(fixedOpacity, (val) =>
+    val <= 0.01 ? "hidden" : "visible"
   );
 
-  const pointerEvents = useTransform(opacity, (val) =>
-    val > 0.5 ? "auto" : "none"
+  const pointerEvents = useTransform(fixedOpacity, (val) =>
+    val > 0.6 ? "auto" : "none"
   );
 
   return (
     <motion.div
       style={{
         opacity: fixedOpacity,
-        y,
-        zIndex,
+        y: fixedY,
+        zIndex: 10 + index,
         visibility,
         pointerEvents,
       }}
-      initial={{
-        opacity: initialOpacity,
-        y: initialY,
-      }}
       className="absolute inset-0 flex flex-col justify-center space-y-8"
     >
-      <h2 className="text-5xl md:text-7xl font-bold text-navy leading-tight">
+      <h2 className="text-5xl md:text-7xl font-bold text-[#001f3f] leading-tight">
         {service.title}
       </h2>
 
@@ -196,11 +194,8 @@ function ScrollContent({ service, index, progress }: any) {
       </div>
 
       <div
-        className={`grid ${
-          service.title === "Forwarding"
-            ? "grid-cols-2 gap-x-8"
-            : "grid-cols-1"
-        } gap-y-4 pt-4 border-l-2 border-navy/10 pl-8`}
+        className={`grid ${service.title === "Forwarding" ? "grid-cols-2 gap-x-8" : "grid-cols-1"
+          } gap-y-4 pt-4 border-l-2 border-navy/10 pl-8`}
       >
         {service.points.map((point: string, i: number) => (
           <div key={i} className="flex items-start text-gray-600 group">
@@ -212,12 +207,19 @@ function ScrollContent({ service, index, progress }: any) {
         ))}
       </div>
 
-      <button className="mt-12 group flex items-center gap-6 w-fit cursor-pointer">
+      <motion.button className="mt-12 group flex items-center gap-6 w-fit cursor-pointer">
         <span className="text-xs font-bold uppercase tracking-[0.4em] text-navy group-hover:text-orange-600 transition-colors">
           {service.cta}
         </span>
-        <div className="h-[1.5px] w-12 bg-navy group-hover:w-24 group-hover:bg-orange-600 transition-all duration-500" />
-      </button>
+        <div className="relative h-[1.5px] w-24 overflow-hidden">
+          <motion.div
+            className="absolute left-0 top-0 h-full w-full bg-[#001f3f] group-hover:bg-orange-600 origin-left"
+            initial={{ scaleX: 0.5 }}
+            whileHover={{ scaleX: 1 }}
+            transition={{ duration: 0.4 }}
+          />
+        </div>
+      </motion.button>
     </motion.div>
   );
 }
