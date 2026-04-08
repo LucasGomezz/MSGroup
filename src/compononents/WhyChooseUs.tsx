@@ -47,7 +47,7 @@ export default function WhyMSGroup() {
                     <Feature
                         icon={<FaStar />}
                         title="Valor agregado"
-                        description="+35 años de experiencia transformando la logística internacional en una ventaja competitiva para tu negocio."
+                        description="Aportamos valor a tu negocio con recomendaciones basadas en +35 años de experiencia en operaciones internacionales de todo tipo."
                     />
 
                     <Feature

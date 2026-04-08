@@ -61,7 +61,7 @@ export default function Experience() {
 
                     Hoy, nuestra red global y nuestra base en
                     <span className="font-bold text-navy"> Argentina</span> nos permiten
-                    transformar la confianza de nuestros clientes en
+                    garantizar la confianza de nuestros clientes brindando
                     <span className="font-bold text-navy"> soluciones operativas</span> de alto nivel.
 
                 </p>
