@@ -15,7 +15,7 @@ const services = [
       "Servicios de Agencia Marítima",
     ],
     cta: "Consultar servicio",
-    image: "/images/shipping.png",
+    image: "/images/shippingg.png",
   },
   {
     title: "Forwarding",
@@ -34,7 +34,7 @@ const services = [
       "Depósito Fiscal y Logística",
     ],
     cta: "Cotizar envío",
-    image: "/images/forwarding.png",
+    image: "/images/forwardingg.png",
   },
   {
     title: "Trading",
@@ -47,7 +47,7 @@ const services = [
       "Consultoría en comercio exterior",
     ],
     cta: "Iniciar consultoría",
-    image: "/images/trading.png",
+    image: "/images/tradinggg.png",
   },
 ];
 
