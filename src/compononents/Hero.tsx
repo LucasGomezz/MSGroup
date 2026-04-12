@@ -15,8 +15,7 @@ export default function Hero() {
                     </h1>
 
                     <p className="text-lg md:text-3xl text-white/85 mb-8 max-w-lg">
-                        Soluciones integrales de logística desde 1990.
-                        Movilizamos tu negocio sin fronteras.
+                        Desde 1990 moviendo tu negocio sin fronteras con soluciones integrales de logística.
                     </p>
 
                     <button className="inline-flex items-center gap-2 bg-coral hover:bg-coral/90 text-white  px-10 py-3 rounded-md  text-2xl cursor-pointer">
