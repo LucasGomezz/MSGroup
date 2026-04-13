@@ -15,7 +15,7 @@ const services = [
       "Servicios de Agencia Marítima",
     ],
     cta: "Consultar servicio",
-    image: "/images/shippingg.png",
+    image: "/images/shipping.png",
   },
   {
     title: "Forwarding",
@@ -102,6 +102,7 @@ export default function Services() {
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function ImageTransition({ image, index, activeIndex }: any) {
   const opacity = useTransform(
     activeIndex,
@@ -127,11 +128,12 @@ function ImageTransition({ image, index, activeIndex }: any) {
       <div className="absolute inset-0 bg-black/30" />
 
       {/* gradiente pro */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/40 via-black/10 to-transparent" />
     </motion.div>
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function ScrollContent({ service, index, progress }: any) {
   const unit = 1 / (services.length - 1);
   const center = index * unit;
@@ -199,7 +201,7 @@ function ScrollContent({ service, index, progress }: any) {
       >
         {service.points.map((point: string, i: number) => (
           <div key={i} className="flex items-start text-gray-600 group">
-            <div className="w-1.5 h-1.5 min-w-[6px] min-h-[6px] bg-orange-600 rounded-full mr-4 mt-2 opacity-30 group-hover:opacity-100 transition-opacity" />
+            <div className="w-1.5 h-1.5 min-w-1.5 min-h-1.5 bg-orange-600 rounded-full mr-4 mt-2 opacity-30 group-hover:opacity-100 transition-opacity" />
             <span className="text-sm uppercase tracking-wider font-medium opacity-70 group-hover:opacity-100 transition-opacity">
               {point}
             </span>

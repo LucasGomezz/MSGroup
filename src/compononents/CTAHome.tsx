@@ -5,7 +5,7 @@ export default function CTAHome() {
 
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threshold: 0.4
+        threshold: 0.1
     })
 
     return (
@@ -13,7 +13,7 @@ export default function CTAHome() {
 
             <div
                 ref={ref}
-                className={`max-w-6xl mx-auto px-6 transition-all duration-700 ${inView
+                className={`relative max-w-6xl mx-auto px-6 transition-all duration-700 ${inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                     }`}
