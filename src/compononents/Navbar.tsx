@@ -115,7 +115,7 @@ export default function Navbar() {
         </nav>
 
         <button className={`hidden md:block bg-${getColorSecondary()} text-white px-5 py-2.5 rounded-md font-semibold hover:bg-${getColorSecondary()}/90 transition`}>
-          Contáctenos
+          Contactanos
         </button>
 
       </div>

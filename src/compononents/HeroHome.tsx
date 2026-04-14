@@ -19,7 +19,7 @@ export default function Hero() {
                     </p>
 
                     <button className="inline-flex items-center gap-2 bg-coral hover:bg-coral/90 text-white  px-10 py-3 rounded-md  text-2xl cursor-pointer">
-                        Solicitar cotización
+                        Contactanos
                         <span className="text-lg">→</span>
                     </button>
                 </div>

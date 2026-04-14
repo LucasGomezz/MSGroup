@@ -33,7 +33,7 @@ const services = [
       "Seguros de Carga",
       "Depósito Fiscal y Logística",
     ],
-    cta: "Cotizar envío",
+    cta: "Consultar servicio",
     image: "/images/forwardingg.png",
   },
   {
@@ -46,7 +46,7 @@ const services = [
       "Brokerage comercial",
       "Consultoría en comercio exterior",
     ],
-    cta: "Iniciar consultoría",
+    cta: "Consultar servicio",
     image: "/images/tradinggg.png",
   },
 ];

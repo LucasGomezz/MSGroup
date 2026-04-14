@@ -15,7 +15,7 @@ export default function Stats() {
         className={`relative flex flex-col items-center max-w-4xl mx-auto text-center mb-12 px-6 transition-all duration-700 
       ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
         <h2 className="text-3xl md:text-4xl font-semibold mb-3">
-          Experiencia, Eficiencia y Confianza
+          Experiencia, eficiencia y confianza
         </h2>
 
         <p className="text-gray-300 text-lg">

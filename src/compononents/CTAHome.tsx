@@ -32,7 +32,7 @@ export default function CTAHome() {
                     </div>
 
                     <button className="bg-white text-coral font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition">
-                        Solicitar cotización gratuita
+                        Contactanos
                     </button>
 
                 </div>
