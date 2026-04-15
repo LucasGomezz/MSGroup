@@ -1,22 +1,42 @@
-"use client"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useSpring } from "framer-motion"
-import Image from "next/image"
-export default function HeroMSTrading() {
-    const { scrollYProgress } = useScroll()
-    // mueve la capa blanca hacia arriba 
-    const y = useTransform(scrollYProgress, [0, 0.15], ["0%", "-100%"])
-    const smoothY = useSpring(y, { stiffness: 80, damping: 20, })
-    return (
-        <section className="relative h-[140vh] -mt-20">
-            {/* 🖼 FONDO FIJO */}
-            <div className="fixed top-0 left-0 w-full h-screen -z-10">
-                <Image src="/images/trading.png" alt="Trading background" fill className="object-cover" priority />
-            </div> {/* ⬜ CAPA BLANCA */}
-            <motion.div style={{ y: smoothY }} className="absolute top-0 left-0 w-full h-[90vh] flex items-center justify-center bg-white" >
-                <h1 className=" text-[12vw] font-extrabold leading-none text-center text-transparent bg-[url('/images/trading.png')] bg-size-[100vw_100vh] bg-center bg-no-repeat bg-clip-text" >
-                    MS Trading
-                </h1>
-            </motion.div>
-        </section>)
+export default function HeroVideo() {
+  return (
+    <section className="relative overflow-hidden h-screen flex items-center">
+
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/mt-trading.mp4" type="video/mp4" />
+      </video>
+
+      <div className="absolute inset-0 bg-black/30" />
+
+
+      <div className="relative z-10 max-w-6xl mx-44 px-8 md:px-12 py-24">
+        <div className="max-w-xl text-white">
+
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-4">
+            MT Trading
+          </h1>
+
+          <p className="text-lg md:text-3xl text-white/85 mb-8 max-w-lg">
+           Intermediación comercial y asesoramiento estratégico.
+          </p>
+          <p className="text-lg md:text-3xl text-white/85 mb-8 max-w-lg">
+           Impulsamos la expansión internacional de empresas mediante soluciones comerciales integrales.
+          </p>
+
+          <button className="inline-flex items-center gap-2 bg-shippingComplementario hover:bg-shippingComplementario/90 text-white px-10 py-3 rounded-md text-2xl cursor-pointer">
+            Contactanos
+            <span className="text-lg">→</span>
+          </button>
+
+        </div>
+      </div>
+
+    </section>
+  )
 }
