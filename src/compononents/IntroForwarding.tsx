@@ -13,7 +13,7 @@ export default function IntroForwarding() {
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Contenedor Principal con estilo de bloque industrial */}
-        <div className="grid lg:grid-cols-12 gap-0 border border-gray-200 bg-white shadow-xl overflow-hidden">
+        <div className="grid lg:grid-cols-12 gap-0 border border-gray-200 bg-white shadow-xl overflow-hidden rounded-2xl">
           
           {/* LADO IZQUIERDO: Visual con enfoque en transporte */}
           <div className="lg:col-span-5 relative min-h-[500px] bg-[#002147]">
@@ -105,7 +105,7 @@ export default function IntroForwarding() {
 
                 {/* Botón de Acción */}
                 <div className="pt-8">
-                  <button className="group relative bg-[#002147] text-white px-10 py-4 font-bold text-xs uppercase tracking-[0.2em] transition-all hover:bg-black hover:pl-12 flex items-center gap-4">
+                  <button className="group relative bg-[#002147] text-white px-10 py-4 font-bold text-xs uppercase tracking-[0.2em] transition-all hover:bg-black hover:pl-12 flex items-center gap-4 rounded-xl">
                     Explorar Servicios
                     <ArrowRight size={16} className="transition-transform group-hover:translate-x-2" />
                   </button>
