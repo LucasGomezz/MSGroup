@@ -1,5 +1,5 @@
-import HeroMSTrading from "@/compononents/HeroMSTrading";
-import ContentService from "@/compononents/ContentService";
+import HeroMSTrading from "@/components/HeroMSTrading";
+import ContentService from "@/components/ContentService";
 
 
 export default function MSTrading() {

@@ -1,9 +1,9 @@
-import Hero from "@/compononents/HeroHome";
-import Services from "@/compononents/Services";
-import Stats from "@/compononents/Stats";
-import WhyChooseUs from "@/compononents/WhyChooseUs";
-import CTAHome from "@/compononents/CTAHome";
-import Experience from "@/compononents/Experience";
+import Hero from "@/components/HeroHome";
+import Services from "@/components/Services";
+import Stats from "@/components/Stats";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import CTAHome from "@/components/CTAHome";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (

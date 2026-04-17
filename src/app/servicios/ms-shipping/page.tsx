@@ -1,6 +1,6 @@
-import BloqueWithCompleto from "@/compononents/BloqueWithCompleto";
-import HeroVideo from "@/compononents/HeroVideo";
-import SplitGrid from "@/compononents/SplitGrid";
+import BloqueWithCompleto from "@/components/BloqueWithCompleto";
+import HeroVideo from "@/components/HeroVideo";
+import SplitGrid from "@/components/SplitGrid";
 import { FaHandshake, FaGlobe, FaTools, FaShip, FaBalanceScale } from "react-icons/fa";
 import { MdSecurity } from "react-icons/md";
 import { GiTakeMyMoney } from "react-icons/gi";

@@ -1,8 +1,8 @@
-import IntroForwarding from "@/compononents/IntroForwarding";
-import CardsServicios from "@/compononents/CardsServicios";
-import TransporteContent from "@/compononents/TransporteContent";
-import HeroMSForwarding from "@/compononents/HeroMSForwarding";
-import StatsForwarding from "@/compononents/StatsForwarding";
+import IntroForwarding from "@/components/IntroForwarding";
+import CardsServicios from "@/components/CardsServicios";
+import TransporteContent from "@/components/TransporteContent";
+import HeroMSForwarding from "@/components/HeroMSForwarding";
+import StatsForwarding from "@/components/StatsForwarding";
 
 
 export default function MSFowarding() {
