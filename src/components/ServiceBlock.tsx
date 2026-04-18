@@ -20,7 +20,7 @@ export function ServiceBlock({
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
         <div className={`${reverse ? "md:order-2" : "md:order-1"}`}>
-          <h2 className="text-3xl font-bold text-fowardingPrincipal">
+          <h2 className="text-3xl font-bold text-forwardingPrincipal">
             {title}
           </h2>
 

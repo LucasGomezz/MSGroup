@@ -44,19 +44,19 @@ export default function Footer() {
             <ul className="text-gray-300 text-sm space-y-1 text-center">
 
               <li>
-                <Link href="/servicios/forwarding" className="hover:text-white transition">
+                <Link href="/servicios/ms-forwarding" className="hover:text-white transition">
                   MS Forwarding
                 </Link>
               </li>
 
               <li>
-                <Link href="/servicios/shipping" className="hover:text-white transition">
+                <Link href="/servicios/ms-shipping" className="hover:text-white transition">
                   MS Shipping
                 </Link>
               </li>
 
               <li>
-                <Link href="/servicios/trading" className="hover:text-white transition">
+                <Link href="/servicios/ms-trading" className="hover:text-white transition">
                   MT Trading
                 </Link>
               </li>
