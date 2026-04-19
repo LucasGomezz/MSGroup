@@ -8,7 +8,7 @@ export default function CTAHome() {
   });
 
   return (
-    <section className="py-10 md:py-14 bg-white">
+    <section id="por-que-elegirnos" className="py-10 md:py-14 bg-white">
       <div
         ref={ref}
         className={`relative max-w-6xl mx-auto px-4 sm:px-6 transition-all duration-700 ${

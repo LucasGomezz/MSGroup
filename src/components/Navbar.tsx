@@ -155,7 +155,6 @@ export default function Navbar() {
               />
             </Link>
 
-            {/* DESKTOP SOLO XL+ */}
             <nav
               className={`hidden xl:flex items-center gap-10 font-medium text-base xl:text-lg ${getColorPrimary()}`}
             >
@@ -191,8 +190,7 @@ export default function Navbar() {
               </div>
 
               <Link
-                href="/porQueElegirnos"
-                className={navLinkClass("/porQueElegirnos")}
+                href="/#por-que-elegirnos"
               >
                 Por Qué Elegirnos
               </Link>
