@@ -63,17 +63,17 @@ const ServiceCard = ({
       transition={{ duration: 0.75, ease: "easeOut" }}
       className={`flex flex-col ${
         isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-      } gap-16 items-center py-20 relative overflow-hidden`}
+      } gap-10 md:gap-14 lg:gap-16 items-center py-14 sm:py-16 lg:py-20 relative overflow-hidden`}
     >
-      <div className="flex-1 z-10 space-y-8">
+      <div className="flex-1 z-10 space-y-6 sm:space-y-8 w-full">
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           <motion.span
             initial={{ opacity: 0, x: -18 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ delay: 0.05 }}
-            className="inline-block px-3 py-1 text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full"
+            className="inline-block px-3 py-1 text-[10px] sm:text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full"
           >
             {service.tag}
           </motion.span>
@@ -83,7 +83,7 @@ const ServiceCard = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ delay: 0.12 }}
-            className="text-4xl lg:text-5xl font-black text-slate-900 leading-tight tracking-tighter"
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight tracking-tighter"
           >
             {service.title}
           </motion.h2>
@@ -93,7 +93,7 @@ const ServiceCard = ({
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ delay: 0.18 }}
-            className="text-xl text-slate-500 font-medium leading-relaxed max-w-xl"
+            className="text-base sm:text-lg lg:text-xl text-slate-500 font-medium leading-relaxed max-w-xl"
           >
             {service.description}
           </motion.p>
@@ -107,7 +107,7 @@ const ServiceCard = ({
             hidden: {},
             show: { transition: { staggerChildren: 0.05 } },
           }}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
         >
           {service.items.map((item, i) => (
             <motion.div
@@ -118,15 +118,15 @@ const ServiceCard = ({
               }}
               transition={{ duration: 0.35 }}
               whileHover={{ y: -2 }}
-              className="flex items-center gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100"
+              className="flex items-center gap-3 p-3 sm:p-4 rounded-2xl bg-slate-50 border border-slate-100"
             >
-              <div className="text-blue-500">
+              <div className="text-blue-500 shrink-0">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </div>
 
-              <span className="text-sm font-semibold text-slate-700">
+              <span className="text-xs sm:text-sm font-semibold text-slate-700 leading-snug">
                 {item}
               </span>
             </motion.div>
@@ -139,7 +139,7 @@ const ServiceCard = ({
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ delay: 0.25 }}
-            className="text-xl text-slate-500 font-medium leading-relaxed max-w-xl"
+            className="text-base sm:text-lg lg:text-xl text-slate-500 font-medium leading-relaxed max-w-xl"
           >
             {service.descriptionn}
           </motion.p>
@@ -154,12 +154,13 @@ const ServiceCard = ({
         whileHover={{ y: -4 }}
         className="flex-1 relative w-full"
       >
-        <div className="relative aspect-4/3 rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl">
+        <div className="relative aspect-4/3 rounded-3xl sm:rounded-[2.5rem] overflow-hidden border-4 sm:border-8 border-white shadow-2xl">
 
           <Image
             src={service.image}
             alt={service.title}
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
             style={{
               animation: `slowZoom ${12 + index * 2}s ease-in-out infinite`,
@@ -170,7 +171,7 @@ const ServiceCard = ({
 
           <motion.div
             whileHover={{ scale: 1.08, rotate: 4 }}
-            className="absolute top-6 right-6 w-16 h-16 bg-white/90 backdrop-blur-md rounded-2xl flex items-center justify-center text-blue-600 shadow-xl border border-white/20"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-12 h-12 sm:w-16 sm:h-16 bg-white/90 backdrop-blur-md rounded-2xl flex items-center justify-center text-blue-600 shadow-xl border border-white/20"
           >
             {service.icon}
           </motion.div>
@@ -235,19 +236,18 @@ export default function TransporteContent() {
 
   return (
     <section className="bg-white overflow-hidden">
-
       <style>{slowZoomStyle}</style>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
         <motion.div
           initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.75 }}
-          className="pt-24 pb-12 text-center lg:text-left"
+          className="pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-12 text-center lg:text-left"
         >
-          <h1 className="text-5xl md:text-7xl font-black text-slate-900 leading-[0.9]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95]">
             Soluciones de <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">
               Transporte Inteligente.

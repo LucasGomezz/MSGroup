@@ -16,7 +16,8 @@ export default function MSforwarding() {
                 mediaSrc="/videos/ms-forwarding.mp4"
                 overlayOpacity="bg-black/30"
                 gradient={true}
-                gradientColor="from-forwardingPrincipal/60 via-forwardingPrincipal/20" />
+                gradientColor="from-forwardingPrincipal/60 via-forwardingPrincipal/20"
+                defaultService="MS Forwarding" />
             <StatsForwarding />
             <IntroForwarding />
             <TransporteContent />

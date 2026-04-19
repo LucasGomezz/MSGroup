@@ -89,10 +89,7 @@ export default function ShippingBrokerageServices() {
               >
 
                 <div
-                  className="w-12 h-12 flex items-center justify-center rounded-full 
-                  border-2 border-shippingPrincipal bg-white text-shippingPrincipal 
-                  group-hover:bg-shippingPrincipal group-hover:text-white 
-                  transition-all duration-300 shadow-sm z-10"
+                  className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-shippingPrincipal bg-white text-shippingPrincipal group-hover:bg-shippingPrincipal group-hover:text-white transition-all duration-300 shadow-sm z-10"
                 >
                   {item.icon}
                 </div>

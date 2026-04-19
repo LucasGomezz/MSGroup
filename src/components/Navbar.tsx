@@ -5,17 +5,16 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import ContactModal from "@/components/ContactModal";
 
 export default function Navbar() {
   const pathname = usePathname();
-
   const [visible, setVisible] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
-
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-
   const navRef = useRef<HTMLElement>(null);
+  const [contactOpen, setContactOpen] = useState(false);
 
   useEffect(() => {
     const TOP_OFFSET = 150;
@@ -127,180 +126,181 @@ export default function Navbar() {
   };
 
   const navLinkClass = (path: string) =>
-    `transition ${
-      isActive(path)
-        ? `${getColorPrimary()} font-semibold underline underline-offset-8`
-        : `${getColorHoverSecondary()}`
+    `transition ${isActive(path)
+      ? `${getColorPrimary()} font-semibold underline underline-offset-8`
+      : `${getColorHoverSecondary()}`
     }`;
 
   return (
-    <header
-      ref={navRef}
-      className={`fixed top-3 md:top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl transition-all duration-500 ${
-        visible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"
-      }`}
-    >
-      <div
-        className={`bg-white/75 backdrop-blur-xl border ${getBorderColor()} shadow-lg rounded-2xl px-4 md:px-6 py-3`}
+    <>
+      <header
+        ref={navRef}
+        className={`fixed top-3 md:top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl transition-all duration-500 ${visible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"
+          }`}
       >
-        {/* TOP BAR */}
-        <div className="flex items-center justify-between gap-4">
-          {/* LOGO */}
-          <Link href="/" className="flex items-center shrink-0">
-            <Image
-              src={getLogo()}
-              alt="Logo"
-              width={160}
-              height={80}
-              className="h-10 md:h-14 w-auto"
-              priority
-            />
-          </Link>
-
-          {/* DESKTOP */}
-          <nav
-            className={`hidden lg:flex items-center gap-10 font-medium text-base xl:text-lg ${getColorPrimary()}`}
-          >
-            <Link href="/" className={navLinkClass("/")}>
-              Inicio
+        <div
+          className={`bg-white/75 backdrop-blur-xl border ${getBorderColor()} shadow-lg rounded-2xl px-4 md:px-6 py-3`}
+        >
+          {/* TOP BAR */}
+          <div className="flex items-center justify-between gap-4">
+            {/* LOGO */}
+            <Link href="/" className="flex items-center shrink-0">
+              <Image
+                src={getLogo()}
+                alt="Logo"
+                width={160}
+                height={80}
+                className="h-10 md:h-14 w-auto"
+                priority
+              />
             </Link>
 
-            <div className="relative group">
-              <span className={navLinkClass("/servicios")}>Servicios</span>
-
-              <div className="absolute left-0 top-full mt-3 w-56 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
-                <Link
-                  href="/servicios/ms-trading"
-                  className="block px-4 py-3 hover:bg-gray-100"
-                >
-                  MS Trading
-                </Link>
-
-                <Link
-                  href="/servicios/ms-shipping"
-                  className="block px-4 py-3 hover:bg-gray-100"
-                >
-                  MS Shipping
-                </Link>
-
-                <Link
-                  href="/servicios/ms-forwarding"
-                  className="block px-4 py-3 hover:bg-gray-100"
-                >
-                  MS Forwarding
-                </Link>
-              </div>
-            </div>
-
-            <Link
-              href="/porQueElegirnos"
-              className={navLinkClass("/porQueElegirnos")}
+            {/* DESKTOP SOLO XL+ */}
+            <nav
+              className={`hidden xl:flex items-center gap-10 font-medium text-base xl:text-lg ${getColorPrimary()}`}
             >
-              Por Qué Elegirnos
-            </Link>
+              <Link href="/" className={navLinkClass("/")}>
+                Inicio
+              </Link>
 
-            <Link href="/contacto" className={navLinkClass("/contacto")}>
-              Contacto
-            </Link>
-          </nav>
+              <div className="relative group">
+                <span className={navLinkClass("/servicios")}>Servicios</span>
 
-          {/* CTA DESKTOP */}
-          <button
-            className={`hidden lg:block ${getColorSecondary()} text-white px-5 py-2 rounded-lg font-semibold hover:scale-105 transition-all`}
-          >
-            Contactanos
-          </button>
-
-          {/* MOBILE BTN */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className={`lg:hidden ${getColorPrimary()}`}
-          >
-            {mobileOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-
-        {/* MOBILE MENU */}
-        {mobileOpen && (
-          <div className="lg:hidden pt-5 pb-2 border-t mt-4 space-y-4">
-            <Link
-              href="/"
-              onClick={() => setMobileOpen(false)}
-              className={`block ${navLinkClass("/")}`}
-            >
-              Inicio
-            </Link>
-
-            {/* Servicios */}
-            <div>
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className={`flex items-center justify-between w-full ${navLinkClass(
-                  "/servicios"
-                )}`}
-              >
-                Servicios
-                <ChevronDown
-                  size={18}
-                  className={`transition ${
-                    servicesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {servicesOpen && (
-                <div className="mt-3 ml-4 space-y-3 text-sm">
+                <div className="absolute left-0 top-full mt-3 w-56 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
                   <Link
                     href="/servicios/ms-trading"
-                    onClick={() => setMobileOpen(false)}
-                    className="block"
+                    className="block px-4 py-3 hover:bg-gray-100"
                   >
                     MS Trading
                   </Link>
 
                   <Link
                     href="/servicios/ms-shipping"
-                    onClick={() => setMobileOpen(false)}
-                    className="block"
+                    className="block px-4 py-3 hover:bg-gray-100"
                   >
                     MS Shipping
                   </Link>
 
                   <Link
                     href="/servicios/ms-forwarding"
-                    onClick={() => setMobileOpen(false)}
-                    className="block"
+                    className="block px-4 py-3 hover:bg-gray-100"
                   >
                     MS Forwarding
                   </Link>
                 </div>
-              )}
-            </div>
+              </div>
 
-            <Link
-              href="/porQueElegirnos"
-              onClick={() => setMobileOpen(false)}
-              className={`block ${navLinkClass("/porQueElegirnos")}`}
-            >
-              Por Qué Elegirnos
-            </Link>
+              <Link
+                href="/porQueElegirnos"
+                className={navLinkClass("/porQueElegirnos")}
+              >
+                Por Qué Elegirnos
+              </Link>
 
-            <Link
-              href="/contacto"
-              onClick={() => setMobileOpen(false)}
-              className={`block ${navLinkClass("/contacto")}`}
-            >
-              Contacto
-            </Link>
+            </nav>
 
+            {/* CTA SOLO XL+ */}
             <button
-              className={`w-full mt-2 ${getColorSecondary()} text-white px-5 py-3 rounded-xl font-semibold`}
+              className={`hidden xl:block ${getColorSecondary()} text-white px-5 py-2 rounded-lg font-semibold hover:scale-105 transition-all cursor-pointer`}
+              onClick={() => {
+                setMobileOpen(false);
+                setContactOpen(true);
+              }}
             >
               Contactanos
             </button>
+
+            {/* MOBILE / TABLET / NOTEBOOK CHICA */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className={`xl:hidden ${getColorPrimary()}`}
+            >
+              {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
           </div>
-        )}
-      </div>
-    </header>
+
+          {/* MENU MOBILE / TABLET */}
+          {mobileOpen && (
+            <div className="xl:hidden pt-5 pb-2 border-t mt-4 space-y-4">
+              <Link
+                href="/"
+                onClick={() => setMobileOpen(false)}
+                className={`block ${navLinkClass("/")}`}
+              >
+                Inicio
+              </Link>
+
+              {/* SERVICIOS */}
+              <div>
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className={`flex items-center justify-between w-full ${navLinkClass(
+                    "/servicios"
+                  )}`}
+                >
+                  Servicios
+
+                  <ChevronDown
+                    size={18}
+                    className={`transition ${servicesOpen ? "rotate-180" : ""
+                      }`}
+                  />
+                </button>
+
+                {servicesOpen && (
+                  <div className="mt-3 ml-4 space-y-3 text-sm">
+                    <Link
+                      href="/servicios/ms-trading"
+                      onClick={() => setMobileOpen(false)}
+                      className="block"
+                    >
+                      MS Trading
+                    </Link>
+
+                    <Link
+                      href="/servicios/ms-shipping"
+                      onClick={() => setMobileOpen(false)}
+                      className="block"
+                    >
+                      MS Shipping
+                    </Link>
+
+                    <Link
+                      href="/servicios/ms-forwarding"
+                      onClick={() => setMobileOpen(false)}
+                      className="block"
+                    >
+                      MS Forwarding
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              <Link
+                href="/porQueElegirnos"
+                onClick={() => setMobileOpen(false)}
+                className={`block ${navLinkClass("/porQueElegirnos")}`}
+              >
+                Por Qué Elegirnos
+              </Link>
+              <button
+                className={`w-full mt-2 ${getColorSecondary()} text-white px-5 py-3 rounded-xl font-semibold cursor-pointer`}
+                onClick={() => {
+                  setMobileOpen(false);
+                  setContactOpen(true);
+                }}
+              >
+                Contactanos
+              </button>
+            </div>
+          )}
+        </div>
+
+      </header>
+      <ContactModal
+        open={contactOpen}
+        onClose={() => setContactOpen(false)}
+      />
+    </>
   );
 }

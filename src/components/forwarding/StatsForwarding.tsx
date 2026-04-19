@@ -12,8 +12,8 @@ export default function StatsForwarding() {
   ];
 
   return (
-    <section className="bg-navy text-white py-20">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="bg-navy text-white py-14 sm:py-16 md:py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <motion.div
           initial="hidden"
@@ -27,7 +27,7 @@ export default function StatsForwarding() {
               },
             },
           }}
-          className="flex justify-between items-center gap-6 text-base md:text-lg"
+          className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row justify-between items-center gap-4 sm:gap-5 lg:gap-6 text-sm sm:text-base md:text-lg"
         >
           {items.map((item, i) => (
             <motion.div
@@ -38,13 +38,13 @@ export default function StatsForwarding() {
               }}
               transition={{ duration: 0.55, ease: "easeOut" }}
               whileHover={{ y: -3 }}
-              className="flex items-center gap-3 whitespace-nowrap"
+              className="flex items-center justify-center lg:justify-start gap-3 whitespace-nowrap w-full sm:w-auto py-3"
             >
               <motion.div
                 whileHover={{ scale: 1.12, rotate: 4 }}
                 transition={{ duration: 0.25 }}
               >
-                <item.icon className="w-6 h-6 text-sand" />
+                <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-sand" />
               </motion.div>
 
               <span className="text-gray-200 font-medium">
@@ -52,7 +52,7 @@ export default function StatsForwarding() {
               </span>
 
               {i !== items.length - 1 && (
-                <span className="text-gray-500 mx-3">|</span>
+                <span className="hidden lg:block text-gray-500 mx-3">|</span>
               )}
             </motion.div>
           ))}

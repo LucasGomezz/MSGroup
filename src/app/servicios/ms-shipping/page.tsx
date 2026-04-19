@@ -20,7 +20,7 @@ export default function MSShipping() {
             overlayOpacity="bg-black/30" 
             gradient={true}
             gradientColor="from-shippingPrincipal/40 via-shippingPrincipal/20"
-             />
+            defaultService="MS Shipping" />
             <section className="relative w-full overflow-hidden">
                 <ShippingIntro/>
                 <ShippingShipManagment/>

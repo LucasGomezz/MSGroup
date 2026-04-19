@@ -1,8 +1,9 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import ContactModal from "../ContactModal";
 
 const services = [
   {
@@ -18,6 +19,7 @@ const services = [
     ],
     cta: "Consultar servicio",
     image: "/images/shipping.png",
+    defaultService: "MS Shipping"
   },
   {
     title: "Forwarding",
@@ -37,6 +39,7 @@ const services = [
     ],
     cta: "Consultar servicio",
     image: "/images/forwardingPruebaHome.jpg",
+    defaultService: "MS Forwarding"
   },
   {
     title: "Trading",
@@ -50,11 +53,19 @@ const services = [
     ],
     cta: "Consultar servicio",
     image: "/images/tradinggg.png",
+    defaultService: "MS Trading"
   },
 ];
 
 export default function Services() {
   const containerRef = useRef(null);
+  const [contactOpen, setContactOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState("Seleccionar servicio");
+
+  const openContact = (service: string) => {
+    setSelectedService(service);
+    setContactOpen(true);
+  };
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -90,6 +101,7 @@ export default function Services() {
                   service={service}
                   index={index}
                   progress={scrollYProgress}
+                  onContact={openContact}
                 />
               ))}
             </div>
@@ -143,7 +155,9 @@ export default function Services() {
                   ))}
                 </div>
 
-                <button className="mt-8 text-xs sm:text-sm font-bold uppercase tracking-[0.3em] text-navy">
+                <button
+                  onClick={() => openContact(service.defaultService)}
+                  className="mt-8 text-xs sm:text-sm font-bold uppercase tracking-[0.3em] text-navy">
                   {service.cta}
                 </button>
               </div>
@@ -151,7 +165,13 @@ export default function Services() {
           ))}
 
         </div>
+
       </section>
+      <ContactModal
+        open={contactOpen}
+        onClose={() => setContactOpen(false)}
+        defaultService={selectedService}
+      />
     </>
   );
 }
@@ -197,7 +217,7 @@ function ImageTransition({
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function ScrollContent({ service, index, progress }: any) {
+function ScrollContent({ service, index, progress, onContact }: any) {
   const unit = 1 / (services.length - 1);
   const center = index * unit;
   const buffer = 0.2;
@@ -275,7 +295,10 @@ function ScrollContent({ service, index, progress }: any) {
         ))}
       </div>
 
-      <motion.button className="mt-12 group flex items-center gap-6 w-fit cursor-pointer">
+      <motion.button
+        onClick={() => onContact(service.defaultService)}
+        className="mt-12 group flex items-center gap-6 w-fit cursor-pointer"
+      >
         <span className="text-xs font-bold uppercase tracking-[0.4em] text-navy group-hover:text-orange-600 transition-colors">
           {service.cta}
         </span>
