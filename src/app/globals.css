@@ -16,11 +16,16 @@
   --shippingPrincipal: #2A632C;
   --shippingSecundario: #488C46;
   --shippingComplementario: #E53935;
-  /*MS Fowarding*/
-  --fowardingPrincipal: #3767A6;
-  --fowardingSecundario: #51ABD7;
-  --fowardingComplementario: #FF8C42;
+  /*MS forwarding*/
+  --forwardingPrincipal: #3767A6;
+  --forwardingSecundario: #51ABD7;
+  --forwardingComplementario: #FF8C42;
   /*Ms Trading*/
+  --tradingPrincipal:#777777;
+  --tradingSecundario: #5C5C5C;
+  --tradingComplementario:#70A4DC;
+
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -64,6 +69,20 @@
   --color-coral: var(--coral);
   --color-sky: var(--sky);
   --color-sand: var(--sand);
+
+  /*MS Shipping*/
+  --color-shippingPrincipal: var(--shippingPrincipal);
+  --color-shippingSecundario: var(--shippingSecundario);
+  --color-shippingComplementario: var(--shippingComplementario);
+  /*MS forwarding*/
+  --color-forwardingPrincipal: var(--forwardingPrincipal);
+  --color-forwardingSecundario: var(--forwardingSecundario);
+  --color-forwardingComplementario: var(--forwardingComplementario);
+    /*Ms Trading*/
+  --color-tradingPrincipal: var(--tradingPrincipal);
+  --color-tradingSecundario: var(--tradingSecundario);
+  --color-tradingComplementario: var(--tradingComplementario);
+
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
@@ -159,4 +178,17 @@
 
   }
 
+}
+html body {
+  font-family: var(--font-body);
+}
+
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  font-family: var(--font-title);
+  letter-spacing: 2px;
 }
