@@ -79,13 +79,14 @@ export default function ContactModal({
 
         if (newErrors.name || newErrors.email || newErrors.message) return;
 
-        const text = `👋 Hola, soy ${name}
-🏢 Empresa: ${company}
-📧 Email: ${email}
-🛠️ Servicio: ${service}
+        const text = `Hola, soy ${name}
 
-💬 Consulta:
-${message}`;
+        Empresa: ${company}
+        Email: ${email}
+        Servicio solicitado: ${service}
+
+        Consulta:
+        ${message}`;
 
         window.open(
             `https://wa.me/541135925567?text=${encodeURIComponent(text)}`,
