@@ -46,7 +46,7 @@ export default function ShippingAgency() {
   ];
 
   return (
-    <div className="w-full bg-white font-sans overflow-hidden">
+    <div id="agencia-maritima" className="w-full bg-white font-sans overflow-hidden">
 
       <div className="relative w-full min-h-187.5 flex items-center justify-center p-6 md:p-12 lg:p-20">
 

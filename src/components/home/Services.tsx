@@ -4,52 +4,105 @@ import { useRef, useState } from "react";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import ContactModal from "../ContactModal";
+import Link from "next/link";
 
 const services = [
   {
-    title: "Shipping",
+    title: "MS Shipping",
     subTitle: "Servicios marítimos.",
+    href: "/servicios/ms-shipping",
     description:
       "Especializados en el manejo comercial y operativo de buques como Operadores, Charterers, Agentes Marítimos y Brokers",
     points: [
-      "Servicios de Brokerage de Cargas y Buques",
-      "Operación de Buques (Ship Management)",
-      "Chartering",
-      "Servicios de Agencia Marítima",
+      {
+        label: "Servicios de Brokerage de Cargas y Buques",
+        link: "/servicios/ms-shipping#servicios-brokerage-cargas"
+      },
+      {
+        label: "Operación de Buques (Ship Management)",
+        link: "/servicios/ms-shipping#operacion-buques"
+      },
+      {
+        label: "Chartering",
+        link: "/servicios/ms-shipping#cherating"
+      },
+      {
+        label: "Servicios de Agencia Marítima",
+        link: "/servicios/ms-shipping#agencia-maritima"
+      },
+
     ],
     cta: "Consultar servicio",
     image: "/images/shipping.png",
     defaultService: "MS Shipping"
   },
   {
-    title: "Forwarding",
+    title: "MS Forwarding",
     subTitle: "Operaciones aéreas y terrestres.",
+    href: "/servicios/ms-forwarding",
     description:
       "Operadora argentina de cargas internacionales por vía marítima, aérea y terrestre desde y hacia cualquier parte del mundo.",
     points: [
-      "Transporte Marítimo Internacional",
-      "Transporte Aéreo Internacional",
-      "Transporte Terrestre",
-      "Servicios Multimodales",
-      "Cargas de Proyecto",
-      "Cargas Break Bulk",
-      "Despacho Aduanero",
-      "Seguros de Carga",
-      "Depósito Fiscal y Logística",
+      {
+        label: "Transporte Marítimo Internacional",
+        link: "/servicios/ms-forwarding#maritimo"
+      },
+      {
+        label: "Transporte Aéreo Internacional",
+        link: "/servicios/ms-forwarding#aereo"
+      },
+      {
+        label: "Transporte Terrestre",
+        link: "/servicios/ms-forwarding#terrestre"
+      },
+      {
+        label: "Servicios Multimodales",
+        link: "/servicios/ms-forwarding#servicios-portuarios"
+      },
+      {
+        label: "Cargas de Proyecto",
+        link: "/servicios/ms-forwarding#servicios-portuarios"
+      },
+      {
+        label: "Cargas Break Bulk",
+        link: "/servicios/ms-forwarding#servicios-portuarios"
+      },
+      {
+        label: "Despacho Aduanero",
+        link: "/servicios/ms-forwarding#servicios-portuarios"
+      },
+      {
+        label: "Seguros de Carga",
+        link: "/servicios/ms-forwarding#servicios-portuarios"
+      },
+      {
+        label: "Depósito Fiscal y Logística",
+        link: "/servicios/ms-forwarding#servicios-portuarios"
+      },
     ],
     cta: "Consultar servicio",
     image: "/images/forwardingPruebaHome.jpg",
     defaultService: "MS Forwarding"
   },
   {
-    title: "Trading",
+    title: "MT Trading",
     subTitle: "Logística y comercialización.",
+    href: "/servicios/mt-trading",
     description:
       "Desarrollo de operaciones de comercio internacional y consultoría integral para empresas exportadoras e importadoras.",
     points: [
-      "Trading internacional",
-      "Brokerage comercial",
-      "Consultoría en comercio exterior",
+      {
+        label: "Trading internacional",
+        link: "/servicios/mt-trading#trading-internacional"
+      },
+      {
+        label: "Brokerage comercial",
+        link: "/servicios/mt-trading#brokerage-comercial"
+      },
+      {
+        label: "Consultoría en comercio exterior",
+        link: "/servicios/mt-trading#consultoria-comercio-exterior"
+      },
     ],
     cta: "Consultar servicio",
     image: "/images/tradinggg.png",
@@ -130,9 +183,11 @@ export default function Services() {
                 <div className="absolute inset-0 bg-black/30" />
 
                 <div className="absolute bottom-6 left-6 text-white">
-                  <h2 className="text-3xl sm:text-4xl font-bold">
-                    {service.title}
-                  </h2>
+                  <Link href={service.href}>
+                    <h2 className="text-3xl sm:text-4xl font-bold">
+                      {service.title}
+                    </h2>
+                  </Link>
                   <p className="text-sm sm:text-base opacity-90">
                     {service.subTitle}
                   </p>
@@ -148,9 +203,11 @@ export default function Services() {
                   {service.points.map((point, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 rounded-full bg-orange-600 mt-2 shrink-0" />
-                      <span className="text-xs sm:text-sm uppercase tracking-wider text-gray-600">
-                        {point}
-                      </span>
+                      <Link href={point.link}>
+                        <span className="text-xs sm:text-sm uppercase tracking-wider text-gray-600">
+                          {point.label}
+                        </span>
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -265,10 +322,11 @@ function ScrollContent({ service, index, progress, onContact }: any) {
       }}
       className="absolute inset-0 flex flex-col justify-center space-y-8"
     >
-      <h2 className="text-5xl xl:text-7xl font-bold text-[#001f3f] leading-tight">
-        {service.title}
-      </h2>
-
+      <Link href={service.href}>
+        <h2 className="text-5xl xl:text-7xl font-bold text-[#001f3f] leading-tight">
+          {service.title}
+        </h2>
+      </Link>
       <div className="space-y-6 max-w-lg">
         <h3 className="text-xl xl:text-2xl font-light text-gray-700 italic">
           {service.subTitle}
@@ -280,17 +338,19 @@ function ScrollContent({ service, index, progress, onContact }: any) {
       </div>
 
       <div
-        className={`grid ${service.title === "Forwarding"
+        className={`grid ${service.title === "MS Forwarding"
           ? "grid-cols-2 gap-x-8"
           : "grid-cols-1"
           } gap-y-4 pt-4 border-l-2 border-navy/10 pl-8`}
       >
-        {service.points.map((point: string, i: number) => (
+        {service.points.map(( point: { label: string; link: string }, i: number) => (
           <div key={i} className="flex items-start text-gray-600 group">
             <div className="w-1.5 h-1.5 min-w-1.5 min-h-1.5 bg-orange-600 rounded-full mr-4 mt-2 opacity-30 group-hover:opacity-100 transition-opacity" />
-            <span className="text-sm uppercase tracking-wider font-medium opacity-70 group-hover:opacity-100 transition-opacity">
-              {point}
-            </span>
+            <Link href={point.link}>
+              <span className="text-sm uppercase tracking-wider font-medium opacity-70 group-hover:opacity-100 transition-opacity">
+                {point.label}
+              </span>
+            </Link>
           </div>
         ))}
       </div>
@@ -312,6 +372,6 @@ function ScrollContent({ service, index, progress, onContact }: any) {
           />
         </div>
       </motion.button>
-    </motion.div>
+    </motion.div >
   );
 }

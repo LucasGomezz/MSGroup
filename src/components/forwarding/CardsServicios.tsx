@@ -65,7 +65,7 @@ export default function CardsServicios() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section id="servicios-portuarios" className="py-24 bg-white">
       <div className="max-w-350 mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 35 }}

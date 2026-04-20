@@ -41,7 +41,7 @@ export default function ShippingShipManagment() {
   ];
 
   return (
-    <div className="w-full bg-shippingPrincipal py-16 px-6 md:px-12 lg:px-16">
+    <div id="operacion-buques" className="w-full bg-shippingPrincipal py-16 px-6 md:px-12 lg:px-16">
 
       <div className="grid md:grid-cols-2 gap-10 items-stretch">
         <motion.div

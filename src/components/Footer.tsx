@@ -1,5 +1,6 @@
 import { Clock3, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -104,6 +105,17 @@ export default function Footer() {
           <p>
             © 2026 MS Group S.R.L. Todos los derechos reservados.
           </p>
+
+          <Link href="/" className="flex items-center shrink-0">
+            <Image
+              src={"/icon/logo.ico"}
+              alt="Logo"
+              width={10}
+              height={5}
+              className="h-10 md:h-10 w-auto"
+              priority
+            />
+          </Link>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center">
 

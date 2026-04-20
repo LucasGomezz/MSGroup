@@ -11,7 +11,7 @@ export default function TradingConsulting() {
         transition: { duration: 0.6 },
     };
     return (
-        <div className="bg-white py-24 px-6">
+        <div id="consultoria-comercio-exterior" className="bg-white py-24 px-6">
             <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-center">
 
                 <div className="md:col-span-7">
