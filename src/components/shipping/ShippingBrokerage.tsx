@@ -58,7 +58,7 @@ export default function ShippingBrokerage() {
   ];
 
   return (
-    <div className="w-full bg-[#f8faf9] py-20 px-6 md:px-12 lg:px-20">
+    <div id="servicios-brokerage-cargas" className="w-full bg-[#f8faf9] py-20 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
 
         <div className="grid lg:grid-cols-3 gap-12 items-start">

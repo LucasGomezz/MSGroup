@@ -12,6 +12,7 @@ const slowZoomStyle = `
 `;
 
 interface ServiceItem {
+  id: string;
   title: string;
   description: string;
   items: string[];
@@ -57,13 +58,13 @@ const ServiceCard = ({
 
   return (
     <motion.div
+      id={service.id}
       initial={{ opacity: 0, y: 45 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.12 }}
       transition={{ duration: 0.75, ease: "easeOut" }}
-      className={`flex flex-col ${
-        isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-      } gap-10 md:gap-14 lg:gap-16 items-center py-14 sm:py-16 lg:py-20 relative overflow-hidden`}
+      className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+        } gap-10 md:gap-14 lg:gap-16 items-center py-14 sm:py-16 lg:py-20 relative overflow-hidden`}
     >
       <div className="flex-1 z-10 space-y-6 sm:space-y-8 w-full">
 
@@ -184,6 +185,7 @@ const ServiceCard = ({
 export default function TransporteContent() {
   const services: ServiceItem[] = [
     {
+      id: "maritimo",
       tag: "Ocean Freight",
       title: "Transporte Marítimo Internacional",
       description:
@@ -200,6 +202,7 @@ export default function TransporteContent() {
       icon: <IconShip />,
     },
     {
+      id: "aereo",
       tag: "Air Solutions",
       title: "Transporte Aéreo Internacional",
       description:
@@ -217,6 +220,7 @@ export default function TransporteContent() {
       icon: <IconPlane />,
     },
     {
+      id: "terrestre",
       tag: "Land Network",
       title: "Transporte Terrestre",
       description:

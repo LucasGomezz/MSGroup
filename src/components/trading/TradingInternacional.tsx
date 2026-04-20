@@ -11,7 +11,7 @@ export default function TradingInternational() {
         transition: { duration: 0.6 },
     };
     return (
-        <div className="bg-[#5C5C5C] text-white py-24 px-6 relative overflow-hidden">
+        <div id="trading-internacional" className="bg-[#5C5C5C] text-white py-24 px-6 relative overflow-hidden">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
                 <motion.div {...fadeInUp}

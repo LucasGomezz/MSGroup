@@ -61,7 +61,7 @@ export default function Navbar() {
   };
 
   const getBorderColor = () => {
-    if (pathname.startsWith("/servicios/ms-trading"))
+    if (pathname.startsWith("/servicios/mt-trading"))
       return "border-tradingPrincipal/40";
 
     if (pathname.startsWith("/servicios/ms-shipping"))
@@ -74,7 +74,7 @@ export default function Navbar() {
   };
 
   const getLogo = () => {
-    if (pathname.startsWith("/servicios/ms-trading"))
+    if (pathname.startsWith("/servicios/mt-trading"))
       return "/images/logos/logoMSTrading.png";
 
     if (pathname.startsWith("/servicios/ms-shipping"))
@@ -87,7 +87,7 @@ export default function Navbar() {
   };
 
   const getColorPrimary = () => {
-    if (pathname.startsWith("/servicios/ms-trading"))
+    if (pathname.startsWith("/servicios/mt-trading"))
       return "text-tradingPrincipal";
 
     if (pathname.startsWith("/servicios/ms-shipping"))
@@ -100,7 +100,7 @@ export default function Navbar() {
   };
 
   const getColorSecondary = () => {
-    if (pathname.startsWith("/servicios/ms-trading"))
+    if (pathname.startsWith("/servicios/mt-trading"))
       return "bg-tradingComplementario hover:bg-tradingComplementario/90";
 
     if (pathname.startsWith("/servicios/ms-shipping"))
@@ -113,7 +113,7 @@ export default function Navbar() {
   };
 
   const getColorHoverSecondary = () => {
-    if (pathname.startsWith("/servicios/ms-trading"))
+    if (pathname.startsWith("/servicios/mt-trading"))
       return "hover:text-tradingComplementario";
 
     if (pathname.startsWith("/servicios/ms-shipping"))
@@ -167,10 +167,10 @@ export default function Navbar() {
 
                 <div className="absolute left-0 top-full mt-3 w-56 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
                   <Link
-                    href="/servicios/ms-trading"
+                    href="/servicios/mt-trading"
                     className="block px-4 py-3 hover:bg-gray-100"
                   >
-                    MS Trading
+                    MT Trading
                   </Link>
 
                   <Link
@@ -248,7 +248,7 @@ export default function Navbar() {
                 {servicesOpen && (
                   <div className="mt-3 ml-4 space-y-3 text-sm">
                     <Link
-                      href="/servicios/ms-trading"
+                      href="/servicios/mt-trading"
                       onClick={() => setMobileOpen(false)}
                       className="block"
                     >

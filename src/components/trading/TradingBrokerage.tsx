@@ -20,7 +20,7 @@ export default function TradingBrokerage() {
   ];
 
   return (
-    <div className="bg-[#777777] py-28 px-6 text-white relative">
+    <div id="brokerage-comercial" className="bg-[#777777] py-28 px-6 text-white relative">
       <div className="max-w-6xl mx-auto">
 
         <motion.div {...fadeInUp} className="mb-16">

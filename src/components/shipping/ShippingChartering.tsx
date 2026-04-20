@@ -27,7 +27,7 @@ export default function ShippingCherating() {
   ];
 
   return (
-    <div className="relative w-full min-h-150 flex items-center justify-center overflow-hidden">
+    <div id="cherating" className="relative w-full min-h-150 flex items-center justify-center overflow-hidden">
 
       <Image
         src="/images/shipping/shipping-cherating.jpg"

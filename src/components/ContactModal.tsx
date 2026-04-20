@@ -80,14 +80,16 @@ export default function ContactModal({
         if (newErrors.name || newErrors.email || newErrors.message) return;
 
         const text = `Hola, soy ${name}
-       Empresa: ${company}
-Email: ${email}
-Servicio: ${service}
 
-${message}`;
+        Empresa: ${company}
+        Email: ${email}
+        Servicio solicitado: ${service}
+
+        Consulta:
+        ${message}`;
 
         window.open(
-            `https://wa.me/541143224902?text=${encodeURIComponent(text)}`,
+            `https://wa.me/541135925567?text=${encodeURIComponent(text)}`,
             "_blank"
         );
     };
@@ -128,7 +130,7 @@ ${message}`;
                                     </p>
 
                                     <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                                        Contactanos
+                                        Hablemos de tu proximo envio
                                     </h2>
 
                                     <p className="text-white/80 mb-10">
@@ -170,9 +172,12 @@ ${message}`;
                                 </div>
                                 <div className="px-6 sm:px-8 lg:px-10 py-10">
 
-                                    <h3 className="text-2xl font-semibold text-navy mb-6">
+                                    <h3 className="text-2xl font-semibold text-navy mb-2">
                                         Solicitar contacto
                                     </h3>
+                                    <p className="text-md font-semibold text-navy ">
+                                        Completa el formulario y un especialista te contactará de inmediato.
+                                    </p>
                                     <div >
                                         <input
                                             type="text"
