@@ -36,7 +36,7 @@ export default function CTAHome() {
               onClick={() => {
                 setContactOpen(true);
               }}>
-              Contactanos
+              Hablemos
             </button>
           </div>
         </div>

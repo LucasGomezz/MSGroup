@@ -9,27 +9,27 @@ export default function ShippingAgency() {
     {
       icon: Ship,
       title: "Atención a diversos tipos de buques",
-      desc: "Bulk carriers, buques multipropósito, Roll-on/Roll-off (Ro/Ro), portacontenedores y buques pesqueros",
+      desc: "Bulk carriers, buques multipropósito, Roll-on/Roll-off (Ro/Ro), portacontenedores y buques pesqueros.",
     },
     {
       icon: Container,
       title: "Gestión de múltiples tipos de carga",
-      desc: "Graneles, productos agrícolas, productos siderúrgicos, fertilizantes, contenedores, carga de proyecto, vehículos y carga general",
+      desc: "Graneles, productos agrícolas, productos siderúrgicos, fertilizantes, contenedores, carga de proyecto, vehículos y carga general.",
     },
     {
       icon: Eye,
       title: "Seguimiento permanente",
-      desc: "Monitoreo continuo de operaciones portuarias cumpliendo con todos los requerimientos operativos y documentales de nuestros clientes",
+      desc: "Monitoreo continuo de operaciones portuarias cumpliendo con todos los requerimientos operativos y documentales de nuestros clientes.",
     },
     {
       icon: Users,
       title: "Equipo especializado",
-      desc: "Staff de profesionales con amplia experiencia y la infraestructura necesaria para asegurar operaciones portuarias eficientes",
+      desc: "Staff de profesionales con amplia experiencia y la infraestructura necesaria para asegurar operaciones portuarias eficientes.",
     },
     {
       icon: Languages,
       title: "Capacidad multilingüe",
-      desc: "Personal bilingüe español/inglés, con conocimientos adicionales de italiano y portugués para comunicación con tripulaciones y armadores internacionales",
+      desc: "Personal bilingüe español/inglés, con conocimientos adicionales de italiano y portugués para comunicación con tripulaciones y armadores internacionales.",
     },
   ];
 

@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Hero title="Un partner para toda tu operación internacional." 
                   description="Desde 1990 moviendo tu negocio sin fronteras con soluciones integrales de logística." 
-                  buttonText="Contactanos" 
+                  buttonText="Iniciá tu consulta" 
                   buttonColor="bg-coral hover:shippingComplementario/90" 
                   mediaType="image" 
                   mediaSrc="/images/heroBoat.png" 

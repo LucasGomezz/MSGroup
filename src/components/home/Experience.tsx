@@ -51,7 +51,7 @@ export default function Experience() {
             —
 
             <span className="text-coral font-semibold"> Shipping</span>,
-            <span className="text-coral font-semibold"> Forwarding</span>
+            <span className="text-coral font-semibold"> Forwarding </span>
             y
             <span className="text-coral font-semibold"> Trading</span> —
 

@@ -13,7 +13,7 @@ export default function MSShipping() {
         <>
             <Hero title="MS Shipping" 
             description="Servicios marítimos especializados para navieras, armadores y operadores que buscan soluciones ágiles en el puerto." 
-            buttonText="Contactanos" 
+            buttonText="Iniciá tu consulta" 
             buttonColor="bg-shippingComplementario hover:shippingComplementario/90" 
             mediaType="video" 
             mediaSrc="/videos/ms-shipping.mp4" 

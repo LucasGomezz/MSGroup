@@ -38,7 +38,7 @@ const services = [
   },
   {
     title: "MS Forwarding",
-    subTitle: "Operaciones aéreas y terrestres.",
+    subTitle: "Operaciones marítimas, aéreas y terrestres.",
     href: "/servicios/ms-forwarding",
     description:
       "Operadora argentina de cargas internacionales por vía marítima, aérea y terrestre desde y hacia cualquier parte del mundo.",

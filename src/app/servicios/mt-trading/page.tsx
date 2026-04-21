@@ -10,7 +10,7 @@ export default function MSTrading() {
         <>
             <Hero title="MT Trading"
                 description="Intermediación comercial y asesoramiento estratégico. Impulsamos la expansión internacional de empresas mediante soluciones comerciales integrales."
-                buttonText="Contactanos"
+                buttonText="Iniciá tu consulta"
                 buttonColor="bg-tradingComplementario hover:tradingComplementario/90"
                 mediaType="video"
                 mediaSrc="/videos/mt-trading.mp4"

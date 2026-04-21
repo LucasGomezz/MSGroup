@@ -7,8 +7,13 @@ export default function CardsServicios() {
   const services = [
     {
       title: "Servicios Multimodales",
-      description:
-        "Diseñamos soluciones logísticas que combinan diferentes modos de transporte (marítimo + terrestre, aéreo + terrestre) para optimizar tiempos y costos según las características de cada operación. Nuestra experiencia como operadores multimodales nos permite coordinar eficientemente cada tramo del trayecto, minimizando tiempos de espera y asegurando la trazabilidad completa del envío.",
+      description: (
+  <>
+    Diseñamos soluciones logísticas que combinan diferentes modos de transporte (marítimo + terrestre, aéreo + terrestre) para optimizar tiempos y costos según las características de cada operación.
+    <br /><br />
+    Nuestra experiencia como operadores multimodales nos permite coordinar eficientemente cada tramo del trayecto, minimizando tiempos de espera y asegurando la trazabilidad completa del envío.
+  </>
+),
       items: [],
     },
     {

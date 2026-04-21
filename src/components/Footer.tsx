@@ -66,6 +66,15 @@ export default function Footer() {
 
               <li>
                 <Link
+                  href="/servicios/ms-shipping"
+                  className="hover:text-white transition"
+                >
+                  MS Shipping
+                </Link>
+              </li>
+              
+              <li>
+                <Link
                   href="/servicios/ms-forwarding"
                   className="hover:text-white transition"
                 >
@@ -75,19 +84,10 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="/servicios/ms-shipping"
-                  className="hover:text-white transition"
-                >
-                  MS Shipping
-                </Link>
-              </li>
-
-              <li>
-                <Link
                   href="/servicios/ms-trading"
                   className="hover:text-white transition"
                 >
-                  MS Trading
+                  MT Trading
                 </Link>
               </li>
 

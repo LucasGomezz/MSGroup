@@ -10,7 +10,7 @@ export default function MSforwarding() {
         <>
             <Hero title="MS Forwarding"
                 description="Gestionamos el transporte internacional de tu carga con eficiencia y transparencia total en cada etapa del proceso."
-                buttonText="Contactanos"
+                buttonText="Iniciá tu consulta"
                 buttonColor="bg-forwardingComplementario hover:forwardingComplementario/90"
                 mediaType="video"
                 mediaSrc="/videos/ms-forwarding.mp4"

@@ -167,24 +167,24 @@ export default function Navbar() {
 
                 <div className="absolute left-0 top-full mt-3 w-56 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
                   <Link
-                    href="/servicios/mt-trading"
-                    className="block px-4 py-3 hover:bg-gray-100"
-                  >
-                    MT Trading
-                  </Link>
-
-                  <Link
                     href="/servicios/ms-shipping"
                     className="block px-4 py-3 hover:bg-gray-100"
                   >
                     MS Shipping
                   </Link>
-
+                  
                   <Link
                     href="/servicios/ms-forwarding"
                     className="block px-4 py-3 hover:bg-gray-100"
                   >
                     MS Forwarding
+                  </Link>
+
+                  <Link
+                    href="/servicios/mt-trading"
+                    className="block px-4 py-3 hover:bg-gray-100"
+                  >
+                    MT Trading
                   </Link>
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default function Navbar() {
               <Link
                 href="/#por-que-elegirnos"
               >
-                Por Qué Elegirnos
+                ¿Por qué elegirnos?
               </Link>
 
             </nav>

@@ -118,9 +118,11 @@ export default function ShippingShipManagment() {
             </h2>
 
             <p className="mt-6 text-base md:text-lg leading-relaxed text-white/90 max-w-md">
-              Gestionamos la operación integral para diversos armadores internacionales,
-              especializándonos en buques Bulk Carrier, Multipropósito y Roll-on/Roll-off,
-              entre otros.
+              Como operadores de buques, gestionamos la operación de buques para diversos armadores internacionales, principalmente de los tipos Bulk Carrier, Multipropósito y Roll-on/Roll-off, entre otros. 
+            </p>
+            <span></span>
+            <p className="mt-6 text-base md:text-lg leading-relaxed text-white/90 max-w-md">
+              Nuestra vasta trayectoria e inserción en los principales mercados internacionales altamente competitivos y nuestra seriedad en el cumplimiento de los compromisos contraídos, junto con la calidad de los servicios ofrecidos, nos han permitido que, año a año, empresas armadoras de primer nivel internacional y empresas importadores/exportadores de diferentes rubros nos confíen la operación y manejo de sus contratos de carga.
             </p>
           </motion.div>
         </motion.div>
