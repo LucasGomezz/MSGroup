@@ -169,7 +169,7 @@ ${message}`;
                 <div className="px-6 sm:px-8 lg:px-10 py-10">
                   <div className="block lg:hidden mb-6">
                     <h3 className="text-2xl font-semibold text-navy mb-2">
-                      Hablemos de tu próximo evento
+                      Hablemos de tu próximo envio
                     </h3>
                     <p className="text-md font-semibold text-navy">
                       Completa el formulario y un especialista te contactará de
