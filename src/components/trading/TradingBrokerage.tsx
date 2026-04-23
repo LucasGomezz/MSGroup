@@ -29,7 +29,7 @@ export default function TradingBrokerage() {
           </h3>
 
           <p className="text-xl md:text-2xl text-[#F4F1E8]/80 max-w-3xl font-light">
-            Facilitamos el encuentro entre compradores y vendedores a nivel internacional, actuando como intermediarios que garantizan <strong>transparencia, seguridad y cumplimiento</strong>.
+            Facilitamos el encuentro entre compradores y vendedores a nivel internacional, actuando como intermediarios que garantizan <strong>transparencia, seguridad y cumplimiento</strong> en las operaciones comerciales.
           </p>
         </motion.div>
 
