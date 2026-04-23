@@ -121,8 +121,20 @@ export default function IntroForwarding() {
                 className="space-y-6"
               >
                 {[
-                  "Ofrecemos soluciones integrales de transporte y logística internacional, gestión aduanera y documental y seguro de mercadería con un enfoque personalizado que prioriza la eficiencia operativa y la transparencia en cada etapa del proceso logístico.",
-                  "Como agentes de carga internacional especializados, coordinamos el movimiento de mercaderías, brindando a nuestros clientes visibilidad completa de sus envíos y respuesta ágil ante cualquier requerimiento.",
+                  <>
+                    Ofrecemos soluciones integrales de transporte y logística internacional,
+                    gestión aduanera y documental y seguro de mercadería con un enfoque{" "}
+                    <strong>personalizado</strong> que prioriza la <strong>eficiencia</strong>{" "}
+                    <strong>operativa</strong> y la <strong>transparencia</strong> en cada
+                    etapa del proceso logístico.
+                  </>,
+                  <>
+                    Como agentes de carga internacional especializados,{" "}
+                    <strong>coordinamos</strong> el movimiento de mercaderías por vía{" "}
+                    <strong>aérea</strong>, <strong>marítima</strong> y{" "}
+                    <strong>terrestre</strong>, brindando a nuestros clientes visibilidad
+                    completa de sus envíos y respuesta ágil ante cualquier requerimiento.
+                  </>,
                 ].map((text, i) => (
                   <motion.p
                     key={i}

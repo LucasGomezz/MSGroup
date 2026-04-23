@@ -18,7 +18,7 @@ export default function WhyMSGroup() {
   });
 
   return (
-    <section className="bg-white py-16 sm:py-20 md:py-24">
+    <section id="por-que-elegirnos" className="bg-white py-16 sm:py-20 md:py-24">
       <div
         ref={ref}
         className={`relative flex flex-col items-center gap-2 max-w-6xl mx-auto px-4 sm:px-6 transition-all duration-700 ${
