@@ -20,13 +20,13 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="sm:pl-0 lg:px-10 lg:border-r border-white/20">
+          <div className=" sm:pl-0 lg:px-10 lg:border-r border-white/20 ">
             <h3 className="text-coral font-semibold uppercase mb-3 text-center sm:text-left">
               Contacto
             </h3>
 
             <div className="space-y-6 text-sm sm:text-base">
-              <div className="flex gap-4">
+              <div className="flex justify-center sm:justify-start gap-4">
                 <MapPin className="text-coral mt-1" size={16} />
                 <div>
                   Tte. Gral. Juan D. Perón 683, 3° piso
@@ -35,25 +35,24 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex justify-center sm:justify-start gap-4">
                 <Phone className="text-coral mt-1" size={16} />
-                <a href="tel:+54 11 4322-4902">
+                <a href="tel:+541143224902">
                   +54 11 4322-4902
                 </a>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex justify-center sm:justify-start gap-4">
                 <Mail className="text-coral mt-1" size={16} />
                 <a href="mailto:maritima@maritima-group.com">
                   maritima@maritima-group.com
                 </a>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex justify-center sm:justify-start gap-4">
                 <Clock3 className="text-coral mt-1" size={16} />
                 <div>Lunes a Viernes · 9:00 a 18:00</div>
               </div>
-
             </div>
           </div>
 
@@ -72,7 +71,7 @@ export default function Footer() {
                   MS Shipping
                 </Link>
               </li>
-              
+
               <li>
                 <Link
                   href="/servicios/ms-forwarding"
@@ -84,7 +83,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="/servicios/ms-trading"
+                  href="/servicios/mt-trading"
                   className="hover:text-white transition"
                 >
                   MT Trading
@@ -119,13 +118,13 @@ export default function Footer() {
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center">
 
-            <Link href="/legal" className="hover:text-white transition">
+            <p className="hover:text-white transition">
               Aviso Legal
-            </Link>
+            </p>
 
-            <Link href="/privacidad" className="hover:text-white transition">
+            <p className="hover:text-white transition">
               Política de Privacidad
-            </Link>
+            </p>
 
           </div>
 

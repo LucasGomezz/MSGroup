@@ -252,7 +252,7 @@ export default function Navbar() {
                       onClick={() => setMobileOpen(false)}
                       className="block"
                     >
-                      MS Trading
+                      MT Trading
                     </Link>
 
                     <Link

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Montserrat } from "next/font/google";
+import BackToTopButton from "@/components/BackToTopButton";
 
 import "./globals.css";
 
@@ -45,6 +46,8 @@ export default function RootLayout({
         </main>
 
         <Footer />
+
+        <BackToTopButton />
       </body>
     </html>
   );
