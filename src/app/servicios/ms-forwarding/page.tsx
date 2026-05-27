@@ -4,6 +4,7 @@ import TransporteContent from "@/components/forwarding/TransporteContent";
 import StatsForwarding from "@/components/forwarding/StatsForwarding";
 import Hero from "@/components/Hero";
 import CTASection from "@/components/CTASection";
+import ServiceIntro from "@/components/ServiceIntro";
 
 
 export default function MSforwarding() {
@@ -11,7 +12,7 @@ export default function MSforwarding() {
         <>
             <Hero title="MS Forwarding"
                 description="Gestionamos el transporte internacional de tu carga con eficiencia y transparencia total en cada etapa del proceso."
-                buttonText="Iniciá tu consulta"
+                buttonText="Inicia tu consulta"
                 buttonColor="bg-forwardingComplementario hover:forwardingComplementario/90"
                 mediaType="video"
                 mediaSrc="/videos/ms-forwarding.mp4"
@@ -19,6 +20,11 @@ export default function MSforwarding() {
                 gradient={true}
                 gradientColor="from-forwardingPrincipal/60 via-forwardingPrincipal/20"
                 defaultService="MS Forwarding" />
+            <ServiceIntro
+                title="MS Forwarding"
+                colorClass="text-forwardingPrincipal"
+                description="Desde 1990, MS Forwarding brinda soluciones de transporte internacional desde Argentina, coordinando operaciones marítimas, aéreas y terrestres para empresas locales e internacionales."
+            />
             <StatsForwarding />
             <IntroForwarding />
             <TransporteContent />

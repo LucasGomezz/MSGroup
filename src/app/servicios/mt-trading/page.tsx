@@ -1,5 +1,6 @@
 import CTASection from "@/components/CTASection";
 import Hero from "@/components/Hero";
+import ServiceIntro from "@/components/ServiceIntro";
 import TradingBrokerage from "@/components/trading/TradingBrokerage";
 import TradingConsulting from "@/components/trading/TradingConsulting";
 import TradingInternational from "@/components/trading/TradingInternacional";
@@ -11,7 +12,7 @@ export default function MSTrading() {
         <>
             <Hero title="MT Trading"
                 description="Intermediación comercial y asesoramiento estratégico. Impulsamos la expansión internacional de empresas mediante soluciones comerciales integrales."
-                buttonText="Iniciá tu consulta"
+                buttonText="Inicia tu consulta"
                 buttonColor="bg-tradingComplementario hover:tradingComplementario/90"
                 mediaType="video"
                 mediaSrc="/videos/mt-trading.mp4"
@@ -20,6 +21,11 @@ export default function MSTrading() {
                 gradientColor="from-tradingPrincipal/40 via-tradingPrincipal/20"
                 defaultService="MS Trading" />
             <section className="w-full bg-[#F4F1E8] text-[#5C5C5C] overflow-hidden">
+                <ServiceIntro
+                    title="MT Trading"
+                    colorClass="text-tradingPrincipal"
+                    description="Desde 1990, MT Trading acompaña operaciones de comercio exterior desde Argentina, conectando empresas locales e internacionales mediante soluciones comerciales, logísticas y estratégicas."
+                />
                 <TradingIntro />
                 <TradingInternational />
                 <TradingBrokerage />

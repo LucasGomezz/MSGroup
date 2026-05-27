@@ -72,7 +72,7 @@ export default function Hero({
         {/* CONTENT */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-28 md:pt-32 pb-16">
           <div className="max-w-xl text-white">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-tight mb-5">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-5">
               {title}
             </h1>
 

@@ -23,7 +23,7 @@ export default function Stats() {
         </h2>
 
         <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
-          Ofrecemos soluciones seguras y a medida para el transporte
+          Ofrecemos soluciones seguras y a medida para el comercio exterior y el transporte
           internacional de mercaderías.
         </p>
       </div>

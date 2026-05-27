@@ -30,7 +30,7 @@ export default function Experience() {
     >
       <div className="w-full mx-auto grid lg:grid-cols-2 gap-10 md:gap-14 lg:gap-16 items-center">
 
-        <div className="px-1 sm:px-2 md:px-6 lg:px-10 text-left md:text-justify order-2 lg:order-1">
+        <div className="px-1 sm:px-2 md:px-6 lg:px-10 text-left  order-2 lg:order-1">
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-6 md:mb-8 leading-tight">
             La diferencia está en los detalles
@@ -42,7 +42,7 @@ export default function Experience() {
             entendemos que cada requerimiento es único. Por eso, hemos dividido
             las{" "}
             <span className="font-bold text-navy">
-              diferentes actividades
+              diferentes actividades y servicios
             </span>{" "}
             de nuestra empresa creando{" "}
             <span className="font-bold text-navy">
@@ -59,7 +59,7 @@ export default function Experience() {
           </p>
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
-            Hoy, nuestra red global y nuestra base en
+            Hoy, nuestra red global de agentes de primera línea internacional en más de 100 países y nuestra base en
             <span className="font-bold text-navy"> Argentina</span> nos permiten
             garantizar la confianza de nuestros clientes brindando
             <span className="font-bold text-navy">
