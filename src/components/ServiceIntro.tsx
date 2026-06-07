@@ -24,7 +24,7 @@ export default function ServiceIntro({
 
   return (
     <div
-      className="relative bg-[#f5f5f5] bg-cover bg-center bg-no-repeat py-12 px-6 text-center"
+      className="relative bg-[#f5f5f5] bg-cover bg-center bg-no-repeat py-12 px-6 text-center "
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <motion.div {...fadeInUp}>

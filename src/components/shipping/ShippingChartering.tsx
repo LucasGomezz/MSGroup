@@ -30,7 +30,7 @@ export default function ShippingCherating() {
     <div id="cherating" className="relative w-full min-h-150 flex items-center justify-center overflow-hidden">
 
       <Image
-        src="/images/shipping/shipping-cherating.jpg"
+        src="/images/shipping/vignetteAtardecer.jpg"
         alt="Chartering background"
         fill
         className="absolute inset-0 object-cover"
@@ -60,9 +60,7 @@ export default function ShippingCherating() {
             <span className="font-medium text-white">(time charter)</span> para
             atender tanto los contratos de carga de nuestros clientes como
             nuestros propios contratos de cargas y tráficos regulares,
-            concentrándonos principalmente en el servicio de transporte de
-            commodities, graneles, carga rodante y carga general desde y hacia
-            cualquier puerto del mundo.
+            concentrándonos principalmente en el servicio de transporte de commodities, graneles, carga rodante, carga de proyecto y carga general a nivel global.
           </p>
         </motion.div>
 

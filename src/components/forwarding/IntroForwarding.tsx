@@ -122,7 +122,7 @@ export default function IntroForwarding() {
               >
                 {[
                   <>
-                    Ofrecemos soluciones integrales de transporte y logística internacional,
+                    Gracias a nuestro staff de profesionales en todas la áreas, y a nuestra red de agentes internacionales en más de 100 países, ofrecemos soluciones integrales de transporte y logística internacional,
                     gestión aduanera y documental y seguro de mercadería con un enfoque{" "}
                     <strong>personalizado</strong> que prioriza la <strong>eficiencia</strong>{" "}
                     <strong>operativa</strong> y la <strong>transparencia</strong> en cada
@@ -130,7 +130,7 @@ export default function IntroForwarding() {
                   </>,
                   <>
                     Como agentes de carga internacional especializados,{" "}
-                    <strong>coordinamos</strong> el movimiento de mercaderías por vía{" "}
+                    <strong>coordinamos</strong> el movimiento de todo tipo de mercaderías por vía{" "}
                     <strong>aérea</strong>, <strong>marítima</strong> y{" "}
                     <strong>terrestre</strong>, brindando a nuestros clientes visibilidad
                     completa de sus envíos y respuesta ágil ante cualquier requerimiento.

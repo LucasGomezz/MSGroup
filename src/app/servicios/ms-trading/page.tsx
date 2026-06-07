@@ -13,7 +13,7 @@ export default function MSTrading() {
             <Hero title="MT Trading"
                 description="Intermediación comercial y asesoramiento estratégico. Impulsamos la expansión internacional de empresas mediante soluciones comerciales integrales."
                 buttonText="Inicia tu consulta"
-                buttonColor="bg-tradingComplementario hover:tradingComplementario/90"
+                buttonColor="bg-tradingComplementario hover:bg-tradingComplementario/90"
                 mediaType="video"
                 mediaSrc="/videos/mt-trading.mp4"
                 overlayOpacity="bg-black/30"
@@ -21,11 +21,13 @@ export default function MSTrading() {
                 gradientColor="from-tradingPrincipal/40 via-tradingPrincipal/20"
                 defaultService="MS Trading" />
             <section className="w-full bg-[#F4F1E8] text-[#5C5C5C] overflow-hidden">
-                <ServiceIntro
-                    title="MT Trading"
-                    colorClass="text-tradingPrincipal"
-                    description="Desde 1990, MT Trading acompaña operaciones de comercio exterior desde Argentina, conectando empresas locales e internacionales mediante soluciones comerciales, logísticas y estratégicas."
-                />
+                <div className="relative z-10 shadow-[0_12px_30px_-15px_rgba(0,0,0,0.25)]">
+                    <ServiceIntro
+                        title="MT Trading"
+                        colorClass="text-tradingPrincipal"
+                        description="Desde 1990, MT Trading acompaña operaciones de comercio exterior desde Argentina, conectando empresas locales e internacionales mediante soluciones comerciales, logísticas y estratégicas."
+                    />
+                </div>
                 <TradingIntro />
                 <TradingInternational />
                 <TradingBrokerage />
@@ -34,7 +36,7 @@ export default function MSTrading() {
                     title="IMPULSÁ TU CRECIMIENTO EN MERCADOS INTERNACIONALES"
                     description="Identificamos oportunidades y estructuramos operaciones comerciales a tu medida."
                     buttonText="Hablemos"
-                    bgClassName="bg-tradingPrincipal"
+                    bgClassName="bg-[#23262A]"
                     textClassName="text-white"
                     buttonClassName="bg-white text-tradingComplementario hover:bg-gray-100"
                 />

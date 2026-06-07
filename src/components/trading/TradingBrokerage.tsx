@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
@@ -20,7 +20,7 @@ export default function TradingBrokerage() {
   ];
 
   return (
-    <div id="brokerage-comercial" className="bg-[#777777] py-28 px-6 text-white relative">
+    <div id="brokerage-comercial" className="bg-[#4A5158] py-28 px-6 text-white relative">
       <div className="max-w-6xl mx-auto">
 
         <motion.div {...fadeInUp} className="mb-16">
@@ -66,7 +66,7 @@ export default function TradingBrokerage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="bg-[#5C5C5C] p-10 rounded-3xl border border-white/10 flex flex-col justify-center relative overflow-hidden group"
+            className="bg-[#23262A] p-10 rounded-3xl border border-white/10 flex flex-col justify-center relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:rotate-12 transition-transform">
               <Briefcase size={80} />
@@ -80,7 +80,7 @@ export default function TradingBrokerage() {
               Reside en la red de contactos consolidada a lo largo de más de tres décadas.
             </p>
 
-            <div className="mt-8 pt-8 border-t border-white/10 italic text-[#8C8C8C]">
+            <div className="mt-8 pt-8 border-t border-white/10 italic text-[#7E868D]">
               Más de 35 años de confianza global
             </div>
           </motion.div>

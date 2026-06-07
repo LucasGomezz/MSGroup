@@ -61,7 +61,7 @@ export default function Navbar() {
   };
 
   const getBorderColor = () => {
-    if (pathname.startsWith("/servicios/mt-trading"))
+    if (pathname.startsWith("/servicios/ms-trading"))
       return "border-tradingPrincipal/40";
 
     if (pathname.startsWith("/servicios/ms-shipping"))
@@ -74,7 +74,7 @@ export default function Navbar() {
   };
 
   const getLogo = () => {
-    if (pathname.startsWith("/servicios/mt-trading"))
+    if (pathname.startsWith("/servicios/ms-trading"))
       return "/images/logos/logoMSTrading.png";
 
     if (pathname.startsWith("/servicios/ms-shipping"))
@@ -87,7 +87,7 @@ export default function Navbar() {
   };
 
   const getColorPrimary = () => {
-    if (pathname.startsWith("/servicios/mt-trading"))
+    if (pathname.startsWith("/servicios/ms-trading"))
       return "text-tradingPrincipal";
 
     if (pathname.startsWith("/servicios/ms-shipping"))
@@ -100,20 +100,20 @@ export default function Navbar() {
   };
 
   const getColorSecondary = () => {
-    if (pathname.startsWith("/servicios/mt-trading"))
+    if (pathname.startsWith("/servicios/ms-trading"))
       return "bg-tradingComplementario hover:bg-tradingComplementario/90";
 
     if (pathname.startsWith("/servicios/ms-shipping"))
       return "bg-shippingComplementario hover:bg-shippingComplementario/90";
 
     if (pathname.startsWith("/servicios/ms-forwarding"))
-      return "bg-forwardingComplementario hover:bg-forwardingComplementario/90";
+      return "bg-navy hover:bg-navy/90";
 
     return "bg-coral hover:bg-coral/90";
   };
 
   const getColorHoverSecondary = () => {
-    if (pathname.startsWith("/servicios/mt-trading"))
+    if (pathname.startsWith("/servicios/ms-trading"))
       return "hover:text-tradingComplementario";
 
     if (pathname.startsWith("/servicios/ms-shipping"))
@@ -180,10 +180,10 @@ export default function Navbar() {
                   </Link>
 
                   <Link
-                    href="/servicios/mt-trading"
+                    href="/servicios/ms-trading"
                     className="block px-4 py-3 hover:bg-gray-100"
                   >
-                    MT Trading
+                    MS Trading
                   </Link>
                 </div>
               </div>

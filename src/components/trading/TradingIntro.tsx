@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -17,22 +17,22 @@ export default function TradingIntro() {
           División Comercio Exterior
         </span>
 
-        <h2 className="text-5xl md:text-7xl font-black text-[#5C5C5C] leading-none mb-8">
+        <h2 className="text-5xl md:text-7xl font-black text-[#23262A] leading-none mb-8">
           MS <span className="text-[#70A4DC]">TRADING</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10 text-left mt-12 border-t border-[#8C8C8C]/20 pt-10">
-          <p className="text-lg md:text-xl text-[#5C5C5C] leading-relaxed font-medium">
+        <div className="grid md:grid-cols-2 gap-10 text-left mt-12 border-t border-[#7E868D]/20 pt-10">
+          <p className="text-lg md:text-xl text-[#23262A] leading-relaxed font-medium">
             Especializada en la intermediación comercial y el asesoramiento estratégico para empresas que buscan expandir sus operaciones en mercados internacionales.
           </p>
 
-          <p className="text-lg text-[#777777] leading-relaxed font-light">
+          <p className="text-lg text-[#4A5158] leading-relaxed font-light">
             Fundada en 1990 junto con el grupo empresarial, MS Trading combina el conocimiento profundo de los mercados globales con la capacidad logística integrada del grupo, ofreciendo soluciones comerciales completas que van desde la identificación de oportunidades hasta la entrega final del producto.
           </p>
         </div>
       </motion.div>
 
-      <div className="absolute -bottom-10 left-10 text-[180px] font-black text-[#5C5C5C]/5 pointer-events-none">
+      <div className="absolute -bottom-10 left-10 text-[180px] font-black text-[#23262A]/5 pointer-events-none">
         +35
       </div>
     </div>

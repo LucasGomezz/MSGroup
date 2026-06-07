@@ -189,7 +189,7 @@ export default function TransporteContent() {
       tag: "Ocean Freight",
       title: "Transporte Marítimo Internacional",
       description:
-        "Gestionamos fletes marítimos FCL (contenedor completo) y LCL (consolidado) hacia y desde cualquier puerto del mundo.",
+        "Fletes marítimos FCL (contenedor completo), LCL (consolidado), Cargas Rodantes, Cargas de Proyecto, Carga General (Breakbulk) hacia y desde cualquier puerto del mundo.",
       items: [
         "Contenedores secos (20', 40', 40'HC)",
         "Contenedores refrigerados (reefer) para productos perecederos",
@@ -197,8 +197,8 @@ export default function TransporteContent() {
         "Consolidación LCL para optimización de costos en cargas parciales",
       ],
       descriptionn:
-        "Mantenemos acuerdos comerciales directos con las principales navieras internacionales, lo que nos permite ofrecer opciones competitivas de tarifas y tiempos de tránsito para cada necesidad específica.",
-      image: "/images/forwarding/forwarding.png",
+        "En conjunto con nuestra red de agentes en los principales países y mercados internacionales mantenemos acuerdos comerciales directos con las principales navieras internacionales, lo que nos permite ofrecer opciones competitivas de tarifas y tiempos de tránsito para cada necesidad específica.",
+      image: "/images/forwarding/fleteMaritimo.jpg",
       icon: <IconShip />,
     },
     {
@@ -215,8 +215,8 @@ export default function TransporteContent() {
         "Seguimiento en tiempo real desde origen hasta destino",
       ],
       descriptionn:
-        "Nuestras relaciones comerciales con las principales aerolíneas de carga nos permiten garantizar espacios disponibles incluso en temporadas de alta demanda.",
-      image: "/images/forwarding/transporteAereo.png",
+        "Nuestras relaciones comerciales con las principales aerolíneas y el apoyo de nuestra red de agentes de carga nos permiten garantizar espacios disponibles incluso en temporadas de alta demanda.",
+      image: "/images/forwarding/avionDeCarga.jpg",
       icon: <IconPlane />,
     },
     {
@@ -224,8 +224,9 @@ export default function TransporteContent() {
       tag: "Land Network",
       title: "Transporte Terrestre",
       description:
-        "Proveemos servicios de transporte terrestre door-to-door dentro de Argentina y hacia países limítrofes (Uruguay, Paraguay, Chile, Brasil, Peru), coordinando el movimiento de carga desde el punto de origen hasta la entrega final.",
+        "Proveemos servicios de transporte terrestre door-to-door dentro de Argentina y hacia países limítrofes (Uruguay, Paraguay, Chile, Brasil, Perú), coordinando el movimiento de carga desde el punto de origen hasta la entrega final.",
       items: [
+        "Transporte de contenedores",
         "Transporte de carga completa (FTL)",
         "Transporte de carga consolidada (LTL)",
         "Vehículos especializados según tipo de mercadería",

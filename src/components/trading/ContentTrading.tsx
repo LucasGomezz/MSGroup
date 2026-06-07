@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { motion } from "framer-motion";
 import { Globe, Briefcase, Zap, BarChart } from "lucide-react";
 
@@ -11,29 +11,29 @@ export default function ContentTrading() {
   };
 
   return (
-    <section className="w-full bg-[#F4F1E8] text-[#5C5C5C] overflow-hidden">
+    <section className="w-full bg-[#F4F1E8] text-[#23262A] overflow-hidden">
 
       <div className="relative py-28 px-6 flex flex-col items-center justify-center bg-linear-to-b from-white to-[#F4F1E8]">
         <motion.div {...fadeInUp} className="max-w-4xl text-center">
           <span className="text-[#70A4DC] font-black tracking-[0.3em] uppercase text-xs mb-4 block">División Comercio Exterior</span>
-          <h2 className="text-5xl md:text-7xl font-black text-[#5C5C5C] leading-none mb-8">
+          <h2 className="text-5xl md:text-7xl font-black text-[#23262A] leading-none mb-8">
             MS <span className="text-[#70A4DC]">TRADING</span>
           </h2>
-          <div className="grid md:grid-cols-2 gap-10 text-left mt-12 border-t border-[#8C8C8C]/20 pt-10">
-            <p className="text-lg md:text-xl text-[#5C5C5C] leading-relaxed font-medium">
+          <div className="grid md:grid-cols-2 gap-10 text-left mt-12 border-t border-[#7E868D]/20 pt-10">
+            <p className="text-lg md:text-xl text-[#23262A] leading-relaxed font-medium">
               Especializada en la intermediación comercial y el asesoramiento estratégico para empresas que buscan expandir sus operaciones en mercados internacionales.
             </p>
-            <p className="text-lg text-[#777777] leading-relaxed font-light">
+            <p className="text-lg text-[#4A5158] leading-relaxed font-light">
               Fundada en 1990 junto con el grupo empresarial, MS Trading combina el conocimiento profundo de los mercados globales con la capacidad logística integrada del grupo, ofreciendo soluciones comerciales completas que van desde la identificación de oportunidades hasta la entrega final del producto.
             </p>
           </div>
         </motion.div>
-        <div className="absolute -bottom-10 left-10 text-[180px] font-black text-[#5C5C5C]/5 pointer-events-none">
+        <div className="absolute -bottom-10 left-10 text-[180px] font-black text-[#23262A]/5 pointer-events-none">
           +35
         </div>
       </div>
 
-      <div className="bg-[#5C5C5C] text-white py-24 px-6 relative overflow-hidden">
+      <div className="bg-[#23262A] text-white py-24 px-6 relative overflow-hidden">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -57,7 +57,7 @@ export default function ContentTrading() {
         </div>
       </div>
 
-      <div className="bg-[#777777] py-28 px-6 text-white relative">
+      <div className="bg-[#4A5158] py-28 px-6 text-white relative">
         <div className="max-w-6xl mx-auto">
           <motion.div {...fadeInUp} className="mb-16">
             <h3 className="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tight">Brokerage Comercial</h3>
@@ -93,7 +93,7 @@ export default function ContentTrading() {
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              className="bg-[#5C5C5C] p-10 rounded-3xl border border-white/10 flex flex-col justify-center relative overflow-hidden group"
+              className="bg-[#23262A] p-10 rounded-3xl border border-white/10 flex flex-col justify-center relative overflow-hidden group"
             >
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:rotate-12 transition-transform">
                 <Briefcase size={80} />
@@ -102,7 +102,7 @@ export default function ContentTrading() {
               <p className="text-[#F4F1E8] font-light leading-relaxed">
                 Reside en la red de contactos consolidada a lo largo de más de tres décadas, que nos permite acceder directamente a decisores comerciales en múltiples industrias y geografías.
               </p>
-              <div className="mt-8 pt-8 border-t border-white/10 italic text-[#8C8C8C]">
+              <div className="mt-8 pt-8 border-t border-white/10 italic text-[#7E868D]">
                 `Más de 35 años de confianza global`
               </div>
             </motion.div>
@@ -120,11 +120,11 @@ export default function ContentTrading() {
                 whileInView={{ opacity: 1, x: 0 }}
                 className="space-y-6"
               >
-                <h3 className="text-[#5C5C5C] text-5xl font-black uppercase tracking-tighter">
+                <h3 className="text-[#23262A] text-5xl font-black uppercase tracking-tighter">
                   Consultoría en<br />
                   <span className="text-[#70A4DC]">Comercio Exterior</span>
                 </h3>
-                <p className="text-xl text-[#777777] font-light border-l-8 border-[#70A4DC] pl-8 py-4">
+                <p className="text-xl text-[#4A5158] font-light border-l-8 border-[#70A4DC] pl-8 py-4">
                   Brindamos asesoramiento integral a empresas que desean iniciar o expandir sus operaciones de exportación e importación, cubriendo desde los aspectos regulatorios hasta las estrategias de penetración en nuevos mercados.
                 </p>
               </motion.div>
@@ -135,7 +135,7 @@ export default function ContentTrading() {
                 <Zap className="text-[#70A4DC] group-hover:text-white mb-4" size={32} />
                 <span className="font-bold group-hover:text-white uppercase text-xs tracking-widest">Agilidad</span>
               </div>
-              <div className="p-8 bg-[#5C5C5C] rounded-3xl flex flex-col items-center justify-center text-center text-white">
+              <div className="p-8 bg-[#23262A] rounded-3xl flex flex-col items-center justify-center text-center text-white">
                 <BarChart className="text-[#70A4DC] mb-4" size={32} />
                 <span className="font-bold uppercase text-xs tracking-widest">Resultados</span>
               </div>

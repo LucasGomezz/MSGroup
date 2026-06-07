@@ -21,8 +21,8 @@ export default function Home() {
       <Services />
       <WhyChooseUs />
       <CTASection
-        title="¿Listo para potenciar tu logística internacional?"
-        description="Solicita tu cotización ahora y recibí asesoramiento a medida."
+        title="¿Listo para potenciar tus operaciones de comercio internacional?"
+        description="Solicita tu cotización ahora y recibe asesoramiento a medida."
         buttonText="Hablemos"
         bgClassName="bg-coral"
         textClassName="text-white"

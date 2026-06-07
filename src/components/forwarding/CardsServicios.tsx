@@ -29,11 +29,11 @@ export default function CardsServicios() {
       ],
     },
     {
-      title: "Depósito Fiscal y Logística",
+      title: "Depósito y Logística",
       description:
         "Ofrecemos servicios de almacenaje en depósito fiscal para mercaderías de importación y exportación, permitiendo la optimización de tiempos y gestión de inventarios.",
       items: [
-        "Almacenaje en depósito fiscal habilitado por aduana",
+        "Almacenaje en depósito fiscal habilitado por aduana y/o deposito nacional",
         "Gestión de stock y control de inventario",
         "Fraccionamiento y reembalaje",
         "Preparación de pedidos (picking & packing)",
@@ -43,7 +43,7 @@ export default function CardsServicios() {
     {
       title: "Despacho Aduanero",
       description:
-        "Trabajamos con una red de despachantes de aduana altamente calificados que gestionan todos los trámites de importación y exportación ante AFIP, SENASA, ANMAT y demás organismos de control.",
+        "Contamos con profesionales altamente calificados que gestionan los trámites de importación y exportación ante AFIP, SENASA, ANMAT y demás organismos de control, asesorando en cada etapa de la operación para facilitar su gestión local e internacional. Nuestra red de agentes en +100 países nos permite monitorear documentación y mercadería desde antes del embarque, anticipando el despacho para evitar costos aduaneros y operativos inesperados.",
       items: [
         "Asesoramiento integral en materia aduanera",
         "Gestión aduanera en diferentes aduanas del pais",
@@ -56,12 +56,12 @@ export default function CardsServicios() {
     },
     {
       type: "vignette",
-      image: "/images/forwarding/vignetteAtardecer.jpg",
+      image: "/images/forwarding/forwarding-constructores.jpg",
     },
     {
       title: "Seguros de Carga",
       description:
-        "Coordinamos la contratación de seguros de transporte internacional adaptados al valor y características de cada mercadería, con cobertura desde origen hasta destino final.",
+        "Con el respaldo de aseguradoras internacionales de primer linea, coordinamos la contratación de seguros de transporte internacional adaptados al valor y características de cada mercadería, con cobertura desde origen hasta destino final.",
       items: [
         "Seguros específicos de transporte según el tipo de mercadería",
         "Tramitación de siniestros",
@@ -80,7 +80,7 @@ export default function CardsServicios() {
           className="border-l-12 border-forwardingPrincipal pl-8 mb-16"
         >
           <h2 className="text-6xl font-black text-forwardingPrincipal uppercase tracking-tighter">
-            Servicios <br />
+            Servicios de Logística y Comercio Exterior <br />
             <span className="text-gray-300">Portuarios</span>
           </h2>
         </motion.div>

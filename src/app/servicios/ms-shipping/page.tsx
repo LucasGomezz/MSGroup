@@ -4,7 +4,6 @@ import ShippingCherating from "@/components/shipping/ShippingChartering";
 import ShippingBrokerage from "@/components/shipping/ShippingBrokerage";
 import ShippingBrokerageServices from "@/components/shipping/ShippingBrokerageServices";
 import ShippingAgency from "@/components/shipping/ShippingAgency";
-import CTASection from "@/components/CTASection";
 import ServiceIntro from "@/components/ServiceIntro";
 
 
@@ -13,7 +12,7 @@ export default function MSShipping() {
     return (
         <>
             <Hero title="MS Shipping"
-                description="Servicios marítimos especializados para navieras, armadores y operadores que buscan soluciones ágiles en el puerto."
+                description="División marítima de MS Group, especializada en el manejo comercial y operativo de buques como Operadores, Charterers y Brokers de cargas y buques."
                 buttonText="Inicia tu consulta"
                 buttonColor="bg-shippingComplementario hover:shippingComplementario/90"
                 mediaType="video"
@@ -32,14 +31,6 @@ export default function MSShipping() {
                 <ShippingCherating />
                 <ShippingBrokerage />
                 <ShippingBrokerageServices />
-                <CTASection
-                    title="¿LISTO PARA OPTIMIZAR TUS OPERACIONES MARÍTIMAS?"
-                    description="Coordiná tus buques con eficiencia y recibí asesoramiento especializado en cada escala."
-                    buttonText="Hablemos"
-                    bgClassName="bg-shippingPrincipal"
-                    textClassName="text-white"
-                    buttonClassName="bg-white text-shippingPrincipal hover:bg-gray-100"
-                />
                 <ShippingAgency />
             </section>
         </>
