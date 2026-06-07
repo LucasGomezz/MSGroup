@@ -33,7 +33,7 @@ export default function WhyMSGroup() {
           </h2>
 
           <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed">
-            Somos tu socio estratégico en cada operación internacional.
+            Somos tu socio estratégico en cada operación de comercio internacional.
           </p>
         </div>
 

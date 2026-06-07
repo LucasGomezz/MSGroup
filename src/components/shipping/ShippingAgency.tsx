@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Container, Eye, Languages, Ship, Users } from "lucide-react";
+import CTASection from "../CTASection";
 
 export default function ShippingAgency() {
   const capacities = [
@@ -34,7 +35,7 @@ export default function ShippingAgency() {
   ];
 
   const services = [
-    "Servicio de agencia",
+    "Servicio de Agencia Marítima",
     "Coordinación de servicio de prácticos y pilotos de puertos y canales",
     "Servicio de remolcadores y lanchas",
     "Atención a tripulación",
@@ -46,13 +47,13 @@ export default function ShippingAgency() {
   ];
 
   return (
-    <div id="agencia-maritima" className="w-full bg-white font-sans overflow-hidden">
+    <div id="agencia-maritima" className="w-full bg-white font-sans overflow-hidden ">
 
-      <div className="relative w-full min-h-187.5 flex items-center justify-center p-6 md:p-12 lg:p-20">
+      <div className="relative w-full min-h-187.5 items-center justify-center p-6 md:p-12 lg:p-20 flex flex-col">
 
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/shipping/shipping-agenciaMaritima.jpg"
+            src="/images/shipping/barcoCargaGeneral.jpg"
             alt="Agencia Marítima"
             fill
             className="object-cover shadow-inner"
@@ -90,9 +91,6 @@ export default function ShippingAgency() {
               </p>
             </div>
 
-            <h3 className="text-white font-semibold text-lg pt-4">
-              Nuestra capacidad de agencia marítima incluye:
-            </h3>
 
             <motion.div
               initial="hidden"
@@ -183,6 +181,16 @@ export default function ShippingAgency() {
             </motion.div>
           </motion.div>
 
+        </div>
+        <div className="w-[80%] mt-10">
+          <CTASection
+            title="¿LISTO PARA OPTIMIZAR TUS OPERACIONES DE CARGAS MARÍTIMAS?"
+            description="Confía tus necesidades a expertos y recibe asesoramiento de profesionales especializados en shipping.."
+            buttonText="Hablemos"
+            bgClassName="bg-shippingPrincipal"
+            textClassName="text-white"
+            buttonClassName="bg-white text-shippingPrincipal hover:bg-gray-100"
+          />
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ export default function StatsForwarding() {
   const items = [
     { icon: Zap, text: "Cotización en 24hs" },
     { icon: Handshake, text: "Ejecutivo dedicado" },
-    { icon: MapPin, text: "Tracking en tiempo real" },
+    { icon: MapPin, text: "Tracking permanente " },
     { icon: DollarSign, text: "Sin costos ocultos" },
   ];
 

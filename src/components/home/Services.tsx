@@ -12,7 +12,7 @@ const services = [
     subTitle: "Servicios marítimos.",
     href: "/servicios/ms-shipping",
     description:
-      "Especializados en el manejo comercial y operativo de buques como Operadores, Charterers, Agentes Marítimos y Brokers",
+      "Especializados en el manejo comercial y operativo de buques como Operadores, Charterers, Brokers y Agentes Marítimos.",
     points: [
       {
         label: "Servicios de Brokerage de Cargas y Buques",
@@ -33,7 +33,7 @@ const services = [
 
     ],
     cta: "Consultar servicio",
-    image: "/images/shipping.png",
+    image: "/images/shipping/buque-breakbulk2.avif",
     defaultService: "MS Shipping"
   },
   {
@@ -41,7 +41,7 @@ const services = [
     subTitle: "Operaciones marítimas, aéreas y terrestres.",
     href: "/servicios/ms-forwarding",
     description:
-      "Operadora argentina de cargas internacionales por vía marítima, aérea y terrestre desde y hacia cualquier parte del mundo.",
+      "Operadores internacionales de cargas y comercio exterior por vía marítima, aérea y terrestre desde y hacia cualquier lugar del mundo. Depósito Fiscal, Nacional y Logística Integral",
     points: [
       {
         label: "Transporte Marítimo Internacional",
@@ -76,7 +76,7 @@ const services = [
         link: "/servicios/ms-forwarding#servicios-portuarios"
       },
       {
-        label: "Depósito Fiscal y Logística",
+        label: "Depósito Fiscal, Nacional y Logística Integral",
         link: "/servicios/ms-forwarding#servicios-portuarios"
       },
     ],
@@ -85,11 +85,11 @@ const services = [
     defaultService: "MS Forwarding"
   },
   {
-    title: "MT Trading",
+    title: "MS Trading",
     subTitle: "Logística y comercialización.",
     href: "/servicios/mt-trading",
     description:
-      "Desarrollo de operaciones de comercio internacional y consultoría integral para empresas exportadoras e importadoras.",
+      "Consultoría, asesoramiento, comercialización y gestión en Comercio Exterior. Desarrollo de operaciones de comercio internacional y consultoría integral para empresas exportadoras e importadoras",
     points: [
       {
         label: "Trading internacional",
@@ -264,7 +264,7 @@ function ImageTransition({
       <img
         src={image}
         alt=""
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover "
       />
 
       <div className="absolute inset-0 bg-black/20 z-10" />

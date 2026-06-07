@@ -17,7 +17,7 @@ export default function ShippingBrokerage() {
   const items = [
     {
       title: "Red directa de contactos",
-      text: "Relaciones establecidas con armadores, productores, traders, importadores y exportadores a nivel global.",
+      text: "Relaciones establecidas con armadores, operadores, productores, traders, importadores y exportadores a nivel global.",
       icon: <HiOutlineGlobeAlt />,
     },
     {
@@ -32,7 +32,7 @@ export default function ShippingBrokerage() {
     },
     {
       title: "Negociación especializada",
-      text: "Capacidad para negociar términos contractuales óptimos según condiciones actuales de mercado para cada producto y tráfico.",
+      text: "Gestionamos todo tipo de contratos de cargas, buscando obtener el mayor beneficio para nuestros clientes negociando términos contractuales óptimos según las condiciones vigentes del mercado para cualquier tipo de carga y tráfico.",
       icon: <HiOutlinePresentationChartLine />,
     },
     {
@@ -47,7 +47,7 @@ export default function ShippingBrokerage() {
     },
     {
       title: "Compra y venta de buques",
-      text: "Intervención activa en operaciones de compraventa de embarcaciones.",
+      text: "Intervención activa en operaciones de brokerage de compraventa de embarcaciones.",
       icon: <HiOutlineShieldCheck />,
     },
     {
@@ -61,7 +61,7 @@ export default function ShippingBrokerage() {
     <div id="servicios-brokerage-cargas" className="w-full bg-[#f8faf9] py-20 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
 
-        <div className="grid lg:grid-cols-3 gap-12 items-start">
+        <div className="grid lg:grid-cols-3 gap-12 items-start ">
 
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -70,14 +70,11 @@ export default function ShippingBrokerage() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="lg:col-span-1 space-y-6 lg:sticky lg:top-10"
           >
-            <div className="inline-block px-3 py-1 bg-shippingPrincipal/10 text-shippingPrincipal text-xs font-bold tracking-widest uppercase rounded-full">
-              Brokerage Marítimo
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-serif text-gray-900 leading-tight">
-              Nuestra capacidad como{" "}
-              <span className="text-shippingPrincipal">Brokers</span> se sustenta en:
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 tracking-tight">
+              Brokerage Maritimo
             </h2>
+
+            <div className="w-32 h-1 bg-shippingPrincipal mx-auto mb-8" />
 
             <motion.div
               whileHover={{ scale: 1.02 }}
@@ -87,7 +84,7 @@ export default function ShippingBrokerage() {
             >
               <div className="relative rounded-2xl overflow-hidden w-full h-64">
                 <Image
-                  src="/images/shipping/shipping-brokerage.jpg"
+                  src="/images/shipping/reunionOficina.jpg"
                   alt="Brokerage Marítimo"
                   fill
                   className="object-cover"
@@ -109,6 +106,10 @@ export default function ShippingBrokerage() {
                 los requerimientos de transporte posibilitando el acercamiento
                 entre las posiciones de cargas y buques en cualquier puerto del
                 mundo, actuando como intermediarios entre armadores y cargadores.
+              </p>
+
+              <p className="text-gray-600 text-base leading-relaxed mb-4">
+                Gracias a nuestra vasta experiencia en cierres de contratos de carga (Charter Party) y buques de todo tipo, contamos con la capacidad y el conocimiento necesario para gestionar cualquier tipo de contratos de cargas, buscando obtener el mayor beneficio para nuestros clientes mediante la negociación de términos contractuales óptimos según las condiciones vigentes del mercado para cada tipo de carga y tráfico.
               </p>
 
               <p className="text-gray-600 text-base leading-relaxed">

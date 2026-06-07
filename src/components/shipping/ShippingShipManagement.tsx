@@ -11,7 +11,7 @@ export default function ShippingShipManagment() {
     {
       icon: <GiTakeMyMoney />,
       title: "Maximización de Rentabilidad",
-      text: "Gestionamos todo tipo de contratos de cargas, buscando negociar el mayor beneficio para nuestros clientes.",
+      text: "Gestionamos todo tipo de contratos de cargas, buscando obtener el mayor beneficio para nuestros clientes.",
     },
     {
       icon: <FaBalanceScale />,
@@ -26,12 +26,12 @@ export default function ShippingShipManagment() {
     {
       icon: <FaGlobe />,
       title: "Red Global",
-      text: "Monitoreamos en tiempo real las condiciones de mercado y mantenemos contacto directo con productores, traders y operadores globales, lo que nos permite identificar las mejores oportunidades de empleo para cada buque.",
+      text: "Monitoreamos en tiempo real las condiciones de mercado y mantenemos contacto directo por un lado con armadores y operadores de buque y por el otro con productores, traders y operadores globales, lo que nos permite identificar las mejores oportunidades de empleo para cada buque.",
     },
     {
       icon: <FaTools />,
-      title: "Mantenimiento y Costos",
-      text: "Cubrimos todos los requerimientos y necesidades de los armadores manteniendo los buques con altos estándares técnicos y operativos, optimizando costos sin comprometer la calidad del servicio.",
+      title: "Ship Management",
+      text: "Cubrimos todos los requerimientos y necesidades comerciales y operativas de los armadores optimizando costos sin comprometer la calidad del servicio.",
     },
     {
       icon: <FaShip />,
@@ -94,10 +94,10 @@ export default function ShippingShipManagment() {
           className="relative w-full h-105 md:h-auto rounded-2xl overflow-hidden shadow-md"
         >
           <Image
-            src="/images/shipping/shipping-operacionDeBuques.jpg"
+            src="/images/shipping/shipping-cherating.jpg"
             alt="Operación de Buques"
             fill
-            className="object-cover"
+            className="object-cover grayscale opacity-60"
           />
 
           <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/40 to-black/80" />
@@ -118,11 +118,11 @@ export default function ShippingShipManagment() {
             </h2>
 
             <p className="mt-6 text-base md:text-lg leading-relaxed text-white/90 max-w-md">
-              Como operadores de buques, gestionamos la operación de buques para diversos armadores internacionales, principalmente de los tipos Bulk Carrier, Multipropósito y Roll-on/Roll-off, entre otros. 
+              Como operadores de buques, gestionamos la comercialización y operación de buques para diversos armadores y operadores internacionales, principalmente de los tipos Bulk Carrier, Multipropósito y Roll-on/Roll-off, entre otros.
             </p>
             <span></span>
             <p className="mt-6 text-base md:text-lg leading-relaxed text-white/90 max-w-md">
-              Nuestra vasta trayectoria e inserción en los principales mercados internacionales altamente competitivos y nuestra seriedad en el cumplimiento de los compromisos contraídos, junto con la calidad de los servicios ofrecidos, nos han permitido que, año a año, empresas armadoras de primer nivel internacional y empresas importadores/exportadores de diferentes rubros nos confíen la operación y manejo de sus contratos de carga.
+              Nuestra vasta trayectoria e inserción en los principales mercados internacionales altamente competitivos, nuestra seriedad en el cumplimiento de los compromisos contraídos, y la calidad de los servicios ofrecidos, nos han permitido que, año a año, empresas armadoras y operadores de primer nivel internacional y empresas importadores/exportadores de diferentes rubros nos confíen la operación y manejo de sus contratos de carga.
             </p>
           </motion.div>
         </motion.div>
