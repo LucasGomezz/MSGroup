@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import ContactModal from "./ContactModal";
 
 interface CTASectionProps {
-  title: string;
+  title: React.ReactNode;
   description: string;
   buttonText?: string;
   bgClassName?: string;

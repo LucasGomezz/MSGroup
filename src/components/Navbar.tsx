@@ -204,7 +204,7 @@ export default function Navbar() {
                 setContactOpen(true);
               }}
             >
-              Contactanos
+              Contáctanos
             </button>
 
             {/* MOBILE / TABLET / NOTEBOOK CHICA */}
@@ -287,7 +287,7 @@ export default function Navbar() {
                   setContactOpen(true);
                 }}
               >
-                Contactanos
+                Contáctanos
               </button>
             </div>
           )}

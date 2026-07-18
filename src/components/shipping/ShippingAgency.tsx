@@ -185,7 +185,7 @@ export default function ShippingAgency() {
         <div className="w-[80%] mt-10">
           <CTASection
             title="¿LISTO PARA OPTIMIZAR TUS OPERACIONES DE CARGAS MARÍTIMAS?"
-            description="Confía tus necesidades a expertos y recibe asesoramiento de profesionales especializados en shipping.."
+            description="Confía tus necesidades a expertos y recibe asesoramiento de profesionales especializados en shipping."
             buttonText="Hablemos"
             bgClassName="bg-shippingPrincipal"
             textClassName="text-white"

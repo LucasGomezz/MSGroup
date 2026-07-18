@@ -59,13 +59,12 @@ export default function Experience() {
           </p>
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
-            Hoy, nuestra red global de agentes de primera línea internacional en más de 100 países y nuestra base en
-            <span className="font-bold text-navy"> Argentina</span> nos permiten
-            garantizar la confianza de nuestros clientes brindando
+            Hoy, con nuestra base en
+            <span className="font-bold text-navy"> Argentina,</span> y gracias a la confianza de nuestros clientes, asociados y nuestra red global de agentes de primera línea internacional en más de 100 países, brindamos
             <span className="font-bold text-navy">
-              {" "}soluciones operativas
+              {" "} soluciones de transporte y logística
             </span>{" "}
-            de alto nivel.
+            para cada tipo de cargas y mercaderías.
           </p>
         </div>
 

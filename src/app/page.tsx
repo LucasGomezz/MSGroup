@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 export default function Home() {
   return (
     <>
-      <Hero title="Un partner para todas tus operaciónes de comercio internacional."
+      <Hero title="Un partner para todas tus operaciones de comercio internacional."
         description="Desde 1990 moviendo tu negocio sin fronteras con soluciones integrales de logística."
         buttonText="Inicia tu consulta"
         buttonColor="bg-coral hover:shippingComplementario/90"
@@ -21,7 +21,13 @@ export default function Home() {
       <Services />
       <WhyChooseUs />
       <CTASection
-        title="¿Listo para potenciar tus operaciones de comercio internacional?"
+        title={
+    <>
+      ¿Listo para potenciar tus operaciones
+      <br />
+      de comercio internacional?
+    </>
+  }
         description="Solicita tu cotización ahora y recibe asesoramiento a medida."
         buttonText="Hablemos"
         bgClassName="bg-coral"
