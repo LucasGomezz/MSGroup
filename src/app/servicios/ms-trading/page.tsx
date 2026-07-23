@@ -10,7 +10,7 @@ import TradingIntro from "@/components/trading/TradingIntro";
 export default function MSTrading() {
     return (
         <>
-            <Hero title="MT Trading"
+            <Hero title="MS Trading"
                 description="Intermediación comercial y asesoramiento estratégico. Impulsamos la expansión internacional de empresas mediante soluciones comerciales integrales."
                 buttonText="Inicia tu consulta"
                 buttonColor="bg-tradingComplementario hover:bg-tradingComplementario/90"
@@ -23,9 +23,9 @@ export default function MSTrading() {
             <section className="w-full bg-[#F4F1E8] text-[#5C5C5C] overflow-hidden">
                 <div className="relative z-10 shadow-[0_12px_30px_-15px_rgba(0,0,0,0.25)]">
                     <ServiceIntro
-                        title="MT Trading"
+                        title="MS Trading"
                         colorClass="text-tradingPrincipal"
-                        description="Desde 1990, MT Trading acompaña operaciones de comercio exterior desde Argentina, conectando empresas locales e internacionales mediante soluciones comerciales, logísticas y estratégicas."
+                        description="Desde 1990, MS Trading acompaña sus operaciones de comercio exterior desde y hacia Argentina, conectando empresas locales e internacionales mediante soluciones comerciales, logísticas y estratégicas."
                     />
                 </div>
                 <TradingIntro />

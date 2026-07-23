@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Ship, Box, Globe2, Anchor } from "lucide-react";
+import { Ship, Plane, Truck, Anchor } from "lucide-react";
 
 export default function IntroForwarding() {
   const transports = [
     { icon: Ship, label: "Marítimo" },
-    { icon: Globe2, label: "Aéreo" },
-    { icon: Box, label: "Terrestre" },
+    { icon: Plane, label: "Aéreo" },
+    { icon: Truck, label: "Terrestre" },
   ];
 
   return (
@@ -58,7 +58,6 @@ export default function IntroForwarding() {
                 transition={{ delay: 0.15, duration: 0.6 }}
                 className="text-4xl font-black uppercase tracking-tighter leading-none mb-4"
               >
-                Infraestructura <br /> de Carga
               </motion.h3>
 
               <motion.p
@@ -68,7 +67,6 @@ export default function IntroForwarding() {
                 transition={{ delay: 0.3 }}
                 className="text-blue-200 text-xs font-bold uppercase tracking-[0.3em]"
               >
-                Global Forwarding Network
               </motion.p>
             </div>
           </motion.div>

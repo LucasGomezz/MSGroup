@@ -59,109 +59,109 @@ export default function ShippingBrokerage() {
 
   return (
     <div id="servicios-brokerage-cargas" className="w-full bg-[#f8faf9] py-20 px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto space-y-16">
 
-        <div className="grid lg:grid-cols-3 gap-12 items-start ">
+        {/* Sección Superior: Título + Presentación */}
+        <div className="grid lg:grid-cols-12 gap-10 items-center">
 
+          {/* Columna Título e Imagen */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.15 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="lg:col-span-1 space-y-6 lg:sticky lg:top-10"
+            className="lg:col-span-5 space-y-6"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 tracking-tight">
-              Brokerage Maritimo
-            </h2>
-
-            <div className="w-32 h-1 bg-shippingPrincipal mx-auto mb-8" />
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 tracking-tight">
+                Brokerage Marítimo
+              </h2>
+              <div className="w-32 h-1 bg-shippingPrincipal mb-6" />
+            </div>
 
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              viewport={{ once: false, amount: 0.15 }}
-              className="pt-4"
+              className="relative rounded-2xl overflow-hidden w-full h-64 md:h-72 shadow-md"
             >
-              <div className="relative rounded-2xl overflow-hidden w-full h-64">
-                <Image
-                  src="/images/shipping/reunionOficina.jpg"
-                  alt="Brokerage Marítimo"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                src="/images/shipping/reunionOficina.jpg"
+                alt="Brokerage Marítimo"
+                fill
+                className="object-cover"
+              />
             </motion.div>
           </motion.div>
 
-          <div className="lg:col-span-2 space-y-12">
-            <motion.div
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-[#3A6657]"
-            >
-              <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                Nuestro departamento de brokerage da respuesta inmediata a todos
-                los requerimientos de transporte posibilitando el acercamiento
-                entre las posiciones de cargas y buques en cualquier puerto del
-                mundo, actuando como intermediarios entre armadores y cargadores.
-              </p>
+          {/* Columna Texto Descriptivo */}
+          <motion.div
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="lg:col-span-7 bg-white p-8 rounded-2xl shadow-sm border-l-4 border-[#3A6657] space-y-4"
+          >
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Nuestro departamento de brokerage da respuesta inmediata a todos
+              los requerimientos de transporte posibilitando el acercamiento
+              entre las posiciones de cargas y buques en cualquier puerto del
+              mundo, actuando como intermediarios entre armadores y cargadores.
+            </p>
 
-              <p className="text-gray-600 text-base leading-relaxed mb-4">
-                Gracias a nuestra vasta experiencia en cierres de contratos de carga (Charter Party) y buques de todo tipo, contamos con la capacidad y el conocimiento necesario para gestionar cualquier tipo de contratos de cargas, buscando obtener el mayor beneficio para nuestros clientes mediante la negociación de términos contractuales óptimos según las condiciones vigentes del mercado para cada tipo de carga y tráfico.
-              </p>
+            <p className="text-gray-600 text-base leading-relaxed">
+              Gracias a nuestra vasta experiencia en cierres de contratos de carga (Charter Party) y buques de todo tipo, contamos con la capacidad y el conocimiento necesario para gestionar cualquier tipo de contratos de cargas, buscando obtener el mayor beneficio para nuestros clientes mediante la negociación de términos contractuales óptimos según las condiciones vigentes del mercado para cada tipo de carga y tráfico.
+            </p>
 
-              <p className="text-gray-600 text-base leading-relaxed">
-                Mantenemos información actualizada en tiempo real sobre
-                posiciones de buques y requerimientos de cargas a nivel global,
-                lo que nos permite ofrecer alternativas inmediatas a nuestros
-                clientes.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.1 }}
-              variants={{
-                hidden: {},
-                show: {
-                  transition: {
-                    staggerChildren: 0.07,
-                  },
-                },
-              }}
-              className="grid sm:grid-cols-2 gap-x-10 gap-y-10"
-            >
-              {items.map((item, i) => (
-                <motion.div
-                  key={i}
-                  variants={{
-                    hidden: { opacity: 0, y: 28 },
-                    show: { opacity: 1, y: 0 },
-                  }}
-                  transition={{ duration: 0.45, ease: "easeOut" }}
-                  whileHover={{ y: -4 }}
-                  className="relative pl-16 group"
-                >
-                  <div className="absolute left-0 top-0 w-12 h-12 flex items-center justify-center text-2xl text-shippingPrincipal bg-white shadow-sm rounded-xl group-hover:bg-shippingPrincipal group-hover:text-white transition-all duration-300 border border-gray-100">
-                    {item.icon}
-                  </div>
-
-                  <h4 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-shippingPrincipal transition-colors">
-                    {item.title}
-                  </h4>
-
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {item.text}
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
-
-          </div>
+            <p className="text-gray-600 text-base leading-relaxed">
+              Mantenemos información actualizada en tiempo real sobre
+              posiciones de buques y requerimientos de cargas a nivel global,
+              lo que nos permite ofrecer alternativas inmediatas a nuestros
+              clientes.
+            </p>
+          </motion.div>
         </div>
+
+        {/* Sección Inferior: Items en 3 Columnas ocupando el 100% del ancho */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.1 }}
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.07,
+              },
+            },
+          }}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 pt-6"
+        >
+          {items.map((item, i) => (
+            <motion.div
+              key={i}
+              variants={{
+                hidden: { opacity: 0, y: 28 },
+                show: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+              whileHover={{ y: -4 }}
+              className="relative pl-16 group"
+            >
+              <div className="absolute left-0 top-0 w-12 h-12 flex items-center justify-center text-2xl text-shippingPrincipal bg-white shadow-sm rounded-xl group-hover:bg-shippingPrincipal group-hover:text-white transition-all duration-300 border border-gray-100">
+                {item.icon}
+              </div>
+
+              <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-shippingPrincipal transition-colors">
+                {item.title}
+              </h4>
+
+              <p className="text-sm text-gray-500 leading-relaxed">
+                {item.text}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+
       </div>
     </div>
   );

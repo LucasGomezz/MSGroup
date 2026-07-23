@@ -24,13 +24,7 @@ export default function TradingInternational() {
                     <p className="text-2xl font-light leading-snug text-[#F4F1E8]">
                         Actuamos como intermediarios comerciales conectando productores, exportadores e importadores en diferentes mercados del mundo.
                     </p>
-
-                    <div className="mt-8 flex items-center gap-4 text-[#70A4DC]">
-                        <div className="h-0.5 w-12 bg-[#70A4DC]" />
-                        <p className="uppercase tracking-widest text-sm font-bold">
-                            Expertise en Argentina y Latinoamérica
-                        </p>
-                    </div>
+                    
                 </motion.div>
 
                 <div className="relative">
