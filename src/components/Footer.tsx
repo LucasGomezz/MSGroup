@@ -86,7 +86,7 @@ export default function Footer() {
                   href="/servicios/ms-trading"
                   className="hover:text-white transition"
                 >
-                  MT Trading
+                  MS Trading
                 </Link>
               </li>
 
