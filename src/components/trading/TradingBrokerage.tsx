@@ -12,7 +12,7 @@ export default function TradingBrokerage() {
   };
 
   const items = [
-    { title: "Identificación de compradores", desc: "Potenciales según producto y mercado objetivo" },
+    { title: "Identificación de compradores y proveedores", desc: "Potenciales según producto y mercado objetivo" },
     { title: "Negociación comercial", desc: "Términos, precios, volúmenes e Incoterms" },
     { title: "Estructuración legal", desc: "Contratos internacionales sólidos" },
     { title: "Seguimiento", desc: "Cumplimiento de obligaciones contractuales" },
@@ -29,7 +29,7 @@ export default function TradingBrokerage() {
           </h3>
 
           <p className="text-xl md:text-2xl text-[#F4F1E8]/80 max-w-3xl font-light">
-            Facilitamos el encuentro entre compradores y vendedores a nivel internacional, actuando como intermediarios que garantizan <strong>transparencia, seguridad y cumplimiento</strong> en las operaciones comerciales.
+            Buscamos oportunidades y facilitamos el encuentro entre compradores y vendedores a nivel internacional, actuando como intermediarios que garantizan <strong>transparencia, seguridad y cumplimiento</strong> en las operaciones comerciales.
           </p>
         </motion.div>
 

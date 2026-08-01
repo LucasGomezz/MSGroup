@@ -21,10 +21,10 @@ export default function ContentTrading() {
           </h2>
           <div className="grid md:grid-cols-2 gap-10 text-left mt-12 border-t border-[#7E868D]/20 pt-10">
             <p className="text-lg md:text-xl text-[#23262A] leading-relaxed font-medium">
-              Especializada en la intermediación comercial y el asesoramiento estratégico para empresas que buscan expandir sus operaciones en mercados internacionales.
+              Especializada en la intermediación comercial y el asesoramiento estratégico para empresas que buscan importar productos o expandir sus operaciones en mercados internacionales.
             </p>
             <p className="text-lg text-[#4A5158] leading-relaxed font-light">
-              Fundada en 1990 junto con el grupo empresarial, MS Trading combina el conocimiento profundo de los mercados globales con la capacidad logística integrada del grupo, ofreciendo soluciones comerciales completas que van desde la identificación de oportunidades hasta la entrega final del producto.
+              Fundada en 1990 junto con el grupo empresarial, MS Trading combina el conocimiento profundo de los mercados globales con la capacidad logística y de gestión aduanera integrada del grupo, ofreciendo soluciones comerciales completas que van desde la identificación de oportunidades hasta la entrega final del producto.
             </p>
           </div>
         </motion.div>

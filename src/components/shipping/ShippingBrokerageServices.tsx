@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import {
   FaBalanceScale,
-  FaGlobe,
+  FaCalculator,
   FaHandshake,
+  FaSearch,
   FaShip,
 } from "react-icons/fa";
 import { GiTakeMyMoney } from "react-icons/gi";
@@ -16,7 +17,7 @@ export default function ShippingBrokerageServices() {
       text: "Búsqueda de buques disponibles según requerimiento de carga",
     },
     {
-      icon: <FaGlobe size={18} />,
+      icon: <FaSearch size={18} />,
       text: "Búsqueda de cargas para buques disponibles",
     },
     {
@@ -24,7 +25,7 @@ export default function ShippingBrokerageServices() {
       text: "Negociación de términos de charter party",
     },
     {
-      icon: <FaBalanceScale size={18} />,
+      icon: <FaCalculator size={18} />,
       text: "Asesoramiento en cálculo de costos de viaje",
     },
     {

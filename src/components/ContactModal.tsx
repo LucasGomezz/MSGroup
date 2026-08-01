@@ -130,7 +130,7 @@ ${message}`;
                   </p>
 
                   <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                    Hablemos de tu proximo envio
+                    Hablemos de tu próximo envío
                   </h2>
 
                   <p className="text-white/80 mb-10">
@@ -196,11 +196,10 @@ ${message}`;
                         setName(e.target.value);
                         setErrors((prev) => ({ ...prev, name: false }));
                       }}
-                      className={`w-full border rounded-xl my-2 px-4 py-3 outline-none transition ${
-                        errors.name
+                      className={`w-full border rounded-xl my-2 px-4 py-3 outline-none transition ${errors.name
                           ? "border-red-500 focus:border-red-500"
                           : "border-gray-200 focus:border-coral"
-                      }`}
+                        }`}
                     />
 
                     {errors.name && (
@@ -227,11 +226,10 @@ ${message}`;
                         setEmail(e.target.value);
                         setErrors((prev) => ({ ...prev, email: false }));
                       }}
-                      className={`w-full border space-y-4 rounded-xl px-4 py-3 my-2 outline-none transition ${
-                        errors.email
+                      className={`w-full border space-y-4 rounded-xl px-4 py-3 my-2 outline-none transition ${errors.email
                           ? "border-red-500 focus:border-red-500"
                           : "border-gray-200 focus:border-coral"
-                      }`}
+                        }`}
                     />
 
                     {errors.email && (
@@ -254,22 +252,21 @@ ${message}`;
 
                   <div>
                     <textarea
-                      rows={4}
+                      rows={2}
                       placeholder="Contanos qué necesitás... *"
                       value={message}
                       onChange={(e) => {
                         setMessage(e.target.value);
                         setErrors((prev) => ({ ...prev, message: false }));
                       }}
-                      className={`w-full border rounded-xl px-4 py-3 outline-none resize-none transition ${
-                        errors.message
+                      className={`w-full border rounded-xl px-4 py-2.5 outline-none resize-none transition ${errors.message
                           ? "border-red-500 focus:border-red-500"
                           : "border-gray-200 focus:border-coral"
-                      }`}
+                        }`}
                     />
 
                     {errors.message && (
-                      <p className="text-red-500 text-sm mb-2">
+                      <p className="text-red-500 text-sm mt-1">
                         Este campo es obligatorio
                       </p>
                     )}
