@@ -87,21 +87,21 @@ const services = [
   {
     title: "MS Trading",
     subTitle: "Logística y comercialización.",
-    href: "/servicios/mt-trading",
+    href: "/servicios/ms-trading",
     description:
       "Consultoría, asesoramiento, comercialización y gestión en Comercio Exterior. Desarrollo de operaciones de comercio internacional y consultoría integral para empresas exportadoras e importadoras",
     points: [
       {
         label: "Trading internacional",
-        link: "/servicios/mt-trading#trading-internacional"
+        link: "/servicios/ms-trading#trading-internacional"
       },
       {
         label: "Brokerage comercial",
-        link: "/servicios/mt-trading#brokerage-comercial"
+        link: "/servicios/ms-trading#brokerage-comercial"
       },
       {
         label: "Consultoría en comercio exterior",
-        link: "/servicios/mt-trading#consultoria-comercio-exterior"
+        link: "/servicios/ms-trading#consultoria-comercio-exterior"
       },
     ],
     cta: "Consultar servicio",

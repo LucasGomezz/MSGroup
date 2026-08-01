@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "MS Trading",
+  title: "Maritima de Servicios S.R.L",
   description: "Servicios de comercio internacional",
   icons: {
   icon: [
