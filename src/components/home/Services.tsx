@@ -33,7 +33,7 @@ const services = [
 
     ],
     cta: "Consultar servicio",
-    image: "/images/shipping/agencia-maritima.PNG",
+    image: "/images/shipping/agencia-maritima.png",
     defaultService: "MS Shipping"
   },
   {
