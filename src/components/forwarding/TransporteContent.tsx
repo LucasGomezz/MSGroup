@@ -198,7 +198,7 @@ export default function TransporteContent() {
       ],
       descriptionn:
         "En conjunto con nuestra red de agentes en los principales países y mercados internacionales mantenemos acuerdos comerciales directos con las principales navieras internacionales, lo que nos permite ofrecer opciones competitivas de tarifas y tiempos de tránsito para cada necesidad específica.",
-      image: "/images/forwarding/fleteMaritimo.jpg",
+      image: "/images/forwarding/fleteMaritimo.PNG",
       icon: <IconShip />,
     },
     {
