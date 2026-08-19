@@ -15,7 +15,7 @@ export default function MSforwarding() {
                 buttonText="Inicia tu consulta"
                 buttonColor="bg-navy hover:bg-navy/90"
                 mediaType="video"
-                mediaSrc="/videos/ms-forwarding.mp4"
+                mediaSrc="/videos/ms-forwarding-video.mp4"
                 overlayOpacity="bg-black/30"
                 gradient={true}
                 gradientColor="from-forwardingPrincipal/60 via-forwardingPrincipal/20"

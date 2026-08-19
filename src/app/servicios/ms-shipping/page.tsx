@@ -16,7 +16,7 @@ export default function MSShipping() {
                 buttonText="Inicia tu consulta"
                 buttonColor="bg-shippingComplementario hover:shippingComplementario/90"
                 mediaType="video"
-                mediaSrc="/videos/ms-shipping.mp4"
+                mediaSrc="/videos/ms-shipping-video.mp4"
                 overlayOpacity="bg-black/30"
                 gradient={true}
                 gradientColor="from-shippingPrincipal/40 via-shippingPrincipal/20"

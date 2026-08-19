@@ -19,7 +19,6 @@ interface ServiceItem {
   descriptionn: string;
   image: string;
   icon: React.ReactNode;
-  tag: string;
 }
 
 const IconShip = () => (
@@ -47,6 +46,23 @@ const IconTruck = () => (
   </svg>
 );
 
+const IconCustoms = () => (
+  <svg
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    fill="none"
+  >
+    <path d="M3 7.5 12 3l9 4.5-9 4.5-9-4.5z" />
+    <path d="M3 7.5V17l9 4 9-4V7.5" />
+    <path d="M12 12v9" />
+    <path d="m7.5 5.25 9 4.5" />
+    <path d="m15 16 1.5 1.5 3-3" />
+  </svg>
+);
+
 const ServiceCard = ({
   service,
   index,
@@ -69,15 +85,6 @@ const ServiceCard = ({
       <div className="flex-1 z-10 space-y-6 sm:space-y-8 w-full">
 
         <div className="space-y-3 sm:space-y-4">
-          <motion.span
-            initial={{ opacity: 0, x: -18 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
-            transition={{ delay: 0.05 }}
-            className="inline-block px-3 py-1 text-[10px] sm:text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full"
-          >
-            {service.tag}
-          </motion.span>
 
           <motion.h2
             initial={{ opacity: 0, y: 22 }}
@@ -186,7 +193,6 @@ export default function TransporteContent() {
   const services: ServiceItem[] = [
     {
       id: "maritimo",
-      tag: "Ocean Freight",
       title: "Transporte Marítimo Internacional",
       description:
         "Fletes marítimos FCL (contenedor completo), LCL (consolidado), Cargas Rodantes, Cargas de Proyecto, Carga General (Breakbulk) hacia y desde cualquier puerto del mundo.",
@@ -203,7 +209,6 @@ export default function TransporteContent() {
     },
     {
       id: "aereo",
-      tag: "Air Solutions",
       title: "Transporte Aéreo Internacional",
       description:
         "Coordinamos embarques aéreos para cargas que requieren tiempos de tránsito reducidos, productos de alto valor o mercaderías sensibles al tiempo.",
@@ -216,12 +221,11 @@ export default function TransporteContent() {
       ],
       descriptionn:
         "Nuestras relaciones comerciales con las principales aerolíneas y el apoyo de nuestra red de agentes de carga nos permiten garantizar espacios disponibles incluso en temporadas de alta demanda.",
-      image: "/images/forwarding/avionDeCarga.jpg",
+      image: "/images/forwarding/transporte-aereo.jpeg",
       icon: <IconPlane />,
     },
     {
       id: "terrestre",
-      tag: "Land Network",
       title: "Transporte Terrestre",
       description:
         "Proveemos servicios de transporte terrestre door-to-door dentro de Argentina y hacia países limítrofes (Uruguay, Paraguay, Chile, Brasil, Perú), coordinando el movimiento de carga desde el punto de origen hasta la entrega final.",
@@ -236,6 +240,24 @@ export default function TransporteContent() {
       descriptionn: "",
       image: "/images/forwarding/transporteTerrestre.jpg",
       icon: <IconTruck />,
+    },
+    {
+      id: "despacho-aduanero",
+      title: "Despacho aduanero",
+      description:
+        "Contamos con profesionales altamente calificados que gestionan los trámites de importación y exportación ante ARCA/ADUANA, SENASA, ANMAT y demás organismos de control, asesorando en cada etapa de la operación para facilitar su gestión local e internacional. Nuestra red de agentes en +100 países nos permite monitorear documentación y mercadería desde antes del embarque, anticipando el despacho para evitar costos aduaneros y operativos inesperados.",
+      items: [
+        "Asesoramiento integral en materia aduanera",
+        "Gestión aduanera en diferentes aduanas del pais",
+        "Clasificación arancelaria de mercaderías",
+        "Verificación de documentación comercial",
+        "Tramitación de licencias",
+        "Gestión de permisos especiales (SENASA, ANMAT, otros)",
+        "Representación ante autoridades aduaneras",
+      ],
+      descriptionn:"",
+      image: "/images/forwarding/despacho-aduanero.png",
+      icon: <IconCustoms />,
     },
   ];
 

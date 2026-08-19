@@ -107,10 +107,10 @@ export default function Footer() {
 
           <Link href="/" className="flex items-center shrink-0">
             <Image
-              src={"/icon/logo.ico"}
+              src="/images/logos/logoFooter.png"
               alt="Logo"
-              width={10}
-              height={5}
+              width={160}
+              height={40}
               className="h-10 md:h-10 w-auto"
               priority
             />

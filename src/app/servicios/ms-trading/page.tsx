@@ -1,6 +1,7 @@
 import CTASection from "@/components/CTASection";
 import Hero from "@/components/Hero";
 import ServiceIntro from "@/components/ServiceIntro";
+import ImportChina from "@/components/trading/ImportChina";
 import TradingBrokerage from "@/components/trading/TradingBrokerage";
 import TradingConsulting from "@/components/trading/TradingConsulting";
 import TradingInternational from "@/components/trading/TradingInternacional";
@@ -30,6 +31,7 @@ export default function MSTrading() {
                 </div>
                 <TradingIntro />
                 <TradingInternational />
+                <ImportChina/>
                 <TradingBrokerage />
                 <TradingConsulting />
                 <CTASection

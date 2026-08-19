@@ -7,6 +7,8 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import ContactModal from "@/components/ContactModal";
 
+const cx = (str: string) => str.replace(/\s+/g, " ").trim();
+
 export default function Navbar() {
   const pathname = usePathname();
 
@@ -19,15 +21,42 @@ export default function Navbar() {
 
   const navRef = useRef<HTMLElement>(null);
 
+  const isCollapsed = isScrolled && !isHovered;
+
   /*
   |--------------------------------------------------------------------------
-  | DETECTAR SCROLL
+  | FASE DE TRANSICIÓN (abriendo / cerrando)
+  |--------------------------------------------------------------------------
+  */
+
+  const [phase, setPhase] = useState<"opening" | "closing" | null>(null);
+  const [prevCollapsed, setPrevCollapsed] = useState(isCollapsed);
+
+  if (isCollapsed !== prevCollapsed) {
+    setPhase(isCollapsed ? "closing" : "opening");
+    setPrevCollapsed(isCollapsed);
+  }
+
+  /*
+  |--------------------------------------------------------------------------
+  | DETECTAR SCROLL (con hysteresis para evitar flicker en el umbral)
   |--------------------------------------------------------------------------
   */
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      if (ticking) return;
+      ticking = true;
+
+      window.requestAnimationFrame(() => {
+        setIsScrolled((prev) => {
+          if (prev) return window.scrollY > 80;
+          return window.scrollY > 120;
+        });
+        ticking = false;
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -142,10 +171,10 @@ export default function Navbar() {
   */
 
   const navLinkClass = (path: string) =>
-    `transition ${isActive(path)
+    cx(`transition ${isActive(path)
       ? `${getColorPrimary()} font-semibold underline underline-offset-8`
       : `${getColorHoverSecondary()}`
-    }`;
+    }`);
 
   /*
   |--------------------------------------------------------------------------
@@ -167,7 +196,7 @@ export default function Navbar() {
             setIsHovered(false);
           }
         }}
-        className={`
+        className={cx(`
            fixed top-3 md:top-4
            left-0 right-0
            mx-auto
@@ -182,10 +211,10 @@ export default function Navbar() {
               : "w-fit ml-[calc((100%-72rem)/2)]"
             : "w-[95%] max-w-6xl"
           }
-        `}
+        `)}
       >
         <div
-          className={`
+          className={cx(`
             bg-white/75
             backdrop-blur-xl
             border ${getBorderColor()}
@@ -195,11 +224,11 @@ export default function Navbar() {
             py-3
             transition-all duration-500 ease-in-out
 
-            ${isScrolled && !isHovered
+            ${isCollapsed
               ? "w-fit"
               : "w-full"
             }
-          `}
+          `)}
         >
           {/* =====================================================
               TOP BAR
@@ -226,144 +255,158 @@ export default function Navbar() {
             </Link>
 
             {/* =====================================================
-                DESKTOP NAVBAR
+                DESKTOP: NAV + BOTÓN
+                Abre con snap instantáneo (como antes).
+                Cierra con grid-template-columns suave (sin flash).
             ====================================================== */}
 
-            <nav
-              className={`
-                hidden xl:flex
-                items-center
-                gap-10
-                font-medium
-                text-base
-                xl:text-lg
-                ${getColorPrimary()}
-                transition-all
-                duration-500
-
-                ${isScrolled && !isHovered
-                  ? "opacity-0 invisible w-0 overflow-hidden"
-                  : "opacity-100 visible"
+            <div
+              className={cx(`
+                hidden xl:grid
+                ease-in-out
+                ${phase === "closing"
+                  ? "transition-[grid-template-columns] duration-500"
+                  : "transition-none"
                 }
-              `}
+                ${isCollapsed ? "grid-cols-[0fr]" : "grid-cols-[1fr]"}
+              `)}
             >
-              {/* INICIO */}
-
-              <Link
-                href="/"
-                className={navLinkClass("/")}
-              >
-                Inicio
-              </Link>
-
-              {/* SERVICIOS */}
-
-              <div className="relative group">
-
-                <span
-                  className={navLinkClass("/servicios")}
-                >
-                  Servicios
-                </span>
-
+              <div className={cx(`min-w-0 ${isCollapsed ? "overflow-hidden" : "overflow-visible"}`)}>
                 <div
-                  className="
-                    absolute
-                    left-0
-                    top-full
-                    mt-3
-                    w-56
-                    bg-white
-                    shadow-xl
-                    rounded-xl
-                    opacity-0
-                    invisible
-                    group-hover:opacity-100
-                    group-hover:visible
-                    transition-all
-                    duration-200
-                    overflow-hidden
-                  "
+                  className={cx(`
+                    flex items-center gap-10
+                    ease-in-out
+                    ${phase === "closing"
+                      ? "transition-opacity duration-300"
+                      : "transition-opacity duration-150"
+                    }
+                    ${isCollapsed ? "opacity-0 pointer-events-none" : "opacity-100"}
+                  `)}
                 >
-                  <Link
-                    href="/servicios/ms-shipping"
-                    className="
-                      block
-                      px-4
-                      py-3
-                      hover:bg-gray-100
-                    "
-                  >
-                    MS Shipping
-                  </Link>
 
-                  <Link
-                    href="/servicios/ms-forwarding"
-                    className="
-                      block
-                      px-4
-                      py-3
-                      hover:bg-gray-100
-                    "
-                  >
-                    MS Forwarding
-                  </Link>
+                  {/* NAV */}
 
-                  <Link
-                    href="/servicios/ms-trading"
-                    className="
-                      block
-                      px-4
-                      py-3
-                      hover:bg-gray-100
-                    "
+                  <nav
+                    className={cx(`
+                      flex items-center gap-10
+                      font-medium text-base xl:text-lg
+                      ${getColorPrimary()}
+                    `)}
                   >
-                    MS Trading
-                  </Link>
+                    {/* INICIO */}
+
+                    <Link
+                      href="/"
+                      className={navLinkClass("/")}
+                    >
+                      Inicio
+                    </Link>
+
+                    {/* SERVICIOS */}
+
+                    <div className="relative group">
+
+                      <span
+                        className={navLinkClass("/servicios")}
+                      >
+                        Servicios
+                      </span>
+
+                      <div
+                        className={cx(`
+                          absolute
+                          left-0
+                          top-full
+                          mt-3
+                          w-56
+                          bg-white
+                          shadow-xl
+                          rounded-xl
+                          opacity-0
+                          invisible
+                          group-hover:opacity-100
+                          group-hover:visible
+                          transition-all
+                          duration-200
+                          overflow-hidden
+                        `)}
+                      >
+                        <Link
+                          href="/servicios/ms-shipping"
+                          className={cx(`
+                            block
+                            px-4
+                            py-3
+                            hover:bg-gray-100
+                          `)}
+                        >
+                          MS Shipping
+                        </Link>
+
+                        <Link
+                          href="/servicios/ms-forwarding"
+                          className={cx(`
+                            block
+                            px-4
+                            py-3
+                            hover:bg-gray-100
+                          `)}
+                        >
+                          MS Forwarding
+                        </Link>
+
+                        <Link
+                          href="/servicios/ms-trading"
+                          className={cx(`
+                            block
+                            px-4
+                            py-3
+                            hover:bg-gray-100
+                          `)}
+                        >
+                          MS Trading
+                        </Link>
+                      </div>
+
+                    </div>
+
+                    {/* POR QUÉ ELEGIRNOS */}
+
+                    <Link
+                      href="/#por-que-elegirnos"
+                      className={navLinkClass("/#por-que-elegirnos")}
+                    >
+                      ¿Por qué elegirnos?
+                    </Link>
+
+                  </nav>
+
+                  {/* BOTÓN CONTACTO */}
+
+                  <button
+                    className={cx(`
+                      ${getColorSecondary()}
+                      text-white
+                      px-5
+                      py-2
+                      rounded-lg
+                      font-semibold
+                      hover:scale-105
+                      transition-transform
+                      cursor-pointer
+                      shrink-0
+                    `)}
+                    onClick={() => {
+                      setMobileOpen(false);
+                      setContactOpen(true);
+                    }}
+                  >
+                    Contáctanos
+                  </button>
+
                 </div>
-
               </div>
-
-              {/* POR QUÉ ELEGIRNOS */}
-
-              <Link
-                href="/#por-que-elegirnos"
-                className={navLinkClass("/#por-que-elegirnos")}
-              >
-                ¿Por qué elegirnos?
-              </Link>
-
-            </nav>
-
-            {/* =====================================================
-                CONTACT BUTTON
-            ====================================================== */}
-
-            <button
-              className={`
-                hidden xl:block
-                ${getColorSecondary()}
-                text-white
-                px-5
-                py-2
-                rounded-lg
-                font-semibold
-                hover:scale-105
-                transition-all
-                cursor-pointer
-
-                ${isScrolled && !isHovered
-                  ? "opacity-0 invisible w-0 px-0 overflow-hidden"
-                  : "opacity-100 visible"
-                }
-              `}
-              onClick={() => {
-                setMobileOpen(false);
-                setContactOpen(true);
-              }}
-            >
-              Contáctanos
-            </button>
+            </div>
 
             {/* =====================================================
                 MOBILE MENU BUTTON
@@ -371,10 +414,10 @@ export default function Navbar() {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`
+              className={cx(`
                 xl:hidden
                 ${getColorPrimary()}
-              `}
+              `)}
             >
               {mobileOpen ? (
                 <X size={28} />
@@ -406,10 +449,10 @@ export default function Navbar() {
               <Link
                 href="/"
                 onClick={() => setMobileOpen(false)}
-                className={`
+                className={cx(`
                   block
                   ${navLinkClass("/")}
-                `}
+                `)}
               >
                 Inicio
               </Link>
@@ -422,25 +465,25 @@ export default function Navbar() {
                   onClick={() =>
                     setServicesOpen(!servicesOpen)
                   }
-                  className={`
+                  className={cx(`
                     flex
                     items-center
                     justify-between
                     w-full
                     ${navLinkClass("/servicios")}
-                  `}
+                  `)}
                 >
                   Servicios
 
                   <ChevronDown
                     size={18}
-                    className={`
+                    className={cx(`
                       transition
                       ${servicesOpen
                         ? "rotate-180"
                         : ""
                       }
-                    `}
+                    `)}
                   />
                 </button>
 
@@ -496,10 +539,10 @@ export default function Navbar() {
                 onClick={() =>
                   setMobileOpen(false)
                 }
-                className={`
+                className={cx(`
                   block
                   ${navLinkClass("/#por-que-elegirnos")}
-                `}
+                `)}
               >
                 ¿Por qué elegirnos?
               </Link>
@@ -507,7 +550,7 @@ export default function Navbar() {
               {/* CONTACTO */}
 
               <button
-                className={`
+                className={cx(`
                   w-full
                   mt-2
                   ${getColorSecondary()}
@@ -517,7 +560,7 @@ export default function Navbar() {
                   rounded-xl
                   font-semibold
                   cursor-pointer
-                `}
+                `)}
                 onClick={() => {
                   setMobileOpen(false);
                   setContactOpen(true);

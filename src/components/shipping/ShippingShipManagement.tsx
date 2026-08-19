@@ -94,7 +94,7 @@ export default function ShippingShipManagment() {
           className="relative w-full min-h-[760px] md:min-h-0 md:h-auto rounded-2xl overflow-hidden shadow-md"
         >
           <Image
-            src="/images/shipping/shipping-cherating.jpg"
+            src="/images/shipping/ship-management.jpeg"
             alt="Operación de Buques"
             fill
             className="object-cover grayscale opacity-60"
@@ -113,15 +113,15 @@ export default function ShippingShipManagment() {
               Ship Management
             </span>
 
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold leading-tight max-w-md">
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold leading-tight max-w-md lg:max-w-none">
               Operación de Buques
             </h2>
 
-            <p className="mt-6 text-base md:text-lg leading-relaxed text-white/90 max-w-md">
+            <p className="mt-6 text-base md:text-lg leading-relaxed text-white/90 max-w-md lg:max-w-none">
               Como operadores de buques, gestionamos la comercialización y operación de buques para diversos armadores y operadores internacionales, principalmente de los tipos Bulk Carrier, Multipropósito y Roll-on/Roll-off, entre otros.
             </p>
             <span></span>
-            <p className="mt-6 text-base md:text-lg leading-relaxed text-white/90 max-w-md">
+            <p className="mt-6 text-base md:text-lg leading-relaxed text-white/90 max-w-md lg:max-w-none">
               Nuestra vasta trayectoria e inserción en los principales mercados internacionales altamente competitivos, nuestra seriedad en el cumplimiento de los compromisos contraídos, y la calidad de los servicios ofrecidos, nos han permitido que, año a año, empresas armadoras y operadores de primer nivel internacional y empresas importadores/exportadores de diferentes rubros nos confíen la operación y manejo de sus contratos de carga.
             </p>
           </motion.div>

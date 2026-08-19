@@ -80,7 +80,7 @@ export default function CardsServicios() {
           className="border-l-12 border-forwardingPrincipal pl-8 mb-16"
         >
           <h2 className="text-6xl font-black text-forwardingPrincipal uppercase tracking-tighter">
-            Servicios de Aduana, Logística y Comercio Exterio
+            Servicios de Aduana, Logística y Comercio Exterior
           </h2>
         </motion.div>
 
@@ -136,9 +136,6 @@ export default function CardsServicios() {
                 className="group bg-white border-b border-gray-100 p-12 flex flex-col justify-between hover:bg-forwardingPrincipal transition-all duration-300 ease-in-out min-h-100"
               >
                 <div>
-                  <span className="text-[--forwardingComplementario] font-mono font-bold text-sm tracking-[0.3em] uppercase block mb-6 transition-colors duration-300 group-hover:text-[--forwardingSecundario]">
-                    Sector_0{i + 1}
-                  </span>
 
                   <h3 className="text-3xl font-bold text-forwardingPrincipal group-hover:text-white leading-none uppercase mb-6 transition-colors duration-300">
                     {service.title}
