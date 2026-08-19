@@ -30,7 +30,7 @@ export default function ShippingCherating() {
     <div id="cherating" className="relative w-full min-h-150 flex items-center justify-center overflow-hidden">
 
       <Image
-        src="/images/shipping/vignetteAtardecer.jpg"
+        src="/images/shipping/ship-management.jpeg"
         alt="Chartering background"
         fill
         className="absolute inset-0 object-cover"

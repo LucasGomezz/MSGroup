@@ -91,10 +91,10 @@ export default function ShippingShipManagment() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative w-full min-h-[760px] md:min-h-0 md:h-auto rounded-2xl overflow-hidden shadow-md"
+          className="relative w-full min-h-190 md:min-h-0 md:h-auto rounded-2xl overflow-hidden shadow-md"
         >
           <Image
-            src="/images/shipping/ship-management.jpeg"
+            src="/images/shipping/ship-managementt.jpeg"
             alt="Operación de Buques"
             fill
             className="object-cover grayscale opacity-60"
