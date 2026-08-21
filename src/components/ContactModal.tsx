@@ -8,8 +8,11 @@ import {
   Mail,
   MapPin,
   Clock3,
-  MessageCircle,
+  Send,
+  CheckCircle2,
 } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
+import content from "./ContactModal.i18n.json";
 
 type ContactModalProps = {
   open: boolean;
@@ -17,16 +20,21 @@ type ContactModalProps = {
   defaultService?: string;
 };
 
+type Status = "idle" | "sending" | "success" | "error";
+
 export default function ContactModal({
   open,
   onClose,
   defaultService,
 }: ContactModalProps) {
+  const { language } = useLanguage();
+  const t = content[language];
+
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [service, setService] = useState(
-    defaultService || "Seleccionar servicio"
+    defaultService || t.seleccionarServicio
   );
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({
@@ -34,6 +42,7 @@ export default function ContactModal({
     email: false,
     message: false,
   });
+  const [status, setStatus] = useState<Status>("idle");
 
   useEffect(() => {
     if (!open) {
@@ -44,7 +53,7 @@ export default function ContactModal({
         message: false,
       });
 
-      setService(defaultService || "Seleccionar servicio");
+      setService(defaultService || t.seleccionarServicio);
       document.body.style.overflow = "auto";
       return;
     }
@@ -56,6 +65,7 @@ export default function ContactModal({
     });
 
     setService(defaultService || "Seleccionar servicio");
+    setStatus("idle");
 
     const onEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -70,7 +80,24 @@ export default function ContactModal({
     };
   }, [open, onClose, defaultService]);
 
-  const sendWhatsapp = () => {
+  // Al llegar a "success", cierra el modal solo y limpia el form
+  useEffect(() => {
+    if (status !== "success") return;
+
+    const timeout = setTimeout(() => {
+      setName("");
+      setCompany("");
+      setEmail("");
+      setMessage("");
+      setService(defaultService || t.seleccionarServicio);
+      setStatus("idle");
+      onClose();
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, [status, onClose, defaultService]);
+
+  const sendEmail = async () => {
     const newErrors = {
       name: !name.trim(),
       email: !email.trim(),
@@ -81,19 +108,22 @@ export default function ContactModal({
 
     if (newErrors.name || newErrors.email || newErrors.message) return;
 
-    const text = `Hola, soy ${name}
+    setStatus("sending");
 
-Empresa: ${company}
-Email: ${email}
-Servicio solicitado: ${service}
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, company, email, service, message }),
+      });
 
-Consulta:
-${message}`;
+      if (!res.ok) throw new Error("Fallo el envío");
 
-    window.open(
-      `https://wa.me/541135925567?text=${encodeURIComponent(text)}`,
-      "_blank"
-    );
+      setStatus("success");
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    }
   };
 
   return (
@@ -126,24 +156,24 @@ ${message}`;
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="hidden lg:block bg-navy text-white px-6 sm:px-8 lg:px-10 py-10">
                   <p className="text-coral text-sm font-semibold uppercase tracking-[0.3em] mb-4">
-                    MS Group
+                    {t.eyebrow}
                   </p>
 
                   <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                    Hablemos de tu próximo envío
+                    {t.sidebarTitulo}
                   </h2>
 
                   <p className="text-white/80 mb-10">
-                    Soluciones integrales de logística internacional.
+                    {t.sidebarDescripcion}
                   </p>
 
                   <div className="space-y-6 text-sm sm:text-base">
                     <div className="flex gap-4">
                       <MapPin className="text-coral mt-1" size={16} />
                       <div>
-                        Tte. Gral. Juan D. Perón 683, 3° piso
+                        {t.direccionLinea1}
                         <br />
-                        Buenos Aires, Argentina
+                        {t.direccionLinea2}
                       </div>
                     </div>
 
@@ -161,125 +191,144 @@ ${message}`;
 
                     <div className="flex gap-4">
                       <Clock3 className="text-coral mt-1" size={16} />
-                      <div>Lunes a Viernes · 9:00 a 18:00</div>
+                      <div>{t.horario}</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="px-6 sm:px-8 lg:px-10 py-10">
-                  <div className="block lg:hidden mb-6">
-                    <h3 className="text-2xl font-semibold text-navy mb-2">
-                      Hablemos de tu próximo envio
-                    </h3>
-                    <p className="text-md font-semibold text-navy">
-                      Completa el formulario y un especialista te contactará de
-                      inmediato.
-                    </p>
-                  </div>
-
-                  <div className="hidden lg:block mb-6">
-                    <h3 className="text-2xl font-semibold text-navy mb-2">
-                      Solicitar contacto
-                    </h3>
-                    <p className="text-md font-semibold text-navy">
-                      Completa el formulario y un especialista te contactará de
-                      inmediato.
-                    </p>
-                  </div>
-
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Nombre *"
-                      value={name}
-                      onChange={(e) => {
-                        setName(e.target.value);
-                        setErrors((prev) => ({ ...prev, name: false }));
-                      }}
-                      className={`w-full border rounded-xl my-2 px-4 py-3 outline-none transition ${errors.name
-                          ? "border-red-500 focus:border-red-500"
-                          : "border-gray-200 focus:border-coral"
-                        }`}
-                    />
-
-                    {errors.name && (
-                      <p className="text-red-500 text-sm mb-2">
-                        Este campo es obligatorio
+                  {status === "success" ? (
+                    <div className="flex flex-col items-center justify-center text-center h-full py-16">
+                      <CheckCircle2 className="text-green-500 mb-4" size={56} />
+                      <h3 className="text-2xl font-semibold text-navy mb-2">
+                        {t.exitoTitulo}
+                      </h3>
+                      <p className="text-gray-600">
+                        {t.exitoDescripcion}
                       </p>
-                    )}
-                  </div>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="block lg:hidden mb-6">
+                        <h3 className="text-2xl font-semibold text-navy mb-2">
+                          {t.mobileTitulo}
+                        </h3>
+                        <p className="text-md font-semibold text-navy">
+                          {t.mobileDescripcion}
+                        </p>
+                      </div>
 
-                  <input
-                    type="text"
-                    placeholder="Empresa"
-                    value={company}
-                    onChange={(e) => setCompany(e.target.value)}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-coral"
-                  />
+                      <div className="hidden lg:block mb-6">
+                        <h3 className="text-2xl font-semibold text-navy mb-2">
+                          {t.desktopTitulo}
+                        </h3>
+                        <p className="text-md font-semibold text-navy">
+                          {t.desktopDescripcion}
+                        </p>
+                      </div>
 
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email *"
-                      value={email}
-                      onChange={(e) => {
-                        setEmail(e.target.value);
-                        setErrors((prev) => ({ ...prev, email: false }));
-                      }}
-                      className={`w-full border space-y-4 rounded-xl px-4 py-3 my-2 outline-none transition ${errors.email
-                          ? "border-red-500 focus:border-red-500"
-                          : "border-gray-200 focus:border-coral"
-                        }`}
-                    />
+                      <div>
+                        <input
+                          type="text"
+                          placeholder={t.placeholderNombre}
+                          value={name}
+                          onChange={(e) => {
+                            setName(e.target.value);
+                            setErrors((prev) => ({ ...prev, name: false }));
+                          }}
+                          className={`w-full border rounded-xl my-2 px-4 py-3 outline-none transition ${errors.name
+                              ? "border-red-500 focus:border-red-500"
+                              : "border-gray-200 focus:border-coral"
+                            }`}
+                        />
 
-                    {errors.email && (
-                      <p className="text-red-500 text-sm">
-                        Este campo es obligatorio
-                      </p>
-                    )}
-                  </div>
+                        {errors.name && (
+                          <p className="text-red-500 text-sm mb-2">
+                            {t.campoObligatorio}
+                          </p>
+                        )}
+                      </div>
 
-                  <select
-                    value={service}
-                    onChange={(e) => setService(e.target.value)}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 my-2 outline-none focus:border-coral text-gray-600 cursor-pointer"
-                  >
-                    <option>Seleccionar servicio</option>
-                    <option>MS Shipping</option>
-                    <option>MS Forwarding</option>
-                    <option>MS Trading</option>
-                  </select>
+                      <input
+                        type="text"
+                        placeholder={t.placeholderEmpresa}
+                        value={company}
+                        onChange={(e) => setCompany(e.target.value)}
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-coral"
+                      />
 
-                  <div>
-                    <textarea
-                      rows={2}
-                      placeholder="Contanos qué necesitás... *"
-                      value={message}
-                      onChange={(e) => {
-                        setMessage(e.target.value);
-                        setErrors((prev) => ({ ...prev, message: false }));
-                      }}
-                      className={`w-full border rounded-xl px-4 py-2.5 outline-none resize-none transition ${errors.message
-                          ? "border-red-500 focus:border-red-500"
-                          : "border-gray-200 focus:border-coral"
-                        }`}
-                    />
+                      <div>
+                        <input
+                          type="email"
+                          placeholder={t.placeholderEmail}
+                          value={email}
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                            setErrors((prev) => ({ ...prev, email: false }));
+                          }}
+                          className={`w-full border space-y-4 rounded-xl px-4 py-3 my-2 outline-none transition ${errors.email
+                              ? "border-red-500 focus:border-red-500"
+                              : "border-gray-200 focus:border-coral"
+                            }`}
+                        />
 
-                    {errors.message && (
-                      <p className="text-red-500 text-sm mt-1">
-                        Este campo es obligatorio
-                      </p>
-                    )}
-                  </div>
+                        {errors.email && (
+                          <p className="text-red-500 text-sm">
+                            {t.campoObligatorio}
+                          </p>
+                        )}
+                      </div>
 
-                  <button
-                    type="button"
-                    onClick={sendWhatsapp}
-                    className="w-full inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 cursor-pointer"
-                  >
-                    <MessageCircle size={18} />
-                    Enviar consulta por WhatsApp
-                  </button>
+                      <select
+                        value={service}
+                        onChange={(e) => setService(e.target.value)}
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 my-2 outline-none focus:border-coral text-gray-600 cursor-pointer"
+                      >
+                        <option>{t.seleccionarServicio}</option>
+                        <option>{t.msShipping}</option>
+                        <option>{t.msForwarding}</option>
+                        <option>{t.msTrading}</option>
+                      </select>
+
+                      <div>
+                        <textarea
+                          rows={2}
+                          placeholder={t.placeholderMensaje}
+                          value={message}
+                          onChange={(e) => {
+                            setMessage(e.target.value);
+                            setErrors((prev) => ({ ...prev, message: false }));
+                          }}
+                          className={`w-full border rounded-xl px-4 py-2.5 outline-none resize-none transition ${errors.message
+                              ? "border-red-500 focus:border-red-500"
+                              : "border-gray-200 focus:border-coral"
+                            }`}
+                        />
+
+                        {errors.message && (
+                          <p className="text-red-500 text-sm mt-1">
+                            {t.campoObligatorio}
+                          </p>
+                        )}
+                      </div>
+
+                      {status === "error" && (
+                        <p className="text-red-500 text-sm mb-2">
+                          {t.errorEnvio}
+                        </p>
+                      )}
+
+                      <button
+                        type="button"
+                        onClick={sendEmail}
+                        disabled={status === "sending"}
+                        className="w-full inline-flex items-center justify-center gap-3 bg-coral hover:bg-coral/90 disabled:opacity-60 disabled:cursor-not-allowed text-white py-3 rounded-xl font-semibold transition-all duration-300 cursor-pointer"
+                      >
+                        <Send size={18} />
+                        {status === "sending" ? t.enviando : t.enviarConsulta}
+                      </button>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

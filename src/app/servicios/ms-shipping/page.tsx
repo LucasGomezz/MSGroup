@@ -1,3 +1,5 @@
+"use client";
+
 import Hero from "@/components/Hero";
 import ShippingShipManagment from "@/components/shipping/ShippingShipManagement";
 import ShippingCherating from "@/components/shipping/ShippingChartering";
@@ -5,15 +7,20 @@ import ShippingBrokerage from "@/components/shipping/ShippingBrokerage";
 import ShippingBrokerageServices from "@/components/shipping/ShippingBrokerageServices";
 import ShippingAgency from "@/components/shipping/ShippingAgency";
 import ServiceIntro from "@/components/ServiceIntro";
+import { useLanguage } from "@/lib/language-context";
+import content from "./page.i18n.json";
 
 
 
 export default function MSShipping() {
+    const { language } = useLanguage();
+    const t = content[language];
+
     return (
         <>
-            <Hero title="MS Shipping"
-                description="División marítima de MS Group, especializada en el manejo comercial y operativo de buques como Operadores, Charterers y Brokers de cargas y buques."
-                buttonText="Inicia tu consulta"
+            <Hero title={t.heroTitle}
+                description={t.heroDescription}
+                buttonText={t.heroButtonText}
                 buttonColor="bg-shippingComplementario hover:shippingComplementario/90"
                 mediaType="video"
                 mediaSrc="/videos/ms-shipping-video.mp4"
@@ -23,9 +30,9 @@ export default function MSShipping() {
                 defaultService="MS Shipping" />
             <section className="relative w-full overflow-hidden">
                 <ServiceIntro
-                    title="MS Shipping"
+                    title={t.serviceIntroTitle}
                     colorClass="text-shippingPrincipal"
-                    description="Desde 1990, MS Shipping opera desde Argentina como división marítima de MS Group, especializada en el manejo comercial y operativo de buques como Operadores, Charterers y Brokers para clientes locales e internacionales."
+                    description={t.serviceIntroDescription}
                 />
                 <ShippingShipManagment />
                 <ShippingCherating />

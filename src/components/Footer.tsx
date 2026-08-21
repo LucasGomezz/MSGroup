@@ -1,8 +1,17 @@
+"use client";
+
 import { Clock3, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useLanguage } from "@/lib/language-context";
+import content from "./Footer.i18n.json";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const { language } = useLanguage();
+  const t = content[language];
+
   return (
     <footer className="bg-navy text-white">
 
@@ -11,27 +20,26 @@ export default function Footer() {
 
           <div className="lg:pr-10 lg:border-r border-white/20">
             <h3 className="text-coral font-semibold uppercase mb-3 text-center sm:text-left">
-              MS Group
+              {t.msGroup}
             </h3>
 
             <p className="text-gray-300 text-sm leading-relaxed text-center sm:text-left">
-              Soluciones integrales de logística internacional
-              desde 1994.
+              {t.tagline}
             </p>
           </div>
 
           <div className=" sm:pl-0 lg:px-10 lg:border-r border-white/20 ">
             <h3 className="text-coral font-semibold uppercase mb-3 text-center sm:text-left">
-              Contacto
+              {t.contacto}
             </h3>
 
             <div className="space-y-6 text-sm sm:text-base">
               <div className="flex justify-center sm:justify-start gap-4">
                 <MapPin className="text-coral mt-1" size={16} />
                 <div>
-                  Tte. Gral. Juan D. Perón 683, 3° piso
+                  {t.direccionLinea1}
                   <br />
-                  Buenos Aires, Argentina
+                  {t.direccionLinea2}
                 </div>
               </div>
 
@@ -51,14 +59,14 @@ export default function Footer() {
 
               <div className="flex justify-center sm:justify-start gap-4">
                 <Clock3 className="text-coral mt-1" size={16} />
-                <div>Lunes a Viernes · 9:00 a 18:00</div>
+                <div>{t.horario}</div>
               </div>
             </div>
           </div>
 
           <div className="sm:col-span-2 lg:col-span-1 lg:pl-10">
             <h3 className="text-coral font-semibold uppercase mb-3 text-center sm:text-left">
-              Nuestros Servicios
+              {t.nuestrosServicios}
             </h3>
 
             <ul className="text-gray-300 text-lg space-y-6 text-center sm:text-left ">
@@ -68,7 +76,7 @@ export default function Footer() {
                   href="/servicios/ms-shipping"
                   className="hover:text-white transition"
                 >
-                  MS Shipping
+                  {t.msShipping}
                 </Link>
               </li>
 
@@ -77,7 +85,7 @@ export default function Footer() {
                   href="/servicios/ms-forwarding"
                   className="hover:text-white transition"
                 >
-                  MS Forwarding
+                  {t.msForwarding}
                 </Link>
               </li>
 
@@ -86,7 +94,7 @@ export default function Footer() {
                   href="/servicios/ms-trading"
                   className="hover:text-white transition"
                 >
-                  MS Trading
+                  {t.msTrading}
                 </Link>
               </li>
 
@@ -102,10 +110,19 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col lg:flex-row justify-between items-center gap-3 text-sm text-gray-300 text-center lg:text-left">
 
           <p>
-            © 2026 MS Group S.R.L. Todos los derechos reservados.
+            {t.copyright}
           </p>
 
-          <Link href="/" className="flex items-center shrink-0">
+          <Link
+            href="/"
+            onClick={(e) => {
+              if (pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+            className="flex items-center shrink-0"
+          >
             <Image
               src="/images/logos/logoFooter.png"
               alt="Logo"
@@ -119,11 +136,11 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center">
 
             <p className="hover:text-white transition">
-              Aviso Legal
+              {t.avisoLegal}
             </p>
 
             <p className="hover:text-white transition">
-              Política de Privacidad
+              {t.politicaPrivacidad}
             </p>
 
           </div>

@@ -4,47 +4,20 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Container, Eye, Languages, Ship, Users } from "lucide-react";
 import CTASection from "../CTASection";
+import { useLanguage } from "@/lib/language-context";
+import content from "./ShippingAgency.i18n.json";
 
 export default function ShippingAgency() {
-  const capacities = [
-    {
-      icon: Ship,
-      title: "Atención a diversos tipos de buques",
-      desc: "Bulk carriers, buques multipropósito, Roll-on/Roll-off (Ro/Ro), portacontenedores y buques pesqueros.",
-    },
-    {
-      icon: Container,
-      title: "Gestión de múltiples tipos de carga",
-      desc: "Graneles, productos agrícolas, productos siderúrgicos, fertilizantes, contenedores, carga de proyecto, vehículos y carga general.",
-    },
-    {
-      icon: Eye,
-      title: "Seguimiento permanente",
-      desc: "Monitoreo continuo de operaciones portuarias cumpliendo con todos los requerimientos operativos y documentales de nuestros clientes.",
-    },
-    {
-      icon: Users,
-      title: "Equipo especializado",
-      desc: "Staff de profesionales con amplia experiencia y la infraestructura necesaria para asegurar operaciones portuarias eficientes.",
-    },
-    {
-      icon: Languages,
-      title: "Capacidad multilingüe",
-      desc: "Personal bilingüe español/inglés, con conocimientos adicionales de italiano y portugués para comunicación con tripulaciones y armadores internacionales.",
-    },
-  ];
+  const { language } = useLanguage();
+  const t = content[language];
 
-  const services = [
-    "Servicio de Agencia Marítima",
-    "Coordinación de servicio de prácticos y pilotos de puertos y canales",
-    "Servicio de remolcadores y lanchas",
-    "Atención a tripulación",
-    "Provisión de víveres y provisiones",
-    "Manejo y provisión de repuestos y reparaciones",
-    "Atención y coordinación de drydock",
-    "Bunkering",
-    "Operaciones portuarias (carga/descarga)",
-  ];
+  const capacityIcons = [Ship, Container, Eye, Users, Languages];
+  const capacities = t.capacities.map((item, i) => ({
+    ...item,
+    icon: capacityIcons[i],
+  }));
+
+  const services = t.services;
 
   return (
     <div id="agencia-maritima" className="w-full bg-white font-sans overflow-hidden ">
@@ -82,12 +55,11 @@ export default function ShippingAgency() {
               />
 
               <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight uppercase leading-tight mb-4">
-                Agencia Marítima
+                {t.heading}
               </h2>
 
               <p className="text-base md:text-lg text-white/80 max-w-md font-light leading-relaxed">
-                Ofrecemos todos los servicios portuarios para atención de buques y
-                cargas en los principales puertos argentinos.
+                {t.descripcion}
               </p>
             </div>
 
@@ -142,7 +114,7 @@ export default function ShippingAgency() {
             className="bg-white/10 backdrop-blur-md border border-white/20 p-6 md:p-8 rounded-2xl shadow-2xl flex flex-col justify-center"
           >
             <h3 className="text-lg md:text-xl font-bold text-white mb-6 border-b border-white/10 pb-4">
-              Servicios Ofrecidos en Puertos Argentinos
+              {t.serviciosHeading}
             </h3>
 
             <motion.div
@@ -186,13 +158,13 @@ export default function ShippingAgency() {
           <CTASection
             title={
               <>
-                ¿LISTO PARA OPTIMIZAR TUS OPERACIONES
+                {t.ctaTituloLinea1}
                 <br />
-                DE CARGAS MARÍTIMAS?
+                {t.ctaTituloLinea2}
               </>
             }
-            description="Confía tus necesidades a expertos y recibe asesoramiento de profesionales especializados en shipping."
-            buttonText="Hablemos"
+            description={t.ctaDescripcion}
+            buttonText={t.ctaBoton}
             bgClassName="bg-shippingPrincipal"
             textClassName="text-white"
             buttonClassName="bg-white text-shippingPrincipal hover:bg-gray-100"

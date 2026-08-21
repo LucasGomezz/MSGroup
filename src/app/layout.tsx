@@ -6,6 +6,7 @@ import "./globals.css";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { LanguageProvider } from "@/lib/language-context";
 
 const bebas = Bebas_Neue({
   weight: "400",
@@ -39,15 +40,17 @@ export default function RootLayout({
       className={`${bebas.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
+        <LanguageProvider>
+          <Navbar />
 
-        <main className="flex-1">
-          {children}
-        </main>
+          <main className="flex-1">
+            {children}
+          </main>
 
-        <Footer />
+          <Footer />
 
-        <BackToTopButton />
+          <BackToTopButton />
+        </LanguageProvider>
       </body>
     </html>
   );

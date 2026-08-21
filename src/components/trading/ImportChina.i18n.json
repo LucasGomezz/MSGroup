@@ -1,0 +1,30 @@
+{
+  "es": {
+    "headingLinea1": "¿Querés importar",
+    "headingLinea2": "productos desde China?",
+    "parrafo1": "Te acompañamos de principio a fin para que puedas importar de forma simple, segura y eficiente. Contamos con operadores en China y otros mercados estratégicos que nos permiten buscar y evaluar proveedores en origen, identificar las mejores alternativas para tu negocio y gestionar toda la operación.",
+    "nosOcupamosDe": "Nos ocupamos de:",
+    "steps": [
+      { "title": "Buscar", "desc": "Identificamos proveedores y productos según tus necesidades." },
+      { "title": "Evaluar", "desc": "Analizamos las alternativas disponibles y las condiciones de compra." },
+      { "title": "Gestionar", "desc": "Coordinamos la compra, documentación y logística internacional." },
+      { "title": "Importar", "desc": "Acompañamos el proceso hasta que tu mercadería llega a destino." }
+    ],
+    "cierre_antes": "Vos definís qué querés importar.",
+    "cierre_despues": "Nosotros nos ocupamos del resto."
+  },
+  "en": {
+    "headingLinea1": "",
+    "headingLinea2": "",
+    "parrafo1": "",
+    "nosOcupamosDe": "",
+    "steps": [
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" }
+    ],
+    "cierre_antes": "",
+    "cierre_despues": ""
+  }
+}

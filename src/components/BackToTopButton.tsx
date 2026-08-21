@@ -3,8 +3,12 @@
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useLanguage } from "@/lib/language-context";
+import content from "./BackToTopButton.i18n.json";
 
 export default function BackToTopButton() {
+  const { language } = useLanguage();
+  const t = content[language];
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -30,7 +34,7 @@ export default function BackToTopButton() {
       {visible && (
         <motion.button
           onClick={goTop}
-          aria-label="Volver al inicio"
+          aria-label={t.ariaLabel}
           initial={{ opacity: 0, y: 24, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 24, scale: 0.9 }}

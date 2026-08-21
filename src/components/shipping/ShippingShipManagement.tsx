@@ -5,40 +5,23 @@ import { FaGlobe, FaTools, FaShip, FaBalanceScale } from "react-icons/fa";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { MdSecurity } from "react-icons/md";
 import Image from "next/image";
+import { useLanguage } from "@/lib/language-context";
+import content from "./ShippingShipManagement.i18n.json";
 
 export default function ShippingShipManagment() {
-  const items = [
-    {
-      icon: <GiTakeMyMoney />,
-      title: "Maximización de Rentabilidad",
-      text: "Gestionamos todo tipo de contratos de cargas, buscando obtener el mayor beneficio para nuestros clientes.",
-    },
-    {
-      icon: <FaBalanceScale />,
-      title: "Términos Competitivos",
-      text: "Negociamos términos contractuales óptimos según las condiciones vigentes del mercado para cada tipo de carga y tráfico.",
-    },
-    {
-      icon: <MdSecurity />,
-      title: "Gestión de Riesgos",
-      text: "Analizamos cuidadosamente cada viaje para minimizar riesgos y explorar oportunidades en nuevas rutas y mercados..",
-    },
-    {
-      icon: <FaGlobe />,
-      title: "Red Global",
-      text: "Monitoreamos en tiempo real las condiciones de mercado y mantenemos contacto directo por un lado con armadores y operadores de buque y por el otro con productores, traders y operadores globales, lo que nos permite identificar las mejores oportunidades de empleo para cada buque.",
-    },
-    {
-      icon: <FaTools />,
-      title: "Ship Management",
-      text: "Cubrimos todos los requerimientos y necesidades comerciales y operativas de los armadores optimizando costos sin comprometer la calidad del servicio.",
-    },
-    {
-      icon: <FaShip />,
-      title: "Servicios Preferenciales",
-      text: "Accedemos a las mejores alternativas para la contratación de bunkers, agencias marítimas, tripulación, seguros, reparaciones y demás servicios relacionados con el manejo de buques.",
-    },
+  const { language } = useLanguage();
+  const t = content[language];
+
+  const icons = [
+    <GiTakeMyMoney key={0} />,
+    <FaBalanceScale key={1} />,
+    <MdSecurity key={2} />,
+    <FaGlobe key={3} />,
+    <FaTools key={4} />,
+    <FaShip key={5} />,
   ];
+
+  const items = t.items.map((item, i) => ({ ...item, icon: icons[i] }));
 
   return (
     <div id="operacion-buques" className="w-full bg-shippingPrincipal py-16 px-6 md:px-12 lg:px-16">
@@ -110,19 +93,19 @@ export default function ShippingShipManagment() {
             className="absolute inset-0 flex flex-col justify-center px-6 md:px-10 lg:px-12 text-white"
           >
             <span className="text-xs tracking-[0.3em] uppercase text-white/70">
-              Ship Management
+              {t.eyebrow}
             </span>
 
             <h2 className="mt-3 text-3xl md:text-4xl font-bold leading-tight max-w-md lg:max-w-none">
-              Operación de Buques
+              {t.heading}
             </h2>
 
             <p className="mt-6 text-base md:text-lg leading-relaxed text-white/90 max-w-md lg:max-w-none">
-              Como operadores de buques, gestionamos la comercialización y operación de buques para diversos armadores y operadores internacionales, principalmente de los tipos Bulk Carrier, Multipropósito y Roll-on/Roll-off, entre otros.
+              {t.parrafo1}
             </p>
             <span></span>
             <p className="mt-6 text-base md:text-lg leading-relaxed text-white/90 max-w-md lg:max-w-none">
-              Nuestra vasta trayectoria e inserción en los principales mercados internacionales altamente competitivos, nuestra seriedad en el cumplimiento de los compromisos contraídos, y la calidad de los servicios ofrecidos, nos han permitido que, año a año, empresas armadoras y operadores de primer nivel internacional y empresas importadores/exportadores de diferentes rubros nos confíen la operación y manejo de sus contratos de carga.
+              {t.parrafo2}
             </p>
           </motion.div>
         </motion.div>

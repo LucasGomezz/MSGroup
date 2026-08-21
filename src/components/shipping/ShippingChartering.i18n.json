@@ -1,0 +1,39 @@
+{
+  "es": {
+    "heading": "Chartering",
+    "intro_antes": "Proveemos servicios de chartering por viaje",
+    "intro_voyageCharter": "(voyage charter)",
+    "intro_yPorTiempo": "y por tiempo",
+    "intro_timeCharter": "(time charter)",
+    "intro_despues": "para atender tanto los contratos de carga de nuestros clientes como nuestros propios contratos de cargas y tráficos regulares, concentrándonos principalmente en el servicio de transporte de commodities, graneles, carga rodante, carga de proyecto y carga general a nivel global.",
+    "tiposDeContratos": "Tipos de contratos",
+    "traficosPrincipales": "Tráficos principales",
+    "contractTypes": [
+      { "title": "Voyage Charter:", "desc": "Contratación de buque por viaje específico." },
+      { "title": "Time Charter:", "desc": "Arrendamiento de buque por período determinado." },
+      { "title": "Contract of Affreightment (COA):", "desc": "Contratos de volumen para tráficos regulares." }
+    ],
+    "traffics": [
+      "Commodities agrícolas (granos, harinas, aceites).",
+      "Graneles sólidos (minerales, fertilizantes, productos siderúrgicos).",
+      "Carga rodante (vehículos, maquinaria agrícola).",
+      "Carga general y carga de proyecto."
+    ]
+  },
+  "en": {
+    "heading": "",
+    "intro_antes": "",
+    "intro_voyageCharter": "",
+    "intro_yPorTiempo": "",
+    "intro_timeCharter": "",
+    "intro_despues": "",
+    "tiposDeContratos": "",
+    "traficosPrincipales": "",
+    "contractTypes": [
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" }
+    ],
+    "traffics": ["", "", "", ""]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "es": {
+    "heading": "La diferencia está en los detalles",
+    "description": "Somos tu socio estratégico en cada operación de comercio internacional.",
+    "features": [
+      {
+        "title": "Personalización total",
+        "description": "Diseñamos soluciones a medida para cada cliente, adaptándonos a la complejidad de cada operación."
+      },
+      {
+        "title": "Transparencia real",
+        "description": "Seguimiento en tiempo real, costos claros y comunicación directa con tu ejecutivo asignado."
+      },
+      {
+        "title": "Valor agregado",
+        "description": "Aportamos valor a tu negocio con recomendaciones basadas en +35 años de experiencia en operaciones internacionales de todo tipo."
+      },
+      {
+        "title": "Red global, trato local",
+        "description": "Presencia en +100 países a través de nuestra red de agentes con la cercanía y confianza de una empresa argentina."
+      }
+    ]
+  },
+  "en": {
+    "heading": "",
+    "description": "",
+    "features": [
+      { "title": "", "description": "" },
+      { "title": "", "description": "" },
+      { "title": "", "description": "" },
+      { "title": "", "description": "" }
+    ]
+  }
+}

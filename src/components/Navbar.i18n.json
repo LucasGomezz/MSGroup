@@ -1,0 +1,20 @@
+{
+  "es": {
+    "inicio": "Inicio",
+    "servicios": "Servicios",
+    "msShipping": "MS Shipping",
+    "msForwarding": "MS Forwarding",
+    "msTrading": "MS Trading",
+    "porQueElegirnos": "¿Por qué elegirnos?",
+    "contactanos": "Contáctanos"
+  },
+  "en": {
+    "inicio": "",
+    "servicios": "",
+    "msShipping": "",
+    "msForwarding": "",
+    "msTrading": "",
+    "porQueElegirnos": "",
+    "contactanos": ""
+  }
+}

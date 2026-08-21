@@ -2,14 +2,15 @@
 
 import { motion } from "framer-motion";
 import { Zap, Handshake, MapPin, DollarSign } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
+import content from "./StatsForwarding.i18n.json";
 
 export default function StatsForwarding() {
-  const items = [
-    { icon: Zap, text: "Cotización en 24hs" },
-    { icon: Handshake, text: "Ejecutivo dedicado" },
-    { icon: MapPin, text: "Tracking permanente " },
-    { icon: DollarSign, text: "Sin costos ocultos" },
-  ];
+  const { language } = useLanguage();
+  const t = content[language];
+
+  const icons = [Zap, Handshake, MapPin, DollarSign];
+  const items = t.items.map((text, i) => ({ icon: icons[i], text }));
 
   return (
     <section className="bg-navy text-white py-14 sm:py-16 md:py-20">

@@ -1,0 +1,46 @@
+{
+  "es": {
+    "heading": "Agencia Marítima",
+    "descripcion": "Ofrecemos todos los servicios portuarios para atención de buques y cargas en los principales puertos argentinos.",
+    "capacities": [
+      { "title": "Atención a diversos tipos de buques", "desc": "Bulk carriers, buques multipropósito, Roll-on/Roll-off (Ro/Ro), portacontenedores y buques pesqueros." },
+      { "title": "Gestión de múltiples tipos de carga", "desc": "Graneles, productos agrícolas, productos siderúrgicos, fertilizantes, contenedores, carga de proyecto, vehículos y carga general." },
+      { "title": "Seguimiento permanente", "desc": "Monitoreo continuo de operaciones portuarias cumpliendo con todos los requerimientos operativos y documentales de nuestros clientes." },
+      { "title": "Equipo especializado", "desc": "Staff de profesionales con amplia experiencia y la infraestructura necesaria para asegurar operaciones portuarias eficientes." },
+      { "title": "Capacidad multilingüe", "desc": "Personal bilingüe español/inglés, con conocimientos adicionales de italiano y portugués para comunicación con tripulaciones y armadores internacionales." }
+    ],
+    "serviciosHeading": "Servicios Ofrecidos en Puertos Argentinos",
+    "services": [
+      "Servicio de Agencia Marítima",
+      "Coordinación de servicio de prácticos y pilotos de puertos y canales",
+      "Servicio de remolcadores y lanchas",
+      "Atención a tripulación",
+      "Provisión de víveres y provisiones",
+      "Manejo y provisión de repuestos y reparaciones",
+      "Atención y coordinación de drydock",
+      "Bunkering",
+      "Operaciones portuarias (carga/descarga)"
+    ],
+    "ctaTituloLinea1": "¿LISTO PARA OPTIMIZAR TUS OPERACIONES",
+    "ctaTituloLinea2": "DE CARGAS MARÍTIMAS?",
+    "ctaDescripcion": "Confía tus necesidades a expertos y recibe asesoramiento de profesionales especializados en shipping.",
+    "ctaBoton": "Hablemos"
+  },
+  "en": {
+    "heading": "",
+    "descripcion": "",
+    "capacities": [
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" }
+    ],
+    "serviciosHeading": "",
+    "services": ["", "", "", "", "", "", "", "", ""],
+    "ctaTituloLinea1": "",
+    "ctaTituloLinea2": "",
+    "ctaDescripcion": "",
+    "ctaBoton": ""
+  }
+}

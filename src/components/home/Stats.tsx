@@ -2,14 +2,21 @@
 
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { useLanguage } from "@/lib/language-context";
+import content from "./Stats.i18n.json";
 
 export default function Stats() {
+  const { language } = useLanguage();
+  const t = content[language];
+
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
     initialInView: false,
     fallbackInView: false
   });
+
+  const numbers = [35, 500, 100, 365];
 
   return (
     <section className="bg-navy text-white py-16 sm:py-20 md:py-24">
@@ -19,21 +26,19 @@ export default function Stats() {
           }`}
       >
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-3 leading-tight">
-          Experiencia, eficiencia y confianza
+          {t.heading}
         </h2>
 
         <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
-          Ofrecemos soluciones seguras y a medida para el comercio exterior y el transporte
-          internacional de mercaderías.
+          {t.description}
         </p>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl py-8 sm:py-10 px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 text-center md:divide-x md:divide-white/20">
-          <Stat number={35} label="Años de trayectoria" />
-          <Stat number={500} label="Clientes activos" />
-          <Stat number={100} label="Países conectados" />
-          <Stat number={365} label="Días al año operando" />
+          {t.stats.map((stat, i) => (
+            <Stat key={i} number={numbers[i]} label={stat.label} />
+          ))}
         </div>
       </div>
 

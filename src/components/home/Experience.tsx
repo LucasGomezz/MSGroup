@@ -2,8 +2,13 @@
 
 import { useInView } from "react-intersection-observer";
 import WorldMap from "@/components/ui/world-map";
+import { useLanguage } from "@/lib/language-context";
+import content from "./Experience.i18n.json";
 
 export default function Experience() {
+  const { language } = useLanguage();
+  const t = content[language];
+
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -33,38 +38,37 @@ export default function Experience() {
         <div className="px-1 sm:px-2 md:px-6 lg:px-10 text-left  order-2 lg:order-1">
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-6 md:mb-8 leading-tight">
-            La diferencia está en los detalles
+            {t.heading}
           </h2>
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-5 md:mb-6">
-            Con más de{" "}
-            <span className="font-bold text-navy">30 años</span> de experiencia,
-            entendemos que cada requerimiento es único. Por eso, hemos dividido
-            las{" "}
+            {t.p1_conMasDe}{" "}
+            <span className="font-bold text-navy">{t.p1_30anos}</span>{" "}
+            {t.p1_deExperiencia}{" "}
             <span className="font-bold text-navy">
-              diferentes actividades y servicios
+              {t.p1_diferentesActividades}
             </span>{" "}
-            de nuestra empresa creando{" "}
+            {t.p1_deNuestraEmpresa}{" "}
             <span className="font-bold text-navy">
-              divisiones específicas
+              {t.p1_divisionesEspecificas}
             </span>{" "}
             —
 
-            <span className="text-coral font-semibold"> Shipping</span>,
-            <span className="text-coral font-semibold"> Forwarding </span>
-            y
-            <span className="text-coral font-semibold"> Trading</span> —
+            <span className="text-coral font-semibold"> {t.p1_shipping}</span>,
+            <span className="text-coral font-semibold"> {t.p1_forwarding} </span>
+            {t.p1_y}
+            <span className="text-coral font-semibold"> {t.p1_trading}</span> —
 
-            para garantizar un asesoramiento especializado en cada área.
+            {t.p1_paraGarantizar}
           </p>
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
-            Hoy, con nuestra base en
-            <span className="font-bold text-navy"> Argentina,</span> y gracias a la confianza de nuestros clientes, asociados y nuestra red global de agentes de primera línea internacional en más de 100 países, brindamos
+            {t.p2_hoyCon}
+            <span className="font-bold text-navy"> {t.p2_argentina}</span> {t.p2_yGraciasA}
             <span className="font-bold text-navy">
-              {" "} soluciones de transporte y logística
+              {" "}{t.p2_solucionesDeTransporte}
             </span>{" "}
-            para cada tipo de cargas y mercaderías.
+            {t.p2_paraCadaTipo}
           </p>
         </div>
 

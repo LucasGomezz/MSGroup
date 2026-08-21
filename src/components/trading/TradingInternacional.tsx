@@ -2,8 +2,13 @@
 
 import { motion } from "framer-motion";
 import { Globe } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
+import content from "./TradingInternacional.i18n.json";
 
 export default function TradingInternational() {
+    const { language } = useLanguage();
+    const t = content[language];
+
     const fadeInUp = {
         initial: { opacity: 0, x: -40 },
         whileInView: { opacity: 1, x: 0 },
@@ -18,11 +23,11 @@ export default function TradingInternational() {
                     className="z-10"
                 >
                     <h3 className="text-[#70A4DC] text-4xl md:text-5xl font-bold mb-6 italic tracking-tighter">
-                        Trading Internacional
+                        {t.heading}
                     </h3>
 
                     <p className="text-2xl font-light leading-snug text-[#F4F1E8]">
-                        Actuamos como intermediarios comerciales conectando productores, exportadores e importadores en diferentes mercados del mundo.
+                        {t.descripcion}
                     </p>
                     
                 </motion.div>

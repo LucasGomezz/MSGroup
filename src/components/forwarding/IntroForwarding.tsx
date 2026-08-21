@@ -3,12 +3,17 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Ship, Plane, Truck, Anchor } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
+import content from "./IntroForwarding.i18n.json";
 
 export default function IntroForwarding() {
+  const { language } = useLanguage();
+  const t = content[language];
+
   const transports = [
-    { icon: Ship, label: "Marítimo" },
-    { icon: Plane, label: "Aéreo" },
-    { icon: Truck, label: "Terrestre" },
+    { icon: Ship, label: t.transporteMaritimo },
+    { icon: Plane, label: t.transporteAereo },
+    { icon: Truck, label: t.transporteTerrestre },
   ];
 
   return (
@@ -89,7 +94,7 @@ export default function IntroForwarding() {
                 <span className="h-0.5 w-6 bg-[#002147]" />
 
                 <span className="text-[#002147] font-extrabold text-xs uppercase tracking-[0.2em]">
-                  MS Forwarding • Est. 1990
+                  {t.eyebrow}
                 </span>
               </motion.div>
 
@@ -100,8 +105,8 @@ export default function IntroForwarding() {
                 transition={{ delay: 0.1, duration: 0.55 }}
                 className="text-4xl md:text-5xl font-black text-[#111] leading-[1.1] tracking-tight"
               >
-                Más de 30 años <br />
-                <span className="text-[#002147]">en el mercado.</span>
+                {t.headingLine1} <br />
+                <span className="text-[#002147]">{t.headingLine2}</span>
               </motion.h2>
 
               <motion.div
@@ -120,18 +125,16 @@ export default function IntroForwarding() {
               >
                 {[
                   <>
-                    Gracias a nuestro staff de profesionales en todas la áreas, y a nuestra red de agentes internacionales en más de 100 países, ofrecemos soluciones integrales de transporte y logística internacional,
-                    gestión aduanera y documental y seguro de mercadería con un enfoque{" "}
-                    <strong>personalizado</strong> que prioriza la <strong>eficiencia</strong>{" "}
-                    <strong>operativa</strong> y la <strong>transparencia</strong> en cada
-                    etapa del proceso logístico.
+                    {t.parrafo1_antes}{" "}
+                    <strong>{t.parrafo1_personalizado}</strong> {t.parrafo1_que_prioriza} <strong>{t.parrafo1_eficiencia}</strong>{" "}
+                    <strong>{t.parrafo1_operativa}</strong> {t.parrafo1_y_la} <strong>{t.parrafo1_transparencia}</strong>{" "}
+                    {t.parrafo1_despues}
                   </>,
                   <>
-                    Como agentes de carga internacional especializados,{" "}
-                    <strong>coordinamos</strong> el movimiento de todo tipo de mercaderías por vía{" "}
-                    <strong>aérea</strong>, <strong>marítima</strong> y{" "}
-                    <strong>terrestre</strong>, brindando a nuestros clientes visibilidad
-                    completa de sus envíos y respuesta ágil ante cualquier requerimiento.
+                    {t.parrafo2_antes}{" "}
+                    <strong>{t.parrafo2_coordinamos}</strong> {t.parrafo2_el_movimiento}{" "}
+                    <strong>{t.parrafo2_aerea}</strong>, <strong>{t.parrafo2_marítima}</strong> {t.parrafo2_y}{" "}
+                    <strong>{t.parrafo2_terrestre}</strong>, {t.parrafo2_despues}
                   </>,
                 ].map((text, i) => (
                   <motion.p

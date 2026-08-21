@@ -1,0 +1,71 @@
+{
+  "es": {
+    "services": [
+      {
+        "title": "MS Shipping",
+        "subTitle": "Servicios marítimos.",
+        "description": "Especializados en el manejo comercial y operativo de buques como Operadores, Charterers, Brokers y Agentes Marítimos.",
+        "points": [
+          "Servicios de Brokerage de Cargas y Buques",
+          "Operación de Buques (Ship Management)",
+          "Chartering",
+          "Servicios de Agencia Marítima"
+        ],
+        "cta": "Consultar servicio"
+      },
+      {
+        "title": "MS Forwarding",
+        "subTitle": "Operaciones marítimas, aéreas y terrestres.",
+        "description": "Operadores internacionales de cargas y comercio exterior por vía marítima, aérea y terrestre desde y hacia cualquier lugar del mundo. Depósito Fiscal, Nacional y Logística Integral",
+        "points": [
+          "Transporte Marítimo Internacional",
+          "Transporte Aéreo Internacional",
+          "Transporte Terrestre",
+          "Servicios Multimodales",
+          "Cargas de Proyecto",
+          "Cargas Break Bulk",
+          "Despacho Aduanero",
+          "Seguros de Carga",
+          "Depósito Fiscal, Nacional y Logística Integral"
+        ],
+        "cta": "Consultar servicio"
+      },
+      {
+        "title": "MS Trading",
+        "subTitle": "Logística y comercialización.",
+        "description": "Consultoría, asesoramiento, comercialización y gestión en Comercio Exterior. Desarrollo de operaciones de comercio internacional y consultoría integral para empresas exportadoras e importadoras",
+        "points": [
+          "Trading internacional",
+          "Brokerage comercial",
+          "Consultoría en comercio exterior"
+        ],
+        "cta": "Consultar servicio"
+      }
+    ]
+  },
+  "en": {
+    "services": [
+      {
+        "title": "",
+        "subTitle": "",
+        "description": "",
+        "points": ["", "", "", ""],
+        "cta": ""
+      },
+      {
+        "title": "",
+        "subTitle": "",
+        "description": "",
+        "points": ["", "", "", "", "", "", "", "", ""],
+        "cta": ""
+      },
+      {
+        "title": "",
+        "subTitle": "",
+        "description": "",
+        "points": ["", "", ""],
+        "cta": ""
+      }
+    ]
+  }
+}

@@ -2,70 +2,48 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useLanguage } from "@/lib/language-context";
+import content from "./CardsServicios.i18n.json";
 
 export default function CardsServicios() {
+  const { language } = useLanguage();
+  const t = content[language];
+
   const services = [
     {
-      title: "Despacho Aduanero",
-      description:
-        "Contamos con profesionales altamente calificados que gestionan los trámites de importación y exportación ante ARCA/ADUANA, SENASA, ANMAT y demás organismos de control, asesorando en cada etapa de la operación para facilitar su gestión local e internacional. Nuestra red de agentes en +100 países nos permite monitorear documentación y mercadería desde antes del embarque, anticipando el despacho para evitar costos aduaneros y operativos inesperados.",
-      items: [
-        "Asesoramiento integral en materia aduanera",
-        "Gestión aduanera en diferentes aduanas del pais",
-        "Clasificación arancelaria de mercaderías",
-        "Verificación de documentación comercial",
-        "Tramitación de licencias",
-        "Gestión de permisos especiales (SENASA, ANMAT, otros)",
-        "Representación ante autoridades aduaneras",
-      ],
+      title: t.services[0].title,
+      description: t.services[0].description,
+      items: t.services[0].items,
     },
     {
-      title: "Servicios Multimodales",
+      title: t.services[1].title,
       description: (
         <>
-          Diseñamos soluciones logísticas que combinan diferentes modos de transporte (marítimo + terrestre, aéreo + terrestre) para optimizar tiempos y costos según las características de cada operación.
+          {t.services[1].descriptionPart1}
           <br /><br />
-          Nuestra experiencia como operadores multimodales nos permite coordinar eficientemente cada tramo del trayecto, minimizando tiempos de espera y asegurando la trazabilidad completa del envío.
+          {t.services[1].descriptionPart2}
         </>
       ),
       items: [],
     },
     {
-      title: "Cargas de Proyecto",
-      description:
-        "Contamos con expertise especializado en el manejo de cargas sobredimensionadas, equipamiento industrial y proyectos que requieren coordinación logística compleja.",
-      items: [
-        "Evaluación técnica de factibilidad",
-        "Planificación de rutas especiales",
-        "Coordinación de permisos y autorizaciones",
-        "Equipamiento especializado (flat racks, break bulk)",
-        "Seguros específicos para cargas de alto valor",
-      ],
+      title: t.services[2].title,
+      description: t.services[2].description,
+      items: t.services[2].items,
     },
     {
-      title: "Depósito y Logística",
-      description:
-        "Ofrecemos servicios de almacenaje en depósito fiscal para mercaderías de importación y exportación, permitiendo la optimización de tiempos y gestión de inventarios.",
-      items: [
-        "Almacenaje en depósito fiscal habilitado por aduana y/o deposito nacional",
-        "Gestión de stock y control de inventario",
-        "Fraccionamiento y reembalaje",
-        "Preparación de pedidos (picking & packing)",
-        "Distribución desde depósito",
-      ],
+      title: t.services[3].title,
+      description: t.services[3].description,
+      items: t.services[3].items,
     },
     {
       type: "vignette",
       image: "/images/forwarding/forwarding-constructores.jpg",
     },
     {
-      title: "Seguros de Carga",
-      description:
-        "Con el respaldo de aseguradoras internacionales de primer linea, coordinamos la contratación de seguros de transporte internacional adaptados al valor y características de cada mercadería, con cobertura puerta a puerta desde origen hasta destino final.",
-      items: [
-        "Seguros específicos de transporte según el tipo de mercadería",
-        "Tramitación de siniestros",
-      ],
+      title: t.services[4].title,
+      description: t.services[4].description,
+      items: t.services[4].items,
     },
   ];
 
@@ -80,7 +58,7 @@ export default function CardsServicios() {
           className="border-l-12 border-forwardingPrincipal pl-8 mb-16"
         >
           <h2 className="text-6xl font-black text-forwardingPrincipal uppercase tracking-tighter">
-            Servicios de Aduana, Logística y Comercio Exterior
+            {t.heading}
           </h2>
         </motion.div>
 

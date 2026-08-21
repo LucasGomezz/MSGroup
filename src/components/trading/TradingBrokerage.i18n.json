@@ -1,0 +1,36 @@
+{
+  "es": {
+    "heading": "Brokerage Comercial",
+    "parrafo_antes": "Buscamos oportunidades y facilitamos el encuentro entre compradores y vendedores a nivel internacional, actuando como intermediarios que garantizan",
+    "parrafo_strong": "transparencia, seguridad y cumplimiento",
+    "parrafo_despues": "en las operaciones comerciales.",
+    "serviciosDeBrokerage": "Servicios de brokerage:",
+    "items": [
+      { "title": "Identificación de compradores y proveedores", "desc": "Potenciales según producto y mercado objetivo" },
+      { "title": "Negociación comercial", "desc": "Términos, precios, volúmenes e Incoterms" },
+      { "title": "Estructuración legal", "desc": "Contratos internacionales sólidos" },
+      { "title": "Seguimiento", "desc": "Cumplimiento de obligaciones contractuales" },
+      { "title": "Gestión de crisis", "desc": "Resolución de contingencias comerciales" }
+    ],
+    "valorAgregadoHeading": "Nuestro valor agregado como brokers",
+    "valorAgregadoTexto": "Reside en la red de contactos consolidada a lo largo de más de tres décadas.",
+    "footerLinea": "Más de 35 años de confianza global"
+  },
+  "en": {
+    "heading": "",
+    "parrafo_antes": "",
+    "parrafo_strong": "",
+    "parrafo_despues": "",
+    "serviciosDeBrokerage": "",
+    "items": [
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" },
+      { "title": "", "desc": "" }
+    ],
+    "valorAgregadoHeading": "",
+    "valorAgregadoTexto": "",
+    "footerLinea": ""
+  }
+}

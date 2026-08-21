@@ -9,30 +9,22 @@ import {
   FaShip,
 } from "react-icons/fa";
 import { GiTakeMyMoney } from "react-icons/gi";
+import { useLanguage } from "@/lib/language-context";
+import content from "./ShippingBrokerageServices.i18n.json";
 
 export default function ShippingBrokerageServices() {
-  const services = [
-    {
-      icon: <FaShip size={18} />,
-      text: "Búsqueda de buques disponibles según requerimiento de carga",
-    },
-    {
-      icon: <FaSearch size={18} />,
-      text: "Búsqueda de cargas para buques disponibles",
-    },
-    {
-      icon: <FaHandshake size={18} />,
-      text: "Negociación de términos de charter party",
-    },
-    {
-      icon: <FaCalculator size={18} />,
-      text: "Asesoramiento en cálculo de costos de viaje",
-    },
-    {
-      icon: <GiTakeMyMoney size={18} />,
-      text: "Compra y venta de buques",
-    },
+  const { language } = useLanguage();
+  const t = content[language];
+
+  const icons = [
+    <FaShip size={18} key={0} />,
+    <FaSearch size={18} key={1} />,
+    <FaHandshake size={18} key={2} />,
+    <FaCalculator size={18} key={3} />,
+    <GiTakeMyMoney size={18} key={4} />,
   ];
+
+  const services = t.items.map((text, i) => ({ icon: icons[i], text }));
 
   return (
     <section className="w-full bg-[#f8faf9] py-16 px-6">
@@ -46,7 +38,7 @@ export default function ShippingBrokerageServices() {
           transition={{ duration: 0.75, ease: "easeOut" }}
         >
           <h2 className="text-3xl md:text-4xl font-semibold text-shippingPrincipal">
-            Servicios de brokerage
+            {t.heading}
           </h2>
 
           <div className="w-16 h-1 bg-shippingPrincipal mx-auto mt-3 rounded-full" />

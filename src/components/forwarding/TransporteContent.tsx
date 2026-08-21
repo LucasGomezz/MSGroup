@@ -3,6 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useLanguage } from "@/lib/language-context";
+import content from "./TransporteContent.i18n.json";
 
 const slowZoomStyle = `
 @keyframes slowZoom {
@@ -190,76 +192,23 @@ const ServiceCard = ({
 };
 
 export default function TransporteContent() {
-  const services: ServiceItem[] = [
-    {
-      id: "maritimo",
-      title: "Transporte Marítimo Internacional",
-      description:
-        "Fletes marítimos FCL (contenedor completo), LCL (consolidado), Cargas Rodantes, Cargas de Proyecto, Carga General (Breakbulk) hacia y desde cualquier puerto del mundo.",
-      items: [
-        "Contenedores secos (20', 40', 40'HC)",
-        "Contenedores refrigerados (reefer) para productos perecederos",
-        "Flat racks y open tops para cargas especiales",
-        "Consolidación LCL para optimización de costos en cargas parciales",
-      ],
-      descriptionn:
-        "En conjunto con nuestra red de agentes en los principales países y mercados internacionales mantenemos acuerdos comerciales directos con las principales navieras internacionales, lo que nos permite ofrecer opciones competitivas de tarifas y tiempos de tránsito para cada necesidad específica.",
-      image: "/images/forwarding/fleteMaritimo.PNG",
-      icon: <IconShip />,
-    },
-    {
-      id: "aereo",
-      title: "Transporte Aéreo Internacional",
-      description:
-        "Coordinamos embarques aéreos para cargas que requieren tiempos de tránsito reducidos, productos de alto valor o mercaderías sensibles al tiempo.",
-      items: [
-        "Coordinación de vuelos directos y conexiones optimizadas",
-        "Manejo de cargas consolidadas y envíos directos",
-        "Atención especializada para productos perecederos con temperatura controlada",
-        "Gestión de cargas peligrosas con certificación IATA",
-        "Seguimiento en tiempo real desde origen hasta destino",
-      ],
-      descriptionn:
-        "Nuestras relaciones comerciales con las principales aerolíneas y el apoyo de nuestra red de agentes de carga nos permiten garantizar espacios disponibles incluso en temporadas de alta demanda.",
-      image: "/images/forwarding/transporte-aereo.jpeg",
-      icon: <IconPlane />,
-    },
-    {
-      id: "terrestre",
-      title: "Transporte Terrestre",
-      description:
-        "Proveemos servicios de transporte terrestre door-to-door dentro de Argentina y hacia países limítrofes (Uruguay, Paraguay, Chile, Brasil, Perú), coordinando el movimiento de carga desde el punto de origen hasta la entrega final.",
-      items: [
-        "Transporte de contenedores",
-        "Transporte de carga completa (FTL)",
-        "Transporte de carga consolidada (LTL)",
-        "Vehículos especializados según tipo de mercadería",
-        "Seguimiento GPS en tiempo real",
-        "Cobertura de seguros específicos",
-      ],
-      descriptionn: "",
-      image: "/images/forwarding/transporteTerrestre.jpg",
-      icon: <IconTruck />,
-    },
-    {
-      id: "despacho-aduanero",
-      title: "Despacho aduanero",
-      description:
-        "Contamos con profesionales altamente calificados que gestionan los trámites de importación y exportación ante ARCA/ADUANA, SENASA, ANMAT y demás organismos de control, asesorando en cada etapa de la operación para facilitar su gestión local e internacional. Nuestra red de agentes en +100 países nos permite monitorear documentación y mercadería desde antes del embarque, anticipando el despacho para evitar costos aduaneros y operativos inesperados.",
-      items: [
-        "Asesoramiento integral en materia aduanera",
-        "Gestión aduanera en diferentes aduanas del pais",
-        "Clasificación arancelaria de mercaderías",
-        "Verificación de documentación comercial",
-        "Tramitación de licencias",
-        "Gestión de permisos especiales (SENASA, ANMAT, otros)",
-        "Representación ante autoridades aduaneras",
-      ],
-      descriptionn:"",
-      image: "/images/forwarding/despacho-aduanero.png",
-      icon: <IconCustoms />,
-    },
+  const { language } = useLanguage();
+  const t = content[language];
+
+  const meta = [
+    { id: "maritimo", image: "/images/forwarding/fleteMaritimo.PNG", icon: <IconShip /> },
+    { id: "aereo", image: "/images/forwarding/transporte-aereo.jpeg", icon: <IconPlane /> },
+    { id: "terrestre", image: "/images/forwarding/transporteTerrestre.jpg", icon: <IconTruck /> },
+    { id: "despacho-aduanero", image: "/images/forwarding/despacho-aduanero.png", icon: <IconCustoms /> },
   ];
+
+  const services: ServiceItem[] = meta.map((m, i) => ({
+    ...m,
+    title: t.services[i].title,
+    description: t.services[i].description,
+    items: t.services[i].items,
+    descriptionn: t.services[i].descriptionn,
+  }));
 
   return (
     <section className="bg-white overflow-hidden">
@@ -275,9 +224,9 @@ export default function TransporteContent() {
           className="pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-12 text-center lg:text-left"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95]">
-            Soluciones de <br />
+            {t.headingLine1} <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">
-              Transporte Inteligente.
+              {t.headingLine2}
             </span>
           </h1>
         </motion.div>

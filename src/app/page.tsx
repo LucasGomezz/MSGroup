@@ -1,16 +1,23 @@
+"use client";
+
 import Hero from "@/components/Hero";
 import Services from "@/components/home/Services";
 import Stats from "@/components/home/Stats";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import Experience from "@/components/home/Experience";
 import CTASection from "@/components/CTASection";
+import { useLanguage } from "@/lib/language-context";
+import content from "./page.i18n.json";
 
 export default function Home() {
+  const { language } = useLanguage();
+  const t = content[language];
+
   return (
     <>
-      <Hero title="Un partner para todas tus operaciones de comercio internacional."
-        description="Desde 1990 moviendo tu negocio sin fronteras con soluciones integrales de logística."
-        buttonText="Inicia tu consulta"
+      <Hero title={t.heroTitle}
+        description={t.heroDescription}
+        buttonText={t.heroButtonText}
         buttonColor="bg-coral hover:shippingComplementario/90"
         mediaType="image"
         mediaSrc="/images/heroBoat.png"
@@ -23,13 +30,13 @@ export default function Home() {
       <CTASection
         title={
     <>
-      ¿Listo para potenciar tus operaciones
+      {t.ctaTituloLinea1}
       <br />
-      de comercio internacional?
+      {t.ctaTituloLinea2}
     </>
   }
-        description="Solicita tu cotización ahora y recibe asesoramiento a medida."
-        buttonText="Hablemos"
+        description={t.ctaDescription}
+        buttonText={t.ctaButtonText}
         bgClassName="bg-coral"
         textClassName="text-white"
         buttonClassName="bg-white text-coral hover:bg-gray-100"

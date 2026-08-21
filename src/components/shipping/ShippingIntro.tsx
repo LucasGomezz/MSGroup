@@ -1,7 +1,12 @@
 "use client"
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/language-context";
+import content from "./ShippingIntro.i18n.json";
 
 export default function ShippingIntro() {
+    const { language } = useLanguage();
+    const t = content[language];
+
     const fadeInUp = {
         initial: { opacity: 0, y: 30 },
         whileInView: { opacity: 1, y: 0 },
@@ -17,11 +22,11 @@ export default function ShippingIntro() {
                 <div className="relative z-10 max-w-5xl mx-auto">
 
                     <h2 className="text-shippingPrincipal text-3xl md:text-4xl font-bold mb-4">
-                        MS Shipping
+                        {t.titulo}
                     </h2>
 
                     <p className="max-w-4xl mx-auto leading-relaxed font-light text-gray-700 text-xl md:text-2xl whitespace-pre-line">
-                        División marítima de MS Group, especializada en el manejo comercial y operativo de buques como Operadores, Charterers y Brokers.
+                        {t.descripcion}
                     </p>
 
                     <div className="mt-8 flex items-center justify-center gap-4">

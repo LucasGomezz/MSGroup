@@ -1,0 +1,34 @@
+{
+  "es": {
+    "heading": "Brokerage Marítimo",
+    "parrafo1": "Nuestro departamento de brokerage da respuesta inmediata a todos los requerimientos de transporte posibilitando el acercamiento entre las posiciones de cargas y buques en cualquier puerto del mundo, actuando como intermediarios entre armadores y cargadores.",
+    "parrafo2": "Gracias a nuestra vasta experiencia en cierres de contratos de carga (Charter Party) y buques de todo tipo, contamos con la capacidad y el conocimiento necesario para gestionar cualquier tipo de contratos de cargas, buscando obtener el mayor beneficio para nuestros clientes mediante la negociación de términos contractuales óptimos según las condiciones vigentes del mercado para cada tipo de carga y tráfico.",
+    "parrafo3": "Mantenemos información actualizada en tiempo real sobre posiciones de buques y requerimientos de cargas a nivel global, lo que nos permite ofrecer alternativas inmediatas a nuestros clientes.",
+    "items": [
+      { "title": "Red directa de contactos", "text": "Relaciones establecidas con armadores, operadores, productores, traders, importadores y exportadores a nivel global." },
+      { "title": "Experiencia en puertos", "text": "Amplio conocimiento de operaciones portuarias en todo el mundo, con especialización en Latinoamérica." },
+      { "title": "Cooperación internacional", "text": "Canales activos con los principales brokers y operadores del mercado mundial." },
+      { "title": "Negociación especializada", "text": "Gestionamos todo tipo de contratos de cargas, buscando obtener el mayor beneficio para nuestros clientes negociando términos contractuales óptimos según las condiciones vigentes del mercado para cualquier tipo de carga y tráfico." },
+      { "title": "Asesoramiento integral", "text": "Asistencia completa a clientes, desde la negociación hasta el seguimiento post-cierre de contratos." },
+      { "title": "Expertise en operaciones", "text": "Como operadores de buques, calculamos costos y utilidades de viaje para contratos de chárter." },
+      { "title": "Compra y venta de buques", "text": "Intervención activa en operaciones de brokerage de compraventa de embarcaciones." },
+      { "title": "Confianza internacional", "text": "Presencia consolidada en mercados internacionales competitivos contando con la confianza de clientes de primer nivel que renuevan su confianza año a año." }
+    ]
+  },
+  "en": {
+    "heading": "",
+    "parrafo1": "",
+    "parrafo2": "",
+    "parrafo3": "",
+    "items": [
+      { "title": "", "text": "" },
+      { "title": "", "text": "" },
+      { "title": "", "text": "" },
+      { "title": "", "text": "" },
+      { "title": "", "text": "" },
+      { "title": "", "text": "" },
+      { "title": "", "text": "" },
+      { "title": "", "text": "" }
+    ]
+  }
+}

@@ -12,50 +12,25 @@ import {
   HiOutlineStatusOnline,
   HiOutlineSwitchHorizontal,
 } from "react-icons/hi";
+import { useLanguage } from "@/lib/language-context";
+import content from "./ShippingBrokerage.i18n.json";
 
 export default function ShippingBrokerage() {
-  const items = [
-    {
-      title: "Red directa de contactos",
-      text: "Relaciones establecidas con armadores, operadores, productores, traders, importadores y exportadores a nivel global.",
-      icon: <HiOutlineGlobeAlt />,
-    },
-    {
-      title: "Experiencia en puertos",
-      text: "Amplio conocimiento de operaciones portuarias en todo el mundo, con especialización en Latinoamérica.",
-      icon: <HiOutlineLocationMarker />,
-    },
-    {
-      title: "Cooperación internacional",
-      text: "Canales activos con los principales brokers y operadores del mercado mundial.",
-      icon: <HiOutlineLink />,
-    },
-    {
-      title: "Negociación especializada",
-      text: "Gestionamos todo tipo de contratos de cargas, buscando obtener el mayor beneficio para nuestros clientes negociando términos contractuales óptimos según las condiciones vigentes del mercado para cualquier tipo de carga y tráfico.",
-      icon: <HiOutlinePresentationChartLine />,
-    },
-    {
-      title: "Asesoramiento integral",
-      text: "Asistencia completa a clientes, desde la negociación hasta el seguimiento post-cierre de contratos.",
-      icon: <HiOutlineSwitchHorizontal />,
-    },
-    {
-      title: "Expertise en operaciones",
-      text: "Como operadores de buques, calculamos costos y utilidades de viaje para contratos de chárter.",
-      icon: <HiOutlineStatusOnline />,
-    },
-    {
-      title: "Compra y venta de buques",
-      text: "Intervención activa en operaciones de brokerage de compraventa de embarcaciones.",
-      icon: <HiOutlineShieldCheck />,
-    },
-    {
-      title: "Confianza internacional",
-      text: "Presencia consolidada en mercados internacionales competitivos contando con la confianza de clientes de primer nivel que renuevan su confianza año a año.",
-      icon: <HiOutlineBadgeCheck />,
-    },
+  const { language } = useLanguage();
+  const t = content[language];
+
+  const icons = [
+    <HiOutlineGlobeAlt key={0} />,
+    <HiOutlineLocationMarker key={1} />,
+    <HiOutlineLink key={2} />,
+    <HiOutlinePresentationChartLine key={3} />,
+    <HiOutlineSwitchHorizontal key={4} />,
+    <HiOutlineStatusOnline key={5} />,
+    <HiOutlineShieldCheck key={6} />,
+    <HiOutlineBadgeCheck key={7} />,
   ];
+
+  const items = t.items.map((item, i) => ({ ...item, icon: icons[i] }));
 
   return (
     <div id="servicios-brokerage-cargas" className="w-full bg-[#f8faf9] py-20 px-6 md:px-12 lg:px-20">
@@ -74,7 +49,7 @@ export default function ShippingBrokerage() {
           >
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 tracking-tight">
-                Brokerage Marítimo
+                {t.heading}
               </h2>
               <div className="w-32 h-1 bg-shippingPrincipal mb-6" />
             </div>
@@ -102,21 +77,15 @@ export default function ShippingBrokerage() {
             className="lg:col-span-7 bg-white p-8 rounded-2xl shadow-sm border-l-4 border-[#3A6657] space-y-4"
           >
             <p className="text-gray-700 text-lg leading-relaxed">
-              Nuestro departamento de brokerage da respuesta inmediata a todos
-              los requerimientos de transporte posibilitando el acercamiento
-              entre las posiciones de cargas y buques en cualquier puerto del
-              mundo, actuando como intermediarios entre armadores y cargadores.
+              {t.parrafo1}
             </p>
 
             <p className="text-gray-600 text-base leading-relaxed">
-              Gracias a nuestra vasta experiencia en cierres de contratos de carga (Charter Party) y buques de todo tipo, contamos con la capacidad y el conocimiento necesario para gestionar cualquier tipo de contratos de cargas, buscando obtener el mayor beneficio para nuestros clientes mediante la negociación de términos contractuales óptimos según las condiciones vigentes del mercado para cada tipo de carga y tráfico.
+              {t.parrafo2}
             </p>
 
             <p className="text-gray-600 text-base leading-relaxed">
-              Mantenemos información actualizada en tiempo real sobre
-              posiciones de buques y requerimientos de cargas a nivel global,
-              lo que nos permite ofrecer alternativas inmediatas a nuestros
-              clientes.
+              {t.parrafo3}
             </p>
           </motion.div>
         </div>

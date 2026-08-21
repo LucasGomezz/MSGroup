@@ -1,0 +1,22 @@
+{
+  "es": {
+    "heroTitle": "MS Forwarding",
+    "heroDescription": "Gestionamos el transporte internacional y manejo de su mercadería de importación y exportación con eficiencia y transparencia total en cada etapa del proceso.",
+    "heroButtonText": "Inicia tu consulta",
+    "serviceIntroTitle": "MS Forwarding",
+    "serviceIntroDescription": "Desde 1990, MS Forwarding brinda soluciones de transporte internacional desde Argentina, coordinando operaciones marítimas, aéreas y terrestres para empresas locales e internacionales.",
+    "ctaTitle": "¿COORDINAMOS TU PRÓXIMA CARGA?",
+    "ctaDescription": "Te acompañamos con soluciones claras, ágiles y sin costos ocultos.",
+    "ctaButtonText": "Hablemos"
+  },
+  "en": {
+    "heroTitle": "",
+    "heroDescription": "",
+    "heroButtonText": "",
+    "serviceIntroTitle": "",
+    "serviceIntroDescription": "",
+    "ctaTitle": "",
+    "ctaDescription": "",
+    "ctaButtonText": ""
+  }
+}

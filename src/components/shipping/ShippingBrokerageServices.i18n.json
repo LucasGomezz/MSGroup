@@ -1,0 +1,16 @@
+{
+  "es": {
+    "heading": "Servicios de brokerage",
+    "items": [
+      "Búsqueda de buques disponibles según requerimiento de carga",
+      "Búsqueda de cargas para buques disponibles",
+      "Negociación de términos de charter party",
+      "Asesoramiento en cálculo de costos de viaje",
+      "Compra y venta de buques"
+    ]
+  },
+  "en": {
+    "heading": "",
+    "items": ["", "", "", "", ""]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "es": {
+    "headingLine1": "Soluciones de",
+    "headingLine2": "Transporte Inteligente.",
+    "services": [
+      {
+        "title": "Transporte Marítimo Internacional",
+        "description": "Fletes marítimos FCL (contenedor completo), LCL (consolidado), Cargas Rodantes, Cargas de Proyecto, Carga General (Breakbulk) hacia y desde cualquier puerto del mundo.",
+        "items": [
+          "Contenedores secos (20', 40', 40'HC)",
+          "Contenedores refrigerados (reefer) para productos perecederos",
+          "Flat racks y open tops para cargas especiales",
+          "Consolidación LCL para optimización de costos en cargas parciales"
+        ],
+        "descriptionn": "En conjunto con nuestra red de agentes en los principales países y mercados internacionales mantenemos acuerdos comerciales directos con las principales navieras internacionales, lo que nos permite ofrecer opciones competitivas de tarifas y tiempos de tránsito para cada necesidad específica."
+      },
+      {
+        "title": "Transporte Aéreo Internacional",
+        "description": "Coordinamos embarques aéreos para cargas que requieren tiempos de tránsito reducidos, productos de alto valor o mercaderías sensibles al tiempo.",
+        "items": [
+          "Coordinación de vuelos directos y conexiones optimizadas",
+          "Manejo de cargas consolidadas y envíos directos",
+          "Atención especializada para productos perecederos con temperatura controlada",
+          "Gestión de cargas peligrosas con certificación IATA",
+          "Seguimiento en tiempo real desde origen hasta destino"
+        ],
+        "descriptionn": "Nuestras relaciones comerciales con las principales aerolíneas y el apoyo de nuestra red de agentes de carga nos permiten garantizar espacios disponibles incluso en temporadas de alta demanda."
+      },
+      {
+        "title": "Transporte Terrestre",
+        "description": "Proveemos servicios de transporte terrestre door-to-door dentro de Argentina y hacia países limítrofes (Uruguay, Paraguay, Chile, Brasil, Perú), coordinando el movimiento de carga desde el punto de origen hasta la entrega final.",
+        "items": [
+          "Transporte de contenedores",
+          "Transporte de carga completa (FTL)",
+          "Transporte de carga consolidada (LTL)",
+          "Vehículos especializados según tipo de mercadería",
+          "Seguimiento GPS en tiempo real",
+          "Cobertura de seguros específicos"
+        ],
+        "descriptionn": ""
+      },
+      {
+        "title": "Despacho aduanero",
+        "description": "Contamos con profesionales altamente calificados que gestionan los trámites de importación y exportación ante ARCA/ADUANA, SENASA, ANMAT y demás organismos de control, asesorando en cada etapa de la operación para facilitar su gestión local e internacional. Nuestra red de agentes en +100 países nos permite monitorear documentación y mercadería desde antes del embarque, anticipando el despacho para evitar costos aduaneros y operativos inesperados.",
+        "items": [
+          "Asesoramiento integral en materia aduanera",
+          "Gestión aduanera en diferentes aduanas del pais",
+          "Clasificación arancelaria de mercaderías",
+          "Verificación de documentación comercial",
+          "Tramitación de licencias",
+          "Gestión de permisos especiales (SENASA, ANMAT, otros)",
+          "Representación ante autoridades aduaneras"
+        ],
+        "descriptionn": ""
+      }
+    ]
+  },
+  "en": {
+    "headingLine1": "",
+    "headingLine2": "",
+    "services": [
+      { "title": "", "description": "", "items": ["", "", "", ""], "descriptionn": "" },
+      { "title": "", "description": "", "items": ["", "", "", "", ""], "descriptionn": "" },
+      { "title": "", "description": "", "items": ["", "", "", "", "", ""], "descriptionn": "" },
+      { "title": "", "description": "", "items": ["", "", "", "", "", "", ""], "descriptionn": "" }
+    ]
+  }
+}

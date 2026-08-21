@@ -6,11 +6,15 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import ContactModal from "@/components/ContactModal";
+import { useLanguage } from "@/lib/language-context";
+import content from "./Navbar.i18n.json";
 
 const cx = (str: string) => str.replace(/\s+/g, " ").trim();
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { language, toggleLanguage } = useLanguage();
+  const t = content[language];
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -242,6 +246,12 @@ export default function Navbar() {
 
             <Link
               href="/"
+              onClick={(e) => {
+                if (pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
               className="flex items-center shrink-0"
             >
               <Image
@@ -299,7 +309,7 @@ export default function Navbar() {
                       href="/"
                       className={navLinkClass("/")}
                     >
-                      Inicio
+                      {t.inicio}
                     </Link>
 
                     {/* SERVICIOS */}
@@ -309,7 +319,7 @@ export default function Navbar() {
                       <span
                         className={navLinkClass("/servicios")}
                       >
-                        Servicios
+                        {t.servicios}
                       </span>
 
                       <div
@@ -340,7 +350,7 @@ export default function Navbar() {
                             hover:bg-gray-100
                           `)}
                         >
-                          MS Shipping
+                          {t.msShipping}
                         </Link>
 
                         <Link
@@ -352,7 +362,7 @@ export default function Navbar() {
                             hover:bg-gray-100
                           `)}
                         >
-                          MS Forwarding
+                          {t.msForwarding}
                         </Link>
 
                         <Link
@@ -364,7 +374,7 @@ export default function Navbar() {
                             hover:bg-gray-100
                           `)}
                         >
-                          MS Trading
+                          {t.msTrading}
                         </Link>
                       </div>
 
@@ -376,10 +386,33 @@ export default function Navbar() {
                       href="/#por-que-elegirnos"
                       className={navLinkClass("/#por-que-elegirnos")}
                     >
-                      ¿Por qué elegirnos?
+                      {t.porQueElegirnos}
                     </Link>
 
                   </nav>
+
+                  {/* SELECTOR DE IDIOMA */}
+
+                  <button
+                    type="button"
+                    onClick={toggleLanguage}
+                    className={cx(`
+                      shrink-0
+                      text-xs
+                      font-bold
+                      tracking-wide
+                      border
+                      ${getBorderColor()}
+                      rounded-lg
+                      px-2.5
+                      py-1.5
+                      cursor-pointer
+                      transition
+                      ${getColorPrimary()}
+                    `)}
+                  >
+                    {language === "es" ? "EN" : "ES"}
+                  </button>
 
                   {/* BOTÓN CONTACTO */}
 
@@ -401,7 +434,7 @@ export default function Navbar() {
                       setContactOpen(true);
                     }}
                   >
-                    Contáctanos
+                    {t.contactanos}
                   </button>
 
                 </div>
@@ -412,19 +445,38 @@ export default function Navbar() {
                 MOBILE MENU BUTTON
             ====================================================== */}
 
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className={cx(`
-                xl:hidden
-                ${getColorPrimary()}
-              `)}
-            >
-              {mobileOpen ? (
-                <X size={28} />
-              ) : (
-                <Menu size={28} />
-              )}
-            </button>
+            <div className="flex items-center gap-3 xl:hidden">
+              <button
+                type="button"
+                onClick={toggleLanguage}
+                className={cx(`
+                  text-xs
+                  font-bold
+                  tracking-wide
+                  border
+                  ${getBorderColor()}
+                  rounded-lg
+                  px-2.5
+                  py-1.5
+                  cursor-pointer
+                  transition
+                  ${getColorPrimary()}
+                `)}
+              >
+                {language === "es" ? "EN" : "ES"}
+              </button>
+
+              <button
+                onClick={() => setMobileOpen(!mobileOpen)}
+                className={getColorPrimary()}
+              >
+                {mobileOpen ? (
+                  <X size={28} />
+                ) : (
+                  <Menu size={28} />
+                )}
+              </button>
+            </div>
 
           </div>
 
@@ -454,7 +506,7 @@ export default function Navbar() {
                   ${navLinkClass("/")}
                 `)}
               >
-                Inicio
+                {t.inicio}
               </Link>
 
               {/* SERVICIOS */}
@@ -473,7 +525,7 @@ export default function Navbar() {
                     ${navLinkClass("/servicios")}
                   `)}
                 >
-                  Servicios
+                  {t.servicios}
 
                   <ChevronDown
                     size={18}
@@ -504,7 +556,7 @@ export default function Navbar() {
                       }
                       className="block"
                     >
-                      MS Trading
+                      {t.msTrading}
                     </Link>
 
                     <Link
@@ -514,7 +566,7 @@ export default function Navbar() {
                       }
                       className="block"
                     >
-                      MS Shipping
+                      {t.msShipping}
                     </Link>
 
                     <Link
@@ -524,7 +576,7 @@ export default function Navbar() {
                       }
                       className="block"
                     >
-                      MS Forwarding
+                      {t.msForwarding}
                     </Link>
 
                   </div>
@@ -544,7 +596,7 @@ export default function Navbar() {
                   ${navLinkClass("/#por-que-elegirnos")}
                 `)}
               >
-                ¿Por qué elegirnos?
+                {t.porQueElegirnos}
               </Link>
 
               {/* CONTACTO */}
@@ -566,7 +618,7 @@ export default function Navbar() {
                   setContactOpen(true);
                 }}
               >
-                Contáctanos
+                {t.contactanos}
               </button>
 
             </div>

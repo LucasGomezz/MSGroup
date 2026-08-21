@@ -5,115 +5,68 @@ import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import ContactModal from "../ContactModal";
 import Link from "next/link";
+import { useLanguage } from "@/lib/language-context";
+import content from "./Services.i18n.json";
 
-const services = [
+const servicesMeta = [
   {
-    title: "MS Shipping",
-    subTitle: "Servicios marítimos.",
     href: "/servicios/ms-shipping",
-    description:
-      "Especializados en el manejo comercial y operativo de buques como Operadores, Charterers, Brokers y Agentes Marítimos.",
-    points: [
-      {
-        label: "Servicios de Brokerage de Cargas y Buques",
-        link: "/servicios/ms-shipping#servicios-brokerage-cargas"
-      },
-      {
-        label: "Operación de Buques (Ship Management)",
-        link: "/servicios/ms-shipping#operacion-buques"
-      },
-      {
-        label: "Chartering",
-        link: "/servicios/ms-shipping#cherating"
-      },
-      {
-        label: "Servicios de Agencia Marítima",
-        link: "/servicios/ms-shipping#agencia-maritima"
-      },
-
+    pointLinks: [
+      "/servicios/ms-shipping#servicios-brokerage-cargas",
+      "/servicios/ms-shipping#operacion-buques",
+      "/servicios/ms-shipping#cherating",
+      "/servicios/ms-shipping#agencia-maritima",
     ],
-    cta: "Consultar servicio",
     image: "/images/shipping/agencia-maritima.png",
-    defaultService: "MS Shipping"
+    defaultService: "MS Shipping",
   },
   {
-    title: "MS Forwarding",
-    subTitle: "Operaciones marítimas, aéreas y terrestres.",
     href: "/servicios/ms-forwarding",
-    description:
-      "Operadores internacionales de cargas y comercio exterior por vía marítima, aérea y terrestre desde y hacia cualquier lugar del mundo. Depósito Fiscal, Nacional y Logística Integral",
-    points: [
-      {
-        label: "Transporte Marítimo Internacional",
-        link: "/servicios/ms-forwarding#maritimo"
-      },
-      {
-        label: "Transporte Aéreo Internacional",
-        link: "/servicios/ms-forwarding#aereo"
-      },
-      {
-        label: "Transporte Terrestre",
-        link: "/servicios/ms-forwarding#terrestre"
-      },
-      {
-        label: "Servicios Multimodales",
-        link: "/servicios/ms-forwarding#servicios-portuarios"
-      },
-      {
-        label: "Cargas de Proyecto",
-        link: "/servicios/ms-forwarding#servicios-portuarios"
-      },
-      {
-        label: "Cargas Break Bulk",
-        link: "/servicios/ms-forwarding#servicios-portuarios"
-      },
-      {
-        label: "Despacho Aduanero",
-        link: "/servicios/ms-forwarding#servicios-portuarios"
-      },
-      {
-        label: "Seguros de Carga",
-        link: "/servicios/ms-forwarding#servicios-portuarios"
-      },
-      {
-        label: "Depósito Fiscal, Nacional y Logística Integral",
-        link: "/servicios/ms-forwarding#servicios-portuarios"
-      },
+    pointLinks: [
+      "/servicios/ms-forwarding#maritimo",
+      "/servicios/ms-forwarding#aereo",
+      "/servicios/ms-forwarding#terrestre",
+      "/servicios/ms-forwarding#servicios-portuarios",
+      "/servicios/ms-forwarding#servicios-portuarios",
+      "/servicios/ms-forwarding#servicios-portuarios",
+      "/servicios/ms-forwarding#servicios-portuarios",
+      "/servicios/ms-forwarding#servicios-portuarios",
+      "/servicios/ms-forwarding#servicios-portuarios",
     ],
-    cta: "Consultar servicio",
     image: "/images/forwardingPruebaHome.jpg",
-    defaultService: "MS Forwarding"
+    defaultService: "MS Forwarding",
   },
   {
-    title: "MS Trading",
-    subTitle: "Logística y comercialización.",
     href: "/servicios/ms-trading",
-    description:
-      "Consultoría, asesoramiento, comercialización y gestión en Comercio Exterior. Desarrollo de operaciones de comercio internacional y consultoría integral para empresas exportadoras e importadoras",
-    points: [
-      {
-        label: "Trading internacional",
-        link: "/servicios/ms-trading#trading-internacional"
-      },
-      {
-        label: "Brokerage comercial",
-        link: "/servicios/ms-trading#brokerage-comercial"
-      },
-      {
-        label: "Consultoría en comercio exterior",
-        link: "/servicios/ms-trading#consultoria-comercio-exterior"
-      },
+    pointLinks: [
+      "/servicios/ms-trading#trading-internacional",
+      "/servicios/ms-trading#brokerage-comercial",
+      "/servicios/ms-trading#consultoria-comercio-exterior",
     ],
-    cta: "Consultar servicio",
     image: "/images/tradinggg.png",
-    defaultService: "MS Trading"
+    defaultService: "MS Trading",
   },
 ];
 
 export default function Services() {
+  const { language } = useLanguage();
+  const t = content[language];
+
+  const services = servicesMeta.map((meta, i) => ({
+    ...meta,
+    title: t.services[i].title,
+    subTitle: t.services[i].subTitle,
+    description: t.services[i].description,
+    cta: t.services[i].cta,
+    points: t.services[i].points.map((label, j) => ({
+      label,
+      link: meta.pointLinks[j],
+    })),
+  }));
+
   const containerRef = useRef(null);
   const [contactOpen, setContactOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState("Seleccionar servicio");
+  const [selectedService, setSelectedService] = useState("");
 
   const openContact = (service: string) => {
     setSelectedService(service);
@@ -275,7 +228,7 @@ function ImageTransition({
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function ScrollContent({ service, index, progress, onContact }: any) {
-  const unit = 1 / (services.length - 1);
+  const unit = 1 / (servicesMeta.length - 1);
   const center = index * unit;
   const buffer = 0.2;
 
@@ -287,7 +240,7 @@ function ScrollContent({ service, index, progress, onContact }: any) {
 
   const fixedOpacity = useTransform(opacity, (v) => {
     if (index === 0 && progress.get() < center) return 1;
-    if (index === services.length - 1 && progress.get() > center) return 1;
+    if (index === servicesMeta.length - 1 && progress.get() > center) return 1;
     return v;
   });
 
@@ -299,7 +252,7 @@ function ScrollContent({ service, index, progress, onContact }: any) {
 
   const fixedY = useTransform(y, (v) => {
     if (index === 0 && progress.get() < center) return 0;
-    if (index === services.length - 1 && progress.get() > center) return 0;
+    if (index === servicesMeta.length - 1 && progress.get() > center) return 0;
     return v;
   });
 
@@ -338,7 +291,7 @@ function ScrollContent({ service, index, progress, onContact }: any) {
       </div>
 
       <div
-        className={`grid ${service.title === "MS Forwarding"
+        className={`grid ${service.href === "/servicios/ms-forwarding"
           ? "grid-cols-2 gap-x-8"
           : "grid-cols-1"
           } gap-y-4 pt-4 border-l-2 border-navy/10 pl-8`}

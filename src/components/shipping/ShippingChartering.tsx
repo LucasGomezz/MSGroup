@@ -2,29 +2,15 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useLanguage } from "@/lib/language-context";
+import content from "./ShippingChartering.i18n.json";
 
 export default function ShippingCherating() {
-  const contractTypes = [
-    {
-      title: "Voyage Charter:",
-      desc: "Contratación de buque por viaje específico.",
-    },
-    {
-      title: "Time Charter:",
-      desc: "Arrendamiento de buque por período determinado.",
-    },
-    {
-      title: "Contract of Affreightment (COA):",
-      desc: "Contratos de volumen para tráficos regulares.",
-    },
-  ];
+  const { language } = useLanguage();
+  const t = content[language];
 
-  const traffics = [
-    "Commodities agrícolas (granos, harinas, aceites).",
-    "Graneles sólidos (minerales, fertilizantes, productos siderúrgicos).",
-    "Carga rodante (vehículos, maquinaria agrícola).",
-    "Carga general y carga de proyecto.",
-  ];
+  const contractTypes = t.contractTypes;
+  const traffics = t.traffics;
 
   return (
     <div id="cherating" className="relative w-full min-h-150 flex items-center justify-center overflow-hidden">
@@ -48,19 +34,16 @@ export default function ShippingCherating() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-            Chartering
+            {t.heading}
           </h2>
 
           <div className="w-24 h-1 bg-shippingComplementario mx-auto mb-8" />
 
           <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-5xl mx-auto font-light leading-relaxed px-4">
-            Proveemos servicios de chartering por viaje{" "}
-            <span className="font-medium text-white">(voyage charter)</span> y por
-            tiempo{" "}
-            <span className="font-medium text-white">(time charter)</span> para
-            atender tanto los contratos de carga de nuestros clientes como
-            nuestros propios contratos de cargas y tráficos regulares,
-            concentrándonos principalmente en el servicio de transporte de commodities, graneles, carga rodante, carga de proyecto y carga general a nivel global.
+            {t.intro_antes}{" "}
+            <span className="font-medium text-white">{t.intro_voyageCharter}</span> {t.intro_yPorTiempo}{" "}
+            <span className="font-medium text-white">{t.intro_timeCharter}</span>{" "}
+            {t.intro_despues}
           </p>
         </motion.div>
 
@@ -75,7 +58,7 @@ export default function ShippingCherating() {
           >
             <h3 className="text-shippingComplementario font-bold mb-6 uppercase text-xl tracking-[0.2em] flex items-center gap-2">
               <span className="w-8 h-0.5 bg-shippingComplementario" />
-              Tipos de contratos
+              {t.tiposDeContratos}
             </h3>
 
             <ul className="grid grid-cols-1 gap-4">
@@ -113,7 +96,7 @@ export default function ShippingCherating() {
           >
             <h3 className="text-shippingComplementario font-bold mb-6 uppercase text-xl tracking-[0.2em] flex items-center gap-2">
               <span className="w-8 h-0.5 bg-shippingComplementario" />
-              Tráficos principales
+              {t.traficosPrincipales}
             </h3>
 
             <ul className="grid grid-cols-1 gap-4">

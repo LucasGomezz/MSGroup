@@ -1,0 +1,30 @@
+{
+  "es": {
+    "items": [
+      { "title": "Maximización de Rentabilidad", "text": "Gestionamos todo tipo de contratos de cargas, buscando obtener el mayor beneficio para nuestros clientes." },
+      { "title": "Términos Competitivos", "text": "Negociamos términos contractuales óptimos según las condiciones vigentes del mercado para cada tipo de carga y tráfico." },
+      { "title": "Gestión de Riesgos", "text": "Analizamos cuidadosamente cada viaje para minimizar riesgos y explorar oportunidades en nuevas rutas y mercados.." },
+      { "title": "Red Global", "text": "Monitoreamos en tiempo real las condiciones de mercado y mantenemos contacto directo por un lado con armadores y operadores de buque y por el otro con productores, traders y operadores globales, lo que nos permite identificar las mejores oportunidades de empleo para cada buque." },
+      { "title": "Ship Management", "text": "Cubrimos todos los requerimientos y necesidades comerciales y operativas de los armadores optimizando costos sin comprometer la calidad del servicio." },
+      { "title": "Servicios Preferenciales", "text": "Accedemos a las mejores alternativas para la contratación de bunkers, agencias marítimas, tripulación, seguros, reparaciones y demás servicios relacionados con el manejo de buques." }
+    ],
+    "eyebrow": "Ship Management",
+    "heading": "Operación de Buques",
+    "parrafo1": "Como operadores de buques, gestionamos la comercialización y operación de buques para diversos armadores y operadores internacionales, principalmente de los tipos Bulk Carrier, Multipropósito y Roll-on/Roll-off, entre otros.",
+    "parrafo2": "Nuestra vasta trayectoria e inserción en los principales mercados internacionales altamente competitivos, nuestra seriedad en el cumplimiento de los compromisos contraídos, y la calidad de los servicios ofrecidos, nos han permitido que, año a año, empresas armadoras y operadores de primer nivel internacional y empresas importadores/exportadores de diferentes rubros nos confíen la operación y manejo de sus contratos de carga."
+  },
+  "en": {
+    "items": [
+      { "title": "", "text": "" },
+      { "title": "", "text": "" },
+      { "title": "", "text": "" },
+      { "title": "", "text": "" },
+      { "title": "", "text": "" },
+      { "title": "", "text": "" }
+    ],
+    "eyebrow": "",
+    "heading": "",
+    "parrafo1": "",
+    "parrafo2": ""
+  }
+}

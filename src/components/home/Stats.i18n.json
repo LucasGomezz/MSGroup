@@ -1,0 +1,22 @@
+{
+  "es": {
+    "heading": "Experiencia, eficiencia y confianza",
+    "description": "Ofrecemos soluciones seguras y a medida para el comercio exterior y el transporte internacional de mercaderías.",
+    "stats": [
+      { "label": "Años de trayectoria" },
+      { "label": "Clientes activos" },
+      { "label": "Países conectados" },
+      { "label": "Días al año operando" }
+    ]
+  },
+  "en": {
+    "heading": "",
+    "description": "",
+    "stats": [
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" }
+    ]
+  }
+}
