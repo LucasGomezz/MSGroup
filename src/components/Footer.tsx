@@ -18,6 +18,7 @@ export default function Footer() {
       <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center sm:text-left">
 
+          {/* MS GROUP */}
           <div className="lg:pr-10 lg:border-r border-white/20">
             <h3 className="text-coral font-semibold uppercase mb-3 text-center sm:text-left">
               {t.msGroup}
@@ -28,14 +29,17 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className=" sm:pl-0 lg:px-10 lg:border-r border-white/20 ">
+          {/* CONTACTO */}
+          <div className="sm:pl-0 lg:px-10 lg:border-r border-white/20">
             <h3 className="text-coral font-semibold uppercase mb-3 text-center sm:text-left">
               {t.contacto}
             </h3>
 
             <div className="space-y-6 text-sm sm:text-base">
+
               <div className="flex justify-center sm:justify-start gap-4">
                 <MapPin className="text-coral mt-1" size={16} />
+
                 <div>
                   {t.direccionLinea1}
                   <br />
@@ -45,6 +49,7 @@ export default function Footer() {
 
               <div className="flex justify-center sm:justify-start gap-4">
                 <Phone className="text-coral mt-1" size={16} />
+
                 <a href="tel:+541143224902">
                   +54 11 4322-4902
                 </a>
@@ -52,6 +57,7 @@ export default function Footer() {
 
               <div className="flex justify-center sm:justify-start gap-4">
                 <Mail className="text-coral mt-1" size={16} />
+
                 <a href="mailto:maritima@maritima-group.com">
                   maritima@maritima-group.com
                 </a>
@@ -59,17 +65,22 @@ export default function Footer() {
 
               <div className="flex justify-center sm:justify-start gap-4">
                 <Clock3 className="text-coral mt-1" size={16} />
-                <div>{t.horario}</div>
+
+                <div>
+                  {t.horario}
+                </div>
               </div>
+
             </div>
           </div>
 
+          {/* SERVICIOS */}
           <div className="sm:col-span-2 lg:col-span-1 lg:pl-10">
             <h3 className="text-coral font-semibold uppercase mb-3 text-center sm:text-left">
               {t.nuestrosServicios}
             </h3>
 
-            <ul className="text-gray-300 text-lg space-y-6 text-center sm:text-left ">
+            <ul className="text-gray-300 text-lg space-y-6 text-center sm:text-left">
 
               <li>
                 <Link
@@ -102,9 +113,9 @@ export default function Footer() {
           </div>
 
         </div>
-
       </div>
 
+      {/* BOTTOM BAR */}
       <div className="border-t border-white/20">
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col lg:flex-row justify-between items-center gap-3 text-sm text-gray-300 text-center lg:text-left">
@@ -118,19 +129,25 @@ export default function Footer() {
             onClick={(e) => {
               if (pathname === "/") {
                 e.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
+
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
               }
             }}
             className="flex items-center shrink-0"
           >
-            <Image
-              src="/images/logos/logoFooter.png"
-              alt="Logo"
-              width={160}
-              height={40}
-              className="h-10 md:h-10 w-auto"
-              priority
-            />
+            <div className="relative w-40 h-10">
+              <Image
+                src="/images/logos/logoFooter.png"
+                alt="Logo"
+                fill
+                sizes="160px"
+                className="object-contain"
+                priority
+              />
+            </div>
           </Link>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center">

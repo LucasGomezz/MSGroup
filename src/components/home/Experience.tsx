@@ -91,12 +91,13 @@ export default function Experience() {
 
           {/* LOGOS */}
           <div className="mt-8 md:mt-10 flex items-center justify-start gap-6 sm:gap-8 md:gap-10">
-            
+
             <div className="relative w-24 h-16 sm:w-28 sm:h-20 md:w-32 md:h-20">
               <Image
                 src="/images/logos/logoShipping.png"
                 alt="MS Shipping"
                 fill
+                sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
                 className="object-contain"
               />
             </div>
@@ -106,6 +107,7 @@ export default function Experience() {
                 src="/images/logos/logoForwarding.png"
                 alt="MS Forwarding"
                 fill
+                sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
                 className="object-contain"
               />
             </div>
@@ -115,6 +117,7 @@ export default function Experience() {
                 src="/images/logos/logoMSTrading.png"
                 alt="MS Trading"
                 fill
+                sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
                 className="object-contain"
               />
             </div>

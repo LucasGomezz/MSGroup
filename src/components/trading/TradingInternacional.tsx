@@ -53,7 +53,16 @@ export default function TradingInternational() {
                         alt="Trading Internacional"
                         width={500}
                         height={500}
-                        className="relative z-10 w-full h-auto max-w-[500px] object-cover rounded-2xl"
+                        sizes="(max-width: 768px) 100vw, 500px"
+                        className="
+                            relative
+                            z-10
+                            w-full
+                            h-auto
+                            max-w-125
+                            object-cover
+                            rounded-2xl
+                        "
                     />
                 </motion.div>
 
