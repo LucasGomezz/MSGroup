@@ -23,6 +23,7 @@ export default function TradingInternational() {
         >
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
+                {/* Texto */}
                 <motion.div
                     {...fadeInUp}
                     className="z-10"
@@ -36,6 +37,7 @@ export default function TradingInternational() {
                     </p>
                 </motion.div>
 
+                {/* Imagen */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -51,7 +53,7 @@ export default function TradingInternational() {
                         alt="Trading Internacional"
                         width={500}
                         height={500}
-                        className="relative z-10 w-full max-w-[500px] h-auto object-cover rounded-2xl"
+                        className="relative z-10 w-full h-auto max-w-[500px] object-cover rounded-2xl"
                     />
                 </motion.div>
 
