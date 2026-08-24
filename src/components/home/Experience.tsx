@@ -1,6 +1,7 @@
 "use client";
 
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 import WorldMap from "@/components/ui/world-map";
 import { useLanguage } from "@/lib/language-context";
 import content from "./Experience.i18n.json";
@@ -30,12 +31,15 @@ export default function Experience() {
     <section
       ref={ref}
       className={`relative bg-white py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 transition-all duration-700 ${
-        inView ? "opacity-100 translate-y-0" : "opacity-100 translate-y-4"
+        inView
+          ? "opacity-100 translate-y-0"
+          : "opacity-100 translate-y-4"
       }`}
     >
       <div className="w-full mx-auto grid lg:grid-cols-2 gap-10 md:gap-14 lg:gap-16 items-center">
 
-        <div className="px-1 sm:px-2 md:px-6 lg:px-10 text-left  order-2 lg:order-1">
+        {/* TEXTO + LOGOS */}
+        <div className="px-1 sm:px-2 md:px-6 lg:px-10 text-left order-2 lg:order-1">
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-6 md:mb-8 leading-tight">
             {t.heading}
@@ -54,24 +58,71 @@ export default function Experience() {
             </span>{" "}
             —
 
-            <span className="text-coral font-semibold"> {t.p1_shipping}</span>,
-            <span className="text-coral font-semibold"> {t.p1_forwarding} </span>
+            <span className="text-coral font-semibold">
+              {" "}{t.p1_shipping}
+            </span>
+            ,
+
+            <span className="text-coral font-semibold">
+              {" "}{t.p1_forwarding}{" "}
+            </span>
+
             {t.p1_y}
-            <span className="text-coral font-semibold"> {t.p1_trading}</span> —
+
+            <span className="text-coral font-semibold">
+              {" "}{t.p1_trading}
+            </span>{" "}
+            —
 
             {t.p1_paraGarantizar}
           </p>
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
             {t.p2_hoyCon}
-            <span className="font-bold text-navy"> {t.p2_argentina}</span> {t.p2_yGraciasA}
+            <span className="font-bold text-navy">
+              {" "}{t.p2_argentina}
+            </span>{" "}
+            {t.p2_yGraciasA}
             <span className="font-bold text-navy">
               {" "}{t.p2_solucionesDeTransporte}
             </span>{" "}
             {t.p2_paraCadaTipo}
           </p>
+
+          {/* LOGOS */}
+          <div className="mt-8 md:mt-10 flex items-center justify-start gap-6 sm:gap-8 md:gap-10">
+            
+            <div className="relative w-24 h-16 sm:w-28 sm:h-20 md:w-32 md:h-20">
+              <Image
+                src="/images/logos/logoShipping.png"
+                alt="MS Shipping"
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            <div className="relative w-24 h-16 sm:w-28 sm:h-20 md:w-32 md:h-20">
+              <Image
+                src="/images/logos/logoForwarding.png"
+                alt="MS Forwarding"
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            <div className="relative w-24 h-16 sm:w-28 sm:h-20 md:w-32 md:h-20">
+              <Image
+                src="/images/logos/logoMSTrading.png"
+                alt="MS Trading"
+                fill
+                className="object-contain"
+              />
+            </div>
+
+          </div>
         </div>
 
+        {/* MAPA */}
         <div className="relative w-full flex justify-center items-center order-1 lg:order-2">
           <div className="relative w-full max-w-xl md:max-w-2xl lg:max-w-none">
             <WorldMap dots={inView ? dots : []} />
