@@ -15,18 +15,18 @@
     "politicaPrivacidad": "Política de Privacidad"
   },
   "en": {
-    "msGroup": "",
-    "tagline": "",
-    "contacto": "",
-    "direccionLinea1": "",
-    "direccionLinea2": "",
-    "horario": "",
-    "nuestrosServicios": "",
-    "msShipping": "",
-    "msForwarding": "",
-    "msTrading": "",
-    "copyright": "",
-    "avisoLegal": "",
-    "politicaPrivacidad": ""
+    "msGroup": "MS Group",
+    "tagline": "Comprehensive international logistics solutions since 1994.",
+    "contacto": "Contact",
+    "direccionLinea1": "Tte. Gral. Juan D. Perón 683, 3° floor",
+    "direccionLinea2": "Buenos Aires, Argentina",
+    "horario": "Monday to Friday · 9:00 a 18:00",
+    "nuestrosServicios": "Our Services",
+    "msShipping": "MS Shipping",
+    "msForwarding": "MS Forwarding",
+    "msTrading": "MS Trading",
+    "copyright": "© 2026 MS Group S.R.L. All rights reserved.",
+    "avisoLegal": "Legal Notice",
+    "politicaPrivacidad": "Privacy Policy"
   }
 }

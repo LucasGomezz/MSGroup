@@ -1,6 +1,7 @@
 "use client";
 
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 import WorldMap from "@/components/ui/world-map";
 import { useLanguage } from "@/lib/language-context";
 import content from "./Experience.i18n.json";
@@ -30,12 +31,15 @@ export default function Experience() {
     <section
       ref={ref}
       className={`relative bg-white py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 transition-all duration-700 ${
-        inView ? "opacity-100 translate-y-0" : "opacity-100 translate-y-4"
+        inView
+          ? "opacity-100 translate-y-0"
+          : "opacity-100 translate-y-4"
       }`}
     >
       <div className="w-full mx-auto grid lg:grid-cols-2 gap-10 md:gap-14 lg:gap-16 items-center">
 
-        <div className="px-1 sm:px-2 md:px-6 lg:px-10 text-left  order-2 lg:order-1">
+        {/* COLUMNA IZQUIERDA */}
+        <div className="px-1 sm:px-2 md:px-6 lg:px-10 text-left order-2 lg:order-1">
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-6 md:mb-8 leading-tight">
             {t.heading}
@@ -43,7 +47,9 @@ export default function Experience() {
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-5 md:mb-6">
             {t.p1_conMasDe}{" "}
-            <span className="font-bold text-navy">{t.p1_30anos}</span>{" "}
+            <span className="font-bold text-navy">
+              {t.p1_30anos}
+            </span>{" "}
             {t.p1_deExperiencia}{" "}
             <span className="font-bold text-navy">
               {t.p1_diferentesActividades}
@@ -54,24 +60,74 @@ export default function Experience() {
             </span>{" "}
             —
 
-            <span className="text-coral font-semibold"> {t.p1_shipping}</span>,
-            <span className="text-coral font-semibold"> {t.p1_forwarding} </span>
+            <span className="text-coral font-semibold">
+              {" "}{t.p1_shipping}
+            </span>
+            ,
+
+            <span className="text-coral font-semibold">
+              {" "}{t.p1_forwarding}
+            </span>{" "}
+
             {t.p1_y}
-            <span className="text-coral font-semibold"> {t.p1_trading}</span> —
+
+            <span className="text-coral font-semibold">
+              {" "}{t.p1_trading}
+            </span>{" "}
+            —
 
             {t.p1_paraGarantizar}
           </p>
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
             {t.p2_hoyCon}
-            <span className="font-bold text-navy"> {t.p2_argentina}</span> {t.p2_yGraciasA}
+            <span className="font-bold text-navy">
+              {" "}{t.p2_argentina}
+            </span>{" "}
+            {t.p2_yGraciasA}
             <span className="font-bold text-navy">
               {" "}{t.p2_solucionesDeTransporte}
             </span>{" "}
             {t.p2_paraCadaTipo}
           </p>
+
+          {/* LOGOS DE LOS SERVICIOS */}
+          <div className="mt-8 md:mt-10 flex items-center justify-start gap-5 sm:gap-7 md:gap-9">
+
+            <div className="flex items-center justify-center">
+              <Image
+                src="/images/logos/logoShipping.png"
+                alt="MS Shipping"
+                width={150}
+                height={60}
+                className="w-auto h-9 sm:h-11 md:h-13 object-contain"
+              />
+            </div>
+
+            <div className="flex items-center justify-center">
+              <Image
+                src="/images/logos/logoForwarding.png"
+                alt="MS Forwarding"
+                width={150}
+                height={60}
+                className="w-auto h-9 sm:h-11 md:h-13 object-contain"
+              />
+            </div>
+
+            <div className="flex items-center justify-center">
+              <Image
+                src="/images/logos/logoMSTrading.png"
+                alt="MS Trading"
+                width={150}
+                height={60}
+                className="w-auto h-9 sm:h-11 md:h-13 object-contain"
+              />
+            </div>
+
+          </div>
         </div>
 
+        {/* COLUMNA DERECHA - MAPA */}
         <div className="relative w-full flex justify-center items-center order-1 lg:order-2">
           <div className="relative w-full max-w-xl md:max-w-2xl lg:max-w-none">
             <WorldMap dots={inView ? dots : []} />

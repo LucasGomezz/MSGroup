@@ -9,12 +9,12 @@
     "contactanos": "Contáctanos"
   },
   "en": {
-    "inicio": "",
-    "servicios": "",
-    "msShipping": "",
-    "msForwarding": "",
-    "msTrading": "",
-    "porQueElegirnos": "",
-    "contactanos": ""
+    "inicio": "Home",
+    "servicios": "Services",
+    "msShipping": "MS Shipping",
+    "msForwarding": "MS Forwarding",
+    "msTrading": "MS Trading",
+    "porQueElegirnos": "Why choose us?",
+    "contactanos": "Contact Us"
   }
 }
