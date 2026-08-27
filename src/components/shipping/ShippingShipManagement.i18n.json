@@ -15,16 +15,16 @@
   },
   "en": {
     "items": [
-      { "title": "", "text": "" },
-      { "title": "", "text": "" },
-      { "title": "", "text": "" },
-      { "title": "", "text": "" },
-      { "title": "", "text": "" },
-      { "title": "", "text": "" }
+      { "title": "Maximizing Returns", "text": "We manage all types of cargo contracts, always focused on maximizing value for our clients." },
+      { "title": "Competitive Chartering Terms", "text": "We negotiate optimal contractual terms in line with prevailing market conditions for each cargo and trade." },
+      { "title": "Risk Management", "text": "We assess every voyage carefully to minimize exposure and identify opportunities in new routes and markets." },
+      { "title": "Global Market Access", "text": "We monitor market conditions in real time and maintain direct contact with shipowners and vessel operators on one side, and producers, traders and global operators on the other, enabling us to identify the best employment opportunities for each vessel." },
+      { "title": "Ship Management", "text": "We cover the full range of shipowners’ commercial and operational requirements, optimizing costs without compromising service quality." },
+      { "title": "Preferred Services", "text": "We secure access to competitive options for bunkers, port agencies, crew, insurance, repairs and other vessel-related services." }
     ],
-    "eyebrow": "",
-    "heading": "",
-    "parrafo1": "",
-    "parrafo2": ""
+    "eyebrow": "Ship Management",
+    "heading": "Vessel Operations",
+    "parrafo1": "As vessel operators, we manage the commercial deployment and operation of vessels for shipowners and international operators, primarily Bulk Carriers, Multipurpose and Roll-on/Roll-off vessels, among others.",
+    "parrafo2": "Our extensive track record and presence in highly competitive international markets, together with our commitment to fulfilling every obligation and the quality of our services, have earned the trust of leading shipowners, operators and importers/exporters across a wide range of industries, who rely on us year after year to manage their cargo contracts and vessel operations."
   }
 }

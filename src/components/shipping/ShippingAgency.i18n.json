@@ -3,11 +3,26 @@
     "heading": "Agencia Marítima",
     "descripcion": "Ofrecemos todos los servicios portuarios para atención de buques y cargas en los principales puertos argentinos.",
     "capacities": [
-      { "title": "Atención a diversos tipos de buques", "desc": "Bulk carriers, buques multipropósito, Roll-on/Roll-off (Ro/Ro), portacontenedores y buques pesqueros." },
-      { "title": "Gestión de múltiples tipos de carga", "desc": "Graneles, productos agrícolas, productos siderúrgicos, fertilizantes, contenedores, carga de proyecto, vehículos y carga general." },
-      { "title": "Seguimiento permanente", "desc": "Monitoreo continuo de operaciones portuarias cumpliendo con todos los requerimientos operativos y documentales de nuestros clientes." },
-      { "title": "Equipo especializado", "desc": "Staff de profesionales con amplia experiencia y la infraestructura necesaria para asegurar operaciones portuarias eficientes." },
-      { "title": "Capacidad multilingüe", "desc": "Personal bilingüe español/inglés, con conocimientos adicionales de italiano y portugués para comunicación con tripulaciones y armadores internacionales." }
+      {
+        "title": "Atención a diversos tipos de buques",
+        "desc": "Bulk carriers, buques multipropósito, Roll-on/Roll-off (Ro/Ro), portacontenedores y buques pesqueros."
+      },
+      {
+        "title": "Gestión de múltiples tipos de carga",
+        "desc": "Graneles, productos agrícolas, productos siderúrgicos, fertilizantes, contenedores, carga de proyecto, vehículos y carga general."
+      },
+      {
+        "title": "Seguimiento permanente",
+        "desc": "Monitoreo continuo de operaciones portuarias cumpliendo con todos los requerimientos operativos y documentales de nuestros clientes."
+      },
+      {
+        "title": "Equipo especializado",
+        "desc": "Staff de profesionales con amplia experiencia y la infraestructura necesaria para asegurar operaciones portuarias eficientes."
+      },
+      {
+        "title": "Capacidad multilingüe",
+        "desc": "Personal bilingüe español/inglés, con conocimientos adicionales de italiano y portugués para comunicación con tripulaciones y armadores internacionales."
+      }
     ],
     "serviciosHeading": "Servicios Ofrecidos en Puertos Argentinos",
     "services": [
@@ -27,20 +42,45 @@
     "ctaBoton": "Hablemos"
   },
   "en": {
-    "heading": "",
-    "descripcion": "",
+    "heading": "Port Agency",
+    "descripcion": "We provide comprehensive port agency services for vessels and cargo at Argentina’s main ports.",
     "capacities": [
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" }
+      {
+        "title": "All types of vessels",
+        "desc": "Bulk carriers, multipurpose vessels, Roll-on/Roll-off (Ro/Ro), container vessels and fishing vessels."
+      },
+      {
+        "title": "Wide range of cargo",
+        "desc": "Dry bulk, agricultural products, steel products, fertilizers, containers, project cargo, vehicles and general cargo."
+      },
+      {
+        "title": "Continuous monitoring",
+        "desc": "Continuous monitoring of port operations, ensuring full compliance with our clients’ operational and documentation requirements."
+      },
+      {
+        "title": "Specialized Team",
+        "desc": "Experienced professionals backed by the infrastructure required to ensure efficient port operations."
+      },
+      {
+        "title": "Multilingual capabilities",
+        "desc": "Bilingual Spanish/English staff, with additional Italian and Portuguese capabilities for communication with international crews and shipowners."
+      }
     ],
-    "serviciosHeading": "",
-    "services": ["", "", "", "", "", "", "", "", ""],
-    "ctaTituloLinea1": "",
-    "ctaTituloLinea2": "",
-    "ctaDescripcion": "",
-    "ctaBoton": ""
+    "serviciosHeading": "Port Services in Argentina",
+    "services": [
+      "Port Agency Services",
+      "Coordination of pilots and pilotage services for ports and waterways",
+      "Tug & launch services",
+      "Crew assistance",
+      "Provision of stores and provisions",
+      "Spare parts supply and repair coordination",
+      "Dry-docking assistance and coordination",
+      "Bunkering",
+      "Cargo operations (loading/discharging)"
+    ],
+    "ctaTituloLinea1": "READY TO OPTIMIZE",
+    "ctaTituloLinea2": "YOUR MARITIME OPERATIONS?",
+    "ctaDescripcion": "Put your requirements in the hands of shipping specialists and receive expert advice.",
+    "ctaBoton": "Let’s talk"
   }
 }

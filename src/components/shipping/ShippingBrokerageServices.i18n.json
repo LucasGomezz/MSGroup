@@ -10,7 +10,13 @@
     ]
   },
   "en": {
-    "heading": "",
-    "items": ["", "", "", "", ""]
+    "heading": "Brokerage Services",
+    "items": [
+      "Vessel sourcing based on cargo requirements",
+      "Cargo sourcing for open tonnage",
+      "Charter Party term negotiation",
+      "Voyage cost calculation and advisory",
+      "Ship Sale & Purchase"
+    ]
   }
 }

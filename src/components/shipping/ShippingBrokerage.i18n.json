@@ -16,19 +16,19 @@
     ]
   },
   "en": {
-    "heading": "",
-    "parrafo1": "",
-    "parrafo2": "",
-    "parrafo3": "",
+    "heading": "Ship Brokerage",
+    "parrafo1": "Our brokerage team responds promptly to transportation requirements, matching cargoes with suitable tonnage at ports worldwide and acting as an intermediary between shipowners and cargo interests.",
+    "parrafo2": "With extensive experience in negotiating and concluding Charter Parties for all types of vessels and cargoes, we have the expertise to structure and negotiate contracts that maximize value for our clients, securing optimal terms in line with current market conditions for each cargo and trade.",
+    "parrafo3": "We maintain real-time information on vessel positions and cargo requirements worldwide, allowing us to provide immediate alternatives to our clients.",
     "items": [
-      { "title": "", "text": "" },
-      { "title": "", "text": "" },
-      { "title": "", "text": "" },
-      { "title": "", "text": "" },
-      { "title": "", "text": "" },
-      { "title": "", "text": "" },
-      { "title": "", "text": "" },
-      { "title": "", "text": "" }
+      { "title": "Direct industry contacts", "text": "Established relationships with shipowners, operators, producers, traders, importers and exporters worldwide." },
+      { "title": "Port & Trade Expertise", "text": "Extensive knowledge of port operations worldwide, with particular expertise in Latin America." },
+      { "title": "Global Market Cooperation", "text": "Active channels with leading brokers and operators across global markets." },
+      { "title": "Specialized Negotiation", "text": "We manage all types of cargo contracts, seeking to maximize value for our clients by negotiating optimal terms in line with prevailing market conditions for any cargo or trade." },
+      { "title": "End-to-end support", "text": "Comprehensive client support, from initial negotiation through post-fixture follow-up." },
+      { "title": "Operational Expertise", "text": "As vessel operators, we calculate voyage costs and returns for charter contracts." },
+      { "title": "Sale & Purchase", "text": "Active involvement in ship sale and purchase brokerage transactions." },
+      { "title": "International Track Record", "text": "A strong presence in competitive international markets, backed by the continued trust of first-class clients who choose us year after year." }
     ]
   }
 }

@@ -9,9 +9,18 @@
     "tiposDeContratos": "Tipos de contratos",
     "traficosPrincipales": "Tráficos principales",
     "contractTypes": [
-      { "title": "Voyage Charter:", "desc": "Contratación de buque por viaje específico." },
-      { "title": "Time Charter:", "desc": "Arrendamiento de buque por período determinado." },
-      { "title": "Contract of Affreightment (COA):", "desc": "Contratos de volumen para tráficos regulares." }
+      {
+        "title": "Voyage Charter:",
+        "desc": "Contratación de buque por viaje específico."
+      },
+      {
+        "title": "Time Charter:",
+        "desc": "Arrendamiento de buque por período determinado."
+      },
+      {
+        "title": "Contract of Affreightment (COA):",
+        "desc": "Contratos de volumen para tráficos regulares."
+      }
     ],
     "traffics": [
       "Commodities agrícolas (granos, harinas, aceites).",
@@ -21,19 +30,33 @@
     ]
   },
   "en": {
-    "heading": "",
-    "intro_antes": "",
-    "intro_voyageCharter": "",
-    "intro_yPorTiempo": "",
-    "intro_timeCharter": "",
-    "intro_despues": "",
-    "tiposDeContratos": "",
-    "traficosPrincipales": "",
+    "heading": "Chartering",
+    "intro_antes": "We provide",
+    "intro_voyageCharter": "voyage",
+    "intro_yPorTiempo": "and",
+    "intro_timeCharter": "time",
+    "intro_despues": "chartering services to support both our clients’ cargo contracts and our own contractual commitments and regular trades, with a primary focus on commodities, dry bulk, ro-ro, project cargo and general cargo movements worldwide.",
+    "tiposDeContratos": "Charter Types",
+    "traficosPrincipales": "Key Trades",
     "contractTypes": [
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" }
+      {
+        "title": "Voyage Charter:",
+        "desc": "Vessel employment for a specific voyage."
+      },
+      {
+        "title": "Time Charter:",
+        "desc": "Vessel hire for a defined period."
+      },
+      {
+        "title": "Contract of Affreightment (COA):",
+        "desc": "Volume commitments for regular trades."
+      }
     ],
-    "traffics": ["", "", "", ""]
+    "traffics": [
+      "Agricultural commodities (grains, meals and vegetable oils).",
+      "Dry bulk (minerals, fertilizers and steel products).",
+      "Ro-Ro cargo (vehicles and agricultural machinery).",
+      "General cargo and project cargo."
+    ]
   }
 }
