@@ -22,13 +22,25 @@
     ]
   },
   "en": {
-    "heading": "",
-    "description": "",
+    "heading": "The difference is in the details",
+    "description": "Your strategic partner for every international trade operation.",
     "features": [
-      { "title": "", "description": "" },
-      { "title": "", "description": "" },
-      { "title": "", "description": "" },
-      { "title": "", "description": "" }
+      {
+        "title": "Tailor-made solutions",
+        "description": "We design customized solutions for every client, adapting to the complexity of each operation."
+      },
+      {
+        "title": "True transparency",
+        "description": "Real-time visibility, transparent costs and direct communication with your dedicated account executive."
+      },
+      {
+        "title": "Added value",
+        "description": "We bring value to your business through recommendations backed by 35+ years of experience across international operations."
+      },
+      {
+        "title": "Global reach, local service",
+        "description": "A presence in 100+ countries through our agent network, combined with the proximity and trust of an Argentine company."
+      }
     ]
   }
 }

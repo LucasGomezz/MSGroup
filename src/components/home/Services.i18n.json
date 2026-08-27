@@ -46,25 +46,44 @@
   "en": {
     "services": [
       {
-        "title": "",
-        "subTitle": "",
-        "description": "",
-        "points": ["", "", "", ""],
-        "cta": ""
+        "title": "MS Shipping",
+        "subTitle": "Brokers, and Port Agents.",
+        "description": "Specialized in the commercial and operational management of vessels as Ship Operators, Charterers, Cargo and Ship",
+        "points": [
+          "Cargo & Ship Brokerage",
+          "Ship Operations (Ship Management)",
+          "Chartering",
+          "Port Agency Services"
+        ],
+        "cta": "Inquire about service"
       },
       {
-        "title": "",
-        "subTitle": "",
-        "description": "",
-        "points": ["", "", "", "", "", "", "", "", ""],
-        "cta": ""
+        "title": "MS Forwarding",
+        "subTitle": "Ocean, air & land freight operations.",
+        "description": "International freight forwarding and foreign trade solutions by sea, air and land, to and from anywhere in the world. Bonded and domestic warehousing, plus integrated logistics.",
+        "points": [
+          "International Ocean Freight",
+          "International Air Freight",
+          "Road Transportation",
+          "Multimodal Solutions",
+          "Project Cargo",
+          "Breakbulk Cargo",
+          "Customs Clearance",
+          "Cargo Insurance",
+          "Bonded & Domestic Warehousing and Integrated Logistics"
+        ],
+        "cta": "Inquire about service"
       },
       {
-        "title": "",
-        "subTitle": "",
-        "description": "",
-        "points": ["", "", ""],
-        "cta": ""
+        "title": "MS Trading",
+        "subTitle": "Trading & commercial solutions.",
+        "description": "International trade consulting, commercial advisory, trading and transaction management. End-to-end international trade solutions for exporters and importers.",
+        "points": [
+          "International Trading",
+          "Commercial Brokerage",
+          "International Trade Consulting"
+        ],
+        "cta": "Inquire about service"
       }
     ]
   }

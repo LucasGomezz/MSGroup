@@ -10,13 +10,13 @@
     ]
   },
   "en": {
-    "heading": "",
-    "description": "",
+    "heading": "Experience, Efficiency and Reliability",
+    "description": "We provide secure, tailor-made solutions for international trade and the global movement of goods.",
     "stats": [
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" }
+      { "label": "Years of experience" },
+      { "label": "Active clients" },
+      { "label": "Countries served" },
+      { "label": "Days a year in operation" }
     ]
   }
 }
