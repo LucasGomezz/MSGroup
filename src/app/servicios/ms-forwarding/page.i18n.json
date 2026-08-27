@@ -10,13 +10,13 @@
     "ctaButtonText": "Hablemos"
   },
   "en": {
-    "heroTitle": "",
-    "heroDescription": "",
-    "heroButtonText": "",
-    "serviceIntroTitle": "",
-    "serviceIntroDescription": "",
-    "ctaTitle": "",
-    "ctaDescription": "",
-    "ctaButtonText": ""
+    "heroTitle": "MS Forwarding",
+    "heroDescription": "We manage international transportation and the handling of import and export cargo with efficiency and full transparency at every stage of the process.",
+    "heroButtonText": "Start your enquiry",
+    "serviceIntroTitle": "MS Forwarding",
+    "serviceIntroDescription": "Since 1990, MS Forwarding has provided international freight solutions from Argentina, coordinating ocean, air and road operations for local and international companies.",
+    "ctaTitle": "READY TO MOVE YOUR NEXT SHIPMENT?",
+    "ctaDescription": "We support you with clear, agile solutions and no hidden costs.",
+    "ctaButtonText": "Let’s talk"
   }
 }

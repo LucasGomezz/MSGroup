@@ -56,13 +56,59 @@
     ]
   },
   "en": {
-    "headingLine1": "",
-    "headingLine2": "",
+    "headingLine1": "Smart",
+    "headingLine2": "Transport Solutions.",
     "services": [
-      { "title": "", "description": "", "items": ["", "", "", ""], "descriptionn": "" },
-      { "title": "", "description": "", "items": ["", "", "", "", ""], "descriptionn": "" },
-      { "title": "", "description": "", "items": ["", "", "", "", "", ""], "descriptionn": "" },
-      { "title": "", "description": "", "items": ["", "", "", "", "", "", ""], "descriptionn": "" }
+      {
+        "title": "International Ocean Freight",
+        "description": "FCL (Full Container Load), LCL (Less than Container Load), Ro-Ro, Project Cargo and General Cargo (Breakbulk) services to and from any port worldwide.",
+        "items": [
+          "Dry containers (20’, 40’, 40’ HC)",
+          "Reefer containers for temperature-sensitive and perishable cargo",
+          "Flat racks and open tops for out-of-gauge and special cargo",
+          "LCL consolidation to optimize costs for partial shipments"
+        ],
+        "descriptionn": "Together with our agent network across key countries and international markets, we maintain direct commercial agreements with leading ocean carriers, enabling us to offer competitive freight rates and transit-time options tailored to each requirement."
+      },
+      {
+        "title": "International Air Freight",
+        "description": "We coordinate air shipments for cargo requiring short transit times, high-value goods or time-sensitive products.",
+        "items": [
+          "Direct flights and optimized connections",
+          "Consolidated cargo and direct shipments",
+          "Specialized handling of temperature-controlled perishables",
+          "IATA-certified dangerous goods handling",
+          "Real-time tracking from origin to destination"
+        ],
+        "descriptionn": "Our commercial relationships with leading airlines, supported by our freight agent network, allow us to secure capacity even during peak seasons."
+      },
+      {
+        "title": "Road Transportation",
+        "description": "We provide door-to-door road transport services within Argentina and to neighboring countries (Uruguay, Paraguay, Chile, Brazil and Peru), coordinating cargo movements from origin through final delivery.",
+        "items": [
+          "Container transportation",
+          "Full Truckload (FTL)",
+          "Less-than-Truckload (LTL)",
+          "Specialized vehicles according to cargo type",
+          "Real-time GPS tracking",
+          "Cargo-specific insurance coverage"
+        ],
+        "descriptionn": ""
+      },
+      {
+        "title": "Customs Clearance",
+        "description": "Our highly qualified professionals manage import and export procedures before ARCA/Customs, SENASA, ANMAT and other regulatory authorities, providing guidance throughout each stage of the operation to facilitate local and international trade. Our network of agents in 100+ countries enables us to monitor documentation and cargo before shipment, anticipating customs clearance and helping avoid unexpected customs and operational costs.",
+        "items": [
+          "Comprehensive customs advisory",
+          "Customs clearance at different customs offices nationwide",
+          "Tariff classification",
+          "Commercial document verification",
+          "Import/export licensing",
+          "Special permits (SENASA, ANMAT and others)",
+          "Representation before customs authorities"
+        ],
+        "descriptionn": ""
+      }
     ]
   }
 }

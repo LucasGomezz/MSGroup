@@ -41,28 +41,43 @@
     ]
   },
   "en": {
-    "heading": "",
+    "heading": "Customs, Logistics & International Trade Services",
     "services": [
       {
-        "title": "",
-        "descriptionPart1": "",
-        "descriptionPart2": "",
+        "title": "Multimodal Solutions",
+        "descriptionPart1": "We design logistics solutions combining different modes of transport (ocean + road, air + road) to optimize transit times and costs according to the specific requirements of each operation.",
+        "descriptionPart2": "Our experience as multimodal operators enables us to coordinate every leg efficiently, minimizing waiting times and ensuring full shipment traceability.",
         "items": []
       },
       {
-        "title": "",
-        "description": "",
-        "items": ["", "", "", "", ""]
+        "title": "Project Cargo",
+        "description": "We provide specialized expertise in handling oversized cargo, industrial equipment and projects requiring complex logistics coordination.",
+        "items": [
+          "Technical feasibility assessment",
+          "Special route planning",
+          "Permits and authorizations coordination",
+          "Specialized equipment (flat racks, breakbulk)",
+          "Dedicated insurance for high-value cargo"
+        ]
       },
       {
-        "title": "",
-        "description": "",
-        "items": ["", "", "", "", ""]
+        "title": "Warehousing & Logistics",
+        "description": "We provide bonded warehousing services for import and export cargo, helping optimize lead times and inventory management.",
+        "items": [
+          "Customs-bonded and/or domestic warehousing",
+          "Stock management and inventory control",
+          "Cargo splitting and repacking",
+          "Pick & pack services",
+          "Distribution from warehouse"
+        ]
       },
       {
-        "title": "",
-        "description": "",
-        "items": ["", ""]
+        "title": "Cargo Insurance",
+        "description": "Working with leading international insurers, we arrange international cargo insurance tailored to the value and characteristics of each shipment, with door-to-door coverage from origin to final destination.",
+        "items": [
+          "Cargo-specific transport insurance",
+          "Claims handling"
+        ]
       }
     ]
   }
