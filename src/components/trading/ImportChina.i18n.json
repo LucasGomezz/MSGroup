@@ -14,17 +14,17 @@
     "cierre_despues": "Nosotros nos ocupamos del resto."
   },
   "en": {
-    "headingLinea1": "",
-    "headingLinea2": "",
-    "parrafo1": "",
-    "nosOcupamosDe": "",
+    "headingLinea1": "Looking to import products",
+    "headingLinea2": "from China or other markets?",
+    "parrafo1": "We support you from start to finish, making the import process simple, secure and efficient. Our teams in China and other strategic markets help us identify and assess suppliers at origin, find the best alternatives for your business and manage the entire operation.",
+    "nosOcupamosDe": "We take care of the entire process:",
     "steps": [
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" }
+      { "title": "Source", "desc": "We identify suppliers and products according to your requirements." },
+      { "title": "Assess", "desc": "We evaluate available alternatives and purchasing terms." },
+      { "title": "Manage", "desc": "We coordinate purchasing, documentation and international logistics" },
+      { "title": "Import", "desc": "We support the process until your cargo reaches its destination." }
     ],
-    "cierre_antes": "",
-    "cierre_despues": ""
+    "cierre_antes": "You decide what you want to import.",
+    "cierre_despues": "We take care of the rest."
   }
 }

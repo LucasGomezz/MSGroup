@@ -17,20 +17,20 @@
     "footerLinea": "Más de 35 años de confianza global"
   },
   "en": {
-    "heading": "",
-    "parrafo_antes": "",
-    "parrafo_strong": "",
+    "heading": "Commercial Brokerage",
+    "parrafo_antes": "We identify opportunities and connect buyers and sellers internationally, acting as trusted intermediaries focused on",
+    "parrafo_strong": "transparency, security and contractual compliance",
     "parrafo_despues": "",
-    "serviciosDeBrokerage": "",
+    "serviciosDeBrokerage": "Brokerage Services:",
     "items": [
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" },
-      { "title": "", "desc": "" }
+      { "title": "Buyer and supplier identification", "desc": "Potential counterparties by product and target market" },
+      { "title": "Commercial negotiation", "desc": "Terms, pricing, volumes and Incoterms" },
+      { "title": "Transaction structuring", "desc": "Robust international contracts" },
+      { "title": "Contract follow-up", "desc": "Contractual compliance" },
+      { "title": "Contingency management", "desc": "Resolution of commercial contingencies" }
     ],
-    "valorAgregadoHeading": "",
-    "valorAgregadoTexto": "",
-    "footerLinea": ""
+    "valorAgregadoHeading": "Our value as brokers",
+    "valorAgregadoTexto": "It lies in a network of established relationships built over more than three decades.",
+    "footerLinea": "35+ years of global trust"
   }
 }

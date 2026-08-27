@@ -10,13 +10,13 @@
     "ctaButtonText": "Hablemos"
   },
   "en": {
-    "heroTitle": "",
-    "heroDescription": "",
-    "heroButtonText": "",
-    "serviceIntroTitle": "",
-    "serviceIntroDescription": "",
-    "ctaTitle": "",
-    "ctaDescription": "",
-    "ctaButtonText": ""
+    "heroTitle": "MS Trading",
+    "heroDescription": "Commercial brokerage and strategic advisory. We help businesses expand internationally through comprehensive commercial solutions.",
+    "heroButtonText": "Start your enquiry",
+    "serviceIntroTitle": "MS Trading",
+    "serviceIntroDescription": "Since 1990, MS Trading has supported foreign trade operations to and from Argentina, connecting local and international companies through integrated commercial, logistics and strategic solutions.",
+    "ctaTitle": "DRIVE GROWTH IN INTERNATIONAL MARKETS",
+    "ctaDescription": "We identify opportunities and structure commercial transactions around your needs.",
+    "ctaButtonText": "Let’s talk"
   }
 }
