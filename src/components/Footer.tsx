@@ -50,8 +50,8 @@ export default function Footer() {
               <div className="flex justify-center sm:justify-start gap-4">
                 <Phone className="text-coral mt-1" size={16} />
 
-                <a href="tel:+541143224902">
-                  +54 11 4322-4902
+                <a href="tel:+541149281004">
+                  +54 11 4928-1004
                 </a>
               </div>
 
